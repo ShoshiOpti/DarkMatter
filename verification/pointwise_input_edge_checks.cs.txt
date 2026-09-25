@@ -1,0 +1,49 @@
+using System.Globalization;
+using System.Security.Cryptography;
+using DarkUniverse;
+using Row = System.Collections.Generic.Dictionary<string,string>;
+var source=Path.GetFullPath(args[0]);
+var work=Path.GetFullPath(args[1]);
+var results=new List<Dictionary<string,object?>>();
+string relative="numerics/pointwise_comparison_2026_09_25/data";
+string allFile=Path.Combine(relative,"pointwise_all.csv"),outerFile=Path.Combine(relative,"pointwise_outer.csv");
+var watched=Directory.GetFiles(Path.Combine(source,relative),"*",SearchOption.AllDirectories).Concat(Directory.GetFiles(Path.Combine(source,"numerics/observations/data"),"*.mrt")).ToArray();
+var initial=watched.ToDictionary(p=>p,p=>Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(p))));
+var valid=PointwiseInputs.Verify(source,Path.Combine(work,"valid_output"));
+string copy=Path.Combine(work,"mutated_data");
+foreach(string sub in new[]{relative,"numerics/observations/data"})
+foreach(string path in Directory.GetFiles(Path.Combine(source,sub),"*",SearchOption.AllDirectories))
+{
+    string target=Path.Combine(copy,Path.GetRelativePath(source,path));Directory.CreateDirectory(Path.GetDirectoryName(target)!);File.Copy(path,target,true);
+}
+void Save(string path,List<Row> rows)=>Csv.Write(path,rows.Select(r=>r.ToDictionary(kv=>kv.Key,kv=>(object?)kv.Value)));
+void Recompute(Row r)
+{
+    double residual=Csv.Number(r,"predicted_kms")-Csv.Number(r,"observed_kms"),z=residual/Csv.Number(r,"sigma_kms");
+    r["residual_kms"]=residual.ToString("R",CultureInfo.InvariantCulture);r["standardized_residual"]=z.ToString("R",CultureInfo.InvariantCulture);r["squared_standardized_error"]=(z*z).ToString("R",CultureInfo.InvariantCulture);
+}
+void Check(string name,Action<List<Row>,List<Row>> mutate,string expected)
+{
+    var all=Csv.Read(Path.Combine(source,allFile));var outer=Csv.Read(Path.Combine(source,outerFile));
+    mutate(all,outer);Save(Path.Combine(copy,allFile),all);Save(Path.Combine(copy,outerFile),outer);
+    string? message=null;string? exception=null;bool passed=false;
+    try {PointwiseInputs.Verify(copy,Path.Combine(work,name+"_output"));}
+    catch(Exception e){message=e.Message;exception=e.GetType().Name;passed=e is InvalidDataException&&message.Contains(expected,StringComparison.Ordinal);}
+    results.Add(new(){["case"]=name,["rejected_as_expected"]=passed,["expected_message_fragment"]=expected,["exception"]=exception,["message"]=message});
+}
+Check("wrong_holdout",(a,o)=>{a[0]["is_outer"]="True";a[0]["is_training"]="False";},"original outer split");
+Check("altered_error_with_consistent_scores",(a,o)=>{a[0]["sigma_kms"]="2";Recompute(a[0]);},"raw SPARC error");
+Check("repeated_model_point",(a,o)=>{a[1]=new Row(a[0]);},"duplicate model-point key");
+Check("dropped_galaxy",(a,o)=>{string g=a[0]["galaxy"];a.RemoveAll(r=>r["galaxy"]==g);o.RemoveAll(r=>r["galaxy"]==g);},"complete model-point rows");
+Check("changed_prediction_with_consistent_scores",(a,o)=>{var r=a.First(r=>r["model"]=="extended");r["predicted_kms"]=(Csv.Number(r,"predicted_kms")+1).ToString("R",CultureInfo.InvariantCulture);Recompute(r);},"current prediction snapshot");
+Check("profiled_failure_hidden_as_finite",(a,o)=>{var r=a.First(r=>r["model"]=="profiled_baryons"&&Csv.Flag(r,"fit_failed"));r["predicted_kms"]=r["observed_kms"];r["valid_prediction"]="True";r["fit_failed"]="False";r["failure_reason"]="";Recompute(r);},"profiled prediction snapshot");
+Check("fractional_outer_point_index",(a,o)=>{o[0]["point_index"]=(Csv.Number(o[0],"point_index")+.5).ToString("R",CultureInfo.InvariantCulture);},"integer outer point index");
+string snapshot=Path.Combine(copy,relative,"inputs/saved_galaxy_scores.csv");
+File.AppendAllText(snapshot,Environment.NewLine);
+Check("modified_frozen_source_snapshot",(a,o)=>{},"immutable source snapshot saved_galaxy_scores.csv");
+File.Copy(Path.Combine(source,relative,"inputs/saved_galaxy_scores.csv"),snapshot,true);
+bool unchanged=initial.All(kv=>kv.Value==Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(kv.Key))));
+var report=new Dictionary<string,object?> { ["passed"]=unchanged&&results.All(r=>(bool)r["rejected_as_expected"]!),["baseline"]=valid,["negative_cases"]=results,["original_data_files_unchanged"]=unchanged,["original_data_files_checked"]=initial.Count,["harness_source"]="verification/pointwise_input_edge_checks.cs.txt",["isolation"]="Independent .NET10 harness linking only Data.cs, Sparc.cs and PointwiseInputs.cs; modified copies under tmp/pointwise_input_edge_check",["source_sha256"]=new[]{"Data.cs","Sparc.cs","PointwiseInputs.cs"}.ToDictionary(n=>n,n=>Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(Path.Combine(source,"..",n)))))};
+Data.SaveJson(args[2],report);
+Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(report,new System.Text.Json.JsonSerializerOptions{WriteIndented=true}));
+return (bool)report["passed"]!?0:1;

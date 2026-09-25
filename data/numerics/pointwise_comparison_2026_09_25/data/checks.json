@@ -1,0 +1,94 @@
+{
+  "status": "pass",
+  "n_galaxies": 131,
+  "n_all_points": 3034,
+  "n_outer_points": 659,
+  "n_models": 7,
+  "n_outer_model_rows": 4613,
+  "finite_profiled_baryon_points": 654,
+  "profiled_baryon_failed_galaxies": [
+    "UGC01281"
+  ],
+  "no_refit": true,
+  "no_changed_predictions": true,
+  "all_observations_catalogue_coordinates": true,
+  "radial_covariance_available": false,
+  "covariance_evidence": "nuisance_fitting_source.py explicitly documents tabulated diagonal errors and no supplied radial covariance",
+  "split_rule": "last max(2, ceil(0.2*n_g)) sorted radii per galaxy",
+  "n_outer_per_galaxy_min": 2,
+  "n_outer_per_galaxy_max": 23,
+  "row_alignment": [
+    {
+      "model": "extended",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "scalar_core",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "compact_plummer",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "nfw",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "baryon_only",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "adaptive_primary",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 0.0,
+        "observed_catalogue_kms": 0.0,
+        "error_catalogue_kms": 0.0
+      },
+      "exact_split_match": true
+    },
+    {
+      "model": "profiled_baryons",
+      "max_coordinate_differences": {
+        "r_catalogue_kpc": 1.4210854715202004e-14,
+        "observed_catalogue_kms": 1.4210854715202004e-14,
+        "error_catalogue_kms": 1.4210854715202004e-14
+      },
+      "exact_split_match": true
+    }
+  ],
+  "max_saved_loss_differences": {
+    "extended": 7.105427357601002e-15,
+    "scalar_core": 2.842170943040401e-14,
+    "compact_plummer": 4.263256414560601e-14,
+    "nfw": 3.552713678800501e-15,
+    "baryon_only": 9.094947017729282e-13,
+    "adaptive_primary": 4.263256414560601e-14,
+    "profiled_baryons": 3.410605131648481e-13
+  }
+}

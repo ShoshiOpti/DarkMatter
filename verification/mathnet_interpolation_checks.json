@@ -1,0 +1,174 @@
+{
+  "package": "MathNet.Numerics 5.0.0",
+  "total": 4180052,
+  "reports": [
+    {
+      "kind": "pchip",
+      "name": "profile_eta_0.3.csv:f",
+      "points": 517001,
+      "maxAbsolute": 2.220446049250313E-16,
+      "maxScaled": 2.220446049250313E-16,
+      "worstX": 0.30406081216243247,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_0.3.csv:phi_prime",
+      "points": 517001,
+      "maxAbsolute": 1.1102230246251565E-16,
+      "maxScaled": 1.1102230246251565E-16,
+      "worstX": 1.5363072614522904,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_0.csv:f",
+      "points": 517001,
+      "maxAbsolute": 2.220446049250313E-16,
+      "maxScaled": 2.220446049250313E-16,
+      "worstX": 0.3280656131226245,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_0.csv:phi_prime",
+      "points": 517001,
+      "maxAbsolute": 1.1102230246251565E-16,
+      "maxScaled": 1.1102230246251565E-16,
+      "worstX": 1.816363272654531,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_1.csv:f",
+      "points": 517001,
+      "maxAbsolute": 2.220446049250313E-16,
+      "maxScaled": 2.220446049250313E-16,
+      "worstX": 0.0640128025605121,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_1.csv:phi_prime",
+      "points": 517001,
+      "maxAbsolute": 1.1102230246251565E-16,
+      "maxScaled": 1.1102230246251565E-16,
+      "worstX": 2.2964592918583717,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_3.csv:f",
+      "points": 517001,
+      "maxAbsolute": 2.220446049250313E-16,
+      "maxScaled": 2.220446049250313E-16,
+      "worstX": 0.008001600320064013,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "profile_eta_3.csv:phi_prime",
+      "points": 517001,
+      "maxAbsolute": 2.220446049250313E-16,
+      "maxScaled": 2.220446049250313E-16,
+      "worstX": 1.896379275855171,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "pchip",
+      "name": "inner/F583-1",
+      "points": 5385,
+      "maxAbsolute": 1.0913936421275139E-11,
+      "maxScaled": 6.848758159525692E-16,
+      "worstX": 14.390826165233046,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "mass_boundary",
+      "name": "inner/F583-1",
+      "boundaryError": 0
+    },
+    {
+      "kind": "pchip",
+      "name": "inner/UGC00731",
+      "points": 5177,
+      "maxAbsolute": 3.637978807091713E-12,
+      "maxScaled": 5.361170224432956E-16,
+      "worstX": 7.263270654130826,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "mass_boundary",
+      "name": "inner/UGC00731",
+      "boundaryError": 0
+    },
+    {
+      "kind": "pchip",
+      "name": "full/F583-1",
+      "points": 5385,
+      "maxAbsolute": 1.0913936421275139E-11,
+      "maxScaled": 6.848758159525692E-16,
+      "worstX": 14.390826165233046,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "mass_boundary",
+      "name": "full/F583-1",
+      "boundaryError": 0
+    },
+    {
+      "kind": "pchip",
+      "name": "full/UGC00731",
+      "points": 5177,
+      "maxAbsolute": 3.637978807091713E-12,
+      "maxScaled": 5.361170224432956E-16,
+      "worstX": 7.263270654130826,
+      "knotError": 0,
+      "outOfRangeIsNaN": true
+    },
+    {
+      "kind": "mass_boundary",
+      "name": "full/UGC00731",
+      "boundaryError": 0
+    },
+    {
+      "kind": "saved_force",
+      "name": "inner/F583-1",
+      "points": 5740,
+      "maxAbsolute": 0,
+      "maxScaled": 0
+    },
+    {
+      "kind": "saved_force",
+      "name": "inner/UGC00731",
+      "points": 5712,
+      "maxAbsolute": 0,
+      "maxScaled": 0
+    },
+    {
+      "kind": "saved_force",
+      "name": "full/F583-1",
+      "points": 5751,
+      "maxAbsolute": 0,
+      "maxScaled": 0
+    },
+    {
+      "kind": "saved_force",
+      "name": "full/UGC00731",
+      "points": 5717,
+      "maxAbsolute": 0,
+      "maxScaled": 0
+    }
+  ]
+}

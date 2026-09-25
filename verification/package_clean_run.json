@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "native_verify_passed": true,
+  "clean_relocated_verify_passed": true,
+  "locked_restore_passed": true,
+  "build_warnings": 0,
+  "build_errors": 0,
+  "clean_data_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\packages_clean_8f3b199e13dc43bd8cf01db697cac267\\data",
+  "mathnet_numerics": "5.0.0.0",
+  "direct_packages": 1,
+  "transitive_packages": 0,
+  "locked_package_version": "5.0.0",
+  "plot_variants": 47,
+  "figure_and_series_files_identical": 94,
+  "current_result_csv_files_identical": 8,
+  "input_files_hash_checked": 141,
+  "mismatches": []
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "snapshot": "current_predictions.csv",
+    "source": "Holonomy_Cubic_TwoField_Investigation_2026-09-24/numerics/baryon_reference_update/analysis/prediction_rows.csv",
+    "sha256": "19e4bab40a7d7eaa20f82cf16b02c74551ffb00038a7836a7430a3893e20f1ca",
+    "bytes": 8413690
+  },
+  {
+    "snapshot": "profiled_baseline_predictions.csv",
+    "source": "output/pdf/Entropy_Dark_Universe_Core_Supplement_Revision/numerics/baryons_only/baseline_predictions.csv",
+    "sha256": "71cdcb8a8d5782edfeb2693da3a7d7e2f85572642a0e5a94e61f51652640257c",
+    "bytes": 1528320
+  },
+  {
+    "snapshot": "profiled_baseline_fits.csv",
+    "source": "output/pdf/Entropy_Dark_Universe_Core_Supplement_Revision/numerics/baryons_only/baseline_fits.csv",
+    "sha256": "f86554075e7615111060099f75e2f49e43ad8e9a1074f55e4ffe1d03e9da6142",
+    "bytes": 195914
+  },
+  {
+    "snapshot": "saved_galaxy_scores.csv",
+    "source": "Holonomy_Cubic_TwoField_Investigation_2026-09-24/numerics/baryon_reference_update/analysis/galaxy_scores.csv",
+    "sha256": "106bdea25ca2f647af41071983a07ee58f2605900c9cfbcc6ed07cc6899b1e98",
+    "bytes": 182452
+  },
+  {
+    "snapshot": "profiled_baseline_saved_scores.csv",
+    "source": "Holonomy_Cubic_TwoField_Investigation_2026-09-24/numerics/model_audit_2026_09_25/fit_logic/saved_outer_scores.csv",
+    "sha256": "d5cd23816b6c9770ae4b38e58d00da2617541d27551644099ad0525b51ea0861",
+    "bytes": 65302
+  },
+  {
+    "snapshot": "profiled_baseline_source.py",
+    "source": "output/pdf/Entropy_Dark_Universe_Core_Supplement_Revision/numerics/baryons_only/fit_baselines.py",
+    "sha256": "2de7d5ce530710cfbad31395ff3651ef9b913c0c068379e72b2e193bec0b46d7",
+    "bytes": 13625
+  },
+  {
+    "snapshot": "nuisance_fitting_source.py",
+    "source": "output/pdf/Entropy_Dark_Universe_Core_Supplement_Revision/numerics/observations/uncertainty_sensitivity.py",
+    "sha256": "ec5f3b0d96c07ddb6b8733692e6eae0bcf5bf4ed2630bf3f65ddf82c8793c912",
+    "bytes": 14973
+  },
+  {
+    "snapshot": "baryon_ablation_source.py",
+    "source": "Holonomy_Cubic_TwoField_Investigation_2026-09-24/numerics/baryon_reference_update/analysis/analyze_baryon_reference.py",
+    "sha256": "e2a1fc151e79caf11d41df5ed72d544dbb72447a8c6496a350953f06a0c80409",
+    "bytes": 14429
+  },
+  {
+    "snapshot": "adaptive_source.py",
+    "source": "Holonomy_Cubic_TwoField_Investigation_2026-09-24/numerics/structure_adaptive_envelope/model/fit_adaptive.py",
+    "sha256": "0697fb157bd801664052588e2877b31e224d8be0e366a11eade44cb95ab4d448",
+    "bytes": 17443
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "figures_visually_reviewed": [
+    "pointwise_cluster_comparison.png",
+    "pointwise_radial_differences.png",
+    "pointwise_covariance_sensitivity.png"
+  ],
+  "checks": [
+    "labels readable without collisions",
+    "all residual tails retained",
+    "all radial values inside padded plot limits",
+    "baryon forest uses labeled separate horizontal scale",
+    "all covariance intervals visible",
+    "no significance stars or independent point p values"
+  ],
+  "no_fits_or_statistical_results_changed": true
+}

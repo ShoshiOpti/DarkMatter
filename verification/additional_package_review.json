@@ -1,0 +1,87 @@
+{
+  "scope": "Additional package review after the MathNet.Numerics 5.0.0 integration",
+  "new_production_packages": [],
+  "existing_package_reuse": [
+    "MathNet SortedArrayStatistics.QuantileCustom with explicit R7 for finite diagnostic quantiles",
+    "MathNet SortedArrayStatistics.QuantileCustom with explicit R7 for finite bootstrap quantiles",
+    "MathNet SpecialFunctions.Log1p for the NFW pilot"
+  ],
+  "retained_special_case": "Data.Quantile retains its non-finite convention: median([1, 2, Infinity]) is 2; the tested MathNet R7 interpolation returned NaN.",
+  "decisions": [
+    {
+      "package": "System.CommandLine",
+      "version": "2.0.12",
+      "decision": "Keep existing CLI parser",
+      "reason": "Prototype needs 36 nonblank lines versus 37 existing parser/help lines. It matches 25 of 26 cases; preserving first-value-wins for repeated options requires extra code.",
+      "sources": [
+        "https://www.nuget.org/packages/System.CommandLine/2.0.12",
+        "https://learn.microsoft.com/en-us/dotnet/standard/commandline/how-to-parse-and-invoke"
+      ]
+    },
+    {
+      "package": "NumSharp",
+      "version": "0.70.0",
+      "decision": "Keep existing 18-line fixed-format NPZ writer",
+      "reason": "Prototype preserved all 5,199,948 values and headers but saves only about six lines, adds a 2,439,168-byte array library, and needs extra dense array conversions.",
+      "sources": [
+        "https://api.nuget.org/v3-flatcontainer/numsharp/0.70.0/numsharp.nuspec",
+        "https://github.com/SciSharp/NumSharp/blob/9fdcaf5812216b428e5b0e1d55d13fcc94db8fb2/src/NumSharp.Core/APIs/np.save.cs"
+      ]
+    },
+    {
+      "package": "NumpyDotNet",
+      "version": "0.9.87.2",
+      "decision": "Not adopted",
+      "reason": "Broad array library and additional dependencies; ZIP handling is still required.",
+      "sources": [
+        "https://www.nuget.org/packages/NumpyDotNet/0.9.87.2"
+      ]
+    },
+    {
+      "package": "Numpy",
+      "version": "3.11.1.35",
+      "decision": "Not adopted",
+      "reason": "Adds an embedded Python runtime for a small native export task.",
+      "sources": [
+        "https://www.nuget.org/packages/Numpy/3.11.1.35"
+      ]
+    },
+    {
+      "package": "FileHelpers",
+      "version": "3.5.2",
+      "decision": "Not adopted",
+      "reason": "Source-based estimate: replaces about 20 splitting lines with annotated schemas for 29 fields; SPARC header, fallback, and scientific checks remain.",
+      "sources": [
+        "https://www.nuget.org/packages/FileHelpers/3.5.2",
+        "https://www.filehelpers.net/example/QuickStart/ReadFileFixed/"
+      ]
+    },
+    {
+      "package": "Scriban",
+      "version": "7.5.0",
+      "decision": "Not adopted",
+      "reason": "Source-based estimate: templates plus data binding are similar in size to the small existing report/gallery builders.",
+      "sources": [
+        "https://www.nuget.org/packages/Scriban/7.5.0"
+      ]
+    },
+    {
+      "package": "Svg",
+      "version": "3.4.8",
+      "decision": "Not adopted",
+      "reason": "Replaces primitive serialization with comparable object construction; scientific axes and layout remain. Adds drawing/CSS dependencies.",
+      "sources": [
+        "https://www.nuget.org/packages/Svg/3.4.8"
+      ]
+    },
+    {
+      "package": "SvgNet",
+      "version": "3.5.7",
+      "decision": "Not adopted",
+      "reason": "Does not remove the layout/scientific code; brings System.Drawing dependencies or Windows-specific targeting.",
+      "sources": [
+        "https://www.nuget.org/packages/SvgNet/3.5.7"
+      ]
+    }
+  ]
+}

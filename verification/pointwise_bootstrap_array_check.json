@@ -1,0 +1,104 @@
+{
+  "status": "pass",
+  "all_expected_array_keys_present": true,
+  "absolute_tolerance": 1e-08,
+  "relative_tolerance": 1e-10,
+  "tolerance_source": "Original independent_check/verify_pointwise.py close() defaults",
+  "compared_values": 5199948,
+  "arrays": {
+    "means": {
+      "native_shape": [
+        99999,
+        24
+      ],
+      "reference_shape": [
+        99999,
+        24
+      ],
+      "expected_shape": [
+        99999,
+        24
+      ],
+      "native_dtype": "float64",
+      "reference_dtype": "float64",
+      "shapes_match": true,
+      "all_values_finite": true,
+      "compared_values": 2399976,
+      "mismatched_values": 0,
+      "max_absolute_error": 4.547473508864641e-13,
+      "max_fraction_of_tolerance": 6.8318960585076434e-06,
+      "max_absolute_error_index": [
+        11759,
+        23
+      ],
+      "native_at_max_error": -588.1013367802922,
+      "reference_at_max_error": -588.1013367802926,
+      "passed": true
+    },
+    "tstats": {
+      "native_shape": [
+        99999,
+        24
+      ],
+      "reference_shape": [
+        99999,
+        24
+      ],
+      "expected_shape": [
+        99999,
+        24
+      ],
+      "native_dtype": "float64",
+      "reference_dtype": "float64",
+      "shapes_match": true,
+      "all_values_finite": true,
+      "compared_values": 2399976,
+      "mismatched_values": 0,
+      "max_absolute_error": 3.197442310920451e-14,
+      "max_fraction_of_tolerance": 2.90176848589402e-06,
+      "max_absolute_error_index": [
+        39798,
+        16
+      ],
+      "native_at_max_error": 10.446757035420877,
+      "reference_at_max_error": 10.446757035420845,
+      "passed": true
+    },
+    "pooled_means": {
+      "native_shape": [
+        99999,
+        4
+      ],
+      "reference_shape": [
+        99999,
+        4
+      ],
+      "expected_shape": [
+        99999,
+        4
+      ],
+      "native_dtype": "float64",
+      "reference_dtype": "float64",
+      "shapes_match": true,
+      "all_values_finite": true,
+      "compared_values": 399996,
+      "mismatched_values": 0,
+      "max_absolute_error": 4.547473508864641e-13,
+      "max_fraction_of_tolerance": 6.268018094086923e-06,
+      "max_absolute_error_index": [
+        44282,
+        3
+      ],
+      "native_at_max_error": -742.3077763916893,
+      "reference_at_max_error": -742.3077763916898,
+      "passed": true
+    }
+  },
+  "numpy_version": "2.5.3",
+  "native_path": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\DarkUniverse.Console\\output\\pointwise_comparison\\results\\bootstrap_summaries.npz",
+  "reference_path": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\Holonomy_Cubic_TwoField_Investigation_2026-09-24\\numerics\\pointwise_comparison_2026_09_25\\results\\bootstrap_summaries.npz",
+  "native_sha256": "bdadf25eaa9d37dd587490126f64f89179ca72fd5d328a64f6596e372ba5bc7c",
+  "reference_sha256": "f4aa90269ef4c3c6764ed9df4f0866b5326bcfa4ec0c5f2eb61ab833dee0bc67",
+  "checker_sha256": "69271d71dd0b8f6c6427c122c910361ebeb0a40a037214bcd2faf84571524167",
+  "scope": "All values generated natively by C# compared to original stored NumPy bootstrap arrays; Python used only for this independent development audit."
+}

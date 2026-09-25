@@ -1,0 +1,20 @@
+{
+  "model": "profiled_baryons",
+  "full_sample_galaxies": 131,
+  "full_sample_points": 659,
+  "failed_galaxies": [
+    "UGC01281"
+  ],
+  "full_sample_effect": "minus_infinity_due_to_comparator_failure; finite mean inference undefined",
+  "full_sample_p": null,
+  "finite_subset_galaxies": 130,
+  "finite_subset_points": 654,
+  "conditional_finite_effect": -122.82692705173713,
+  "conditional_finite_cluster_se": 35.3138201323683,
+  "conditional_finite_ci_low": -267.8886622827515,
+  "conditional_finite_ci_high": -72.6027001957859,
+  "conditional_finite_percentile_low": -201.62599980777958,
+  "conditional_finite_percentile_high": -67.15956485245891,
+  "primary_p_assigned": false,
+  "scope": "conditional-on-feasible130 sensitivity, not fullsample claim"
+}

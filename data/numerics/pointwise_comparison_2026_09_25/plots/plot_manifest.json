@@ -1,0 +1,56 @@
+[
+  {
+    "file": "pointwise_cluster_comparison.pdf",
+    "sha256": "2a1b3244c65191f35a25c506060e8b939e03d12e44a26248fd6a58f4c224e65a",
+    "bytes": 43196,
+    "published_to": "figures/pointwise_cluster_comparison.pdf"
+  },
+  {
+    "file": "pointwise_cluster_comparison.png",
+    "sha256": "e2985ada4005a2f66c273b8c71b06a43893e35971cf317e43db8c562820f54fc",
+    "bytes": 163843,
+    "published_to": "figures/pointwise_cluster_comparison.png"
+  },
+  {
+    "file": "pointwise_cluster_comparison.svg",
+    "sha256": "18b875ac9ed5a0de435d6ad1207f6777329889bef09dc596d8bc2237685ae804",
+    "bytes": 148023,
+    "published_to": "figures/pointwise_cluster_comparison.svg"
+  },
+  {
+    "file": "pointwise_radial_differences.pdf",
+    "sha256": "e26c5801ef1e12be76f2b010427eaa1b95fbd83cc91fcb0c0d5bbb1072684e42",
+    "bytes": 44220,
+    "published_to": "figures/pointwise_radial_differences.pdf"
+  },
+  {
+    "file": "pointwise_radial_differences.png",
+    "sha256": "ff94ab5169881f7523fff78b9587747f07f2113520dd43586dfa475cda010ef1",
+    "bytes": 336574,
+    "published_to": "figures/pointwise_radial_differences.png"
+  },
+  {
+    "file": "pointwise_radial_differences.svg",
+    "sha256": "633d128208740df38a381eb6a9946749ee0ba53cca38698a4af44c16aa35bf11",
+    "bytes": 299087,
+    "published_to": "figures/pointwise_radial_differences.svg"
+  },
+  {
+    "file": "pointwise_covariance_sensitivity.pdf",
+    "sha256": "05449128d24d7b2dac11fabf2076d7d85a301148a70b8aa8fe518db41e57a0be",
+    "bytes": 26092,
+    "published_to": "figures/pointwise_covariance_sensitivity.pdf"
+  },
+  {
+    "file": "pointwise_covariance_sensitivity.png",
+    "sha256": "0ee31cadf9ebf622134548e0abea98a6868f41665c875e1e66624d8fec981120",
+    "bytes": 200626,
+    "published_to": "figures/pointwise_covariance_sensitivity.png"
+  },
+  {
+    "file": "pointwise_covariance_sensitivity.svg",
+    "sha256": "8d0dd287193f124f43e91e7611629faae8594619394604e0d662efeeb77dc060",
+    "bytes": 118345,
+    "published_to": "figures/pointwise_covariance_sensitivity.svg"
+  }
+]

@@ -1,0 +1,8 @@
+model,galaxies,outer_points,finite_outer_points,failed_galaxies,conditioning
+adaptive_primary,131,659,659,0,conditional_inner_validation_retrospective_prediction
+baryon_only,131,659,659,0,conditional_ablation_of_inner_fitted_core_calibration
+compact_plummer,131,659,659,0,inner_only_retrospective_prediction
+extended,131,659,659,0,inner_only_retrospective_prediction
+nfw,131,659,659,0,inner_only_retrospective_prediction
+profiled_baryons,131,659,654,1,independently_profiled_baryons_inner_only_matched_priors
+scalar_core,131,659,659,0,inner_only_retrospective_prediction

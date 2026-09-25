@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "comparisons": 15575,
+  "maxProbabilityRelative": 5.991785311800201E-13,
+  "maxIntervalAbsolute": 2.7936541968642814E-12,
+  "maxNormalAbsolute": 1.4210854715202004E-14,
+  "selfChecks": {
+    "passed": true,
+    "checks": 22
+  }
+}

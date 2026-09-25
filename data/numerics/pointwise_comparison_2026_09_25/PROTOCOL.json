@@ -1,0 +1,43 @@
+{
+  "title": "Retrospective paired pointwise loss comparison with whole-galaxy inference",
+  "date": "2026-09-25",
+  "status": "specified before new bootstrap outcomes; existing data and model development already explored",
+  "models_left": "extended",
+  "primary_comparators": [
+    "scalar_core",
+    "compact_plummer",
+    "nfw",
+    "baryon_only"
+  ],
+  "primary_sample": "all131 galaxies and659 original outer rows; no refit or model selection",
+  "primary_loss": "pointwise squared standardized residual z^2, averaged within galaxy, then equal weight per galaxy",
+  "primary_effect": "mean across galaxies of envelope-minus-comparator loss; negative favors envelope",
+  "primary_se": "sample standard deviation of galaxy mean differences divided by sqrt(G)",
+  "bootstrap_draws": 99999,
+  "seed": 2026092501,
+  "ci": "95% whole-galaxy pairs bootstrap-t interval; percentile interval retained as sensitivity",
+  "test": "two-sided null-imposed studentized wild cluster bootstrap, independent Rademacher multipliers on full galaxy difference scores, intercept null mean0",
+  "p": "(1+tail_count)/(B+1), report Monte Carlo tail count and Clopper-Pearson interval; never zero",
+  "multiplicity": "Holm4 for the four declared new mean-loss tests only",
+  "Z": "unsigned two-sided Gaussian probability equivalent from Holm4 p; at simulation floor mark finite resolution, do not extrapolate",
+  "assumptions": "independent galaxy clusters for sampling inference, enough non-dominant clusters; arbitrary radial dependence retained by whole-galaxy resampling; not exact sign randomization under a mean-only null",
+  "sensitivities": {
+    "weighting": "pooled-point ratio of sums, whole-galaxy resampled with denominator recomputed",
+    "robust_scores": [
+      "mean absolute standardized residual",
+      "mean absolute velocity error in km/s"
+    ],
+    "correlation_rho": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "correlated_score": "common assumed standardized-error equicorrelation matrix, quadratic form per point; no rho fitting or selection",
+    "influence": "every leave-one-galaxy-out mean, effective variance-contribution count, maximum variance share; no deletions from primary"
+  },
+  "profiled_baryons": "retain one failed training case as failure; full continuous mean comparison not finite; all-feasible130 subset separately labelled sensitivity, with no primary p",
+  "adaptive": "retain saved data for provenance; no new primary test",
+  "excluded": "outer-conditioned inverse and posthoc-selected curves",
+  "limitations": "conditional on saved fitted curves, no refit uncertainty or covariance estimation, no fresh validation, no model-history multiplicity correction, no naive chi-square difference/Wilks/AIC/Bayes-factor claims"
+}

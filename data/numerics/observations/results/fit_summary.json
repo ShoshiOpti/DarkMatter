@@ -1,0 +1,133 @@
+{
+  "bounds": {
+    "length_min_kpc": 0.02,
+    "length_max_kpc": 500.0,
+    "excess_amplitude_min_kms": 0.001,
+    "excess_amplitude_max_kms": 3000.0
+  },
+  "selection": "All Q<3 and inclination>=30 degrees; no fit-based exclusions",
+  "display_selection": "Six mid-bin ranks in median Vobs; ties by galaxy name, declared before fitting",
+  "displayed": [
+    "D512-2",
+    "UGC07690",
+    "UGC05721",
+    "F568-V1",
+    "NGC4217",
+    "NGC6195"
+  ],
+  "display_rank_zero_based": [
+    12,
+    38,
+    63,
+    89,
+    114,
+    140
+  ],
+  "data": {
+    "MassModels_Lelli2016c.mrt": {
+      "sha256": "9108994b12cc401b94a1768beca61c53ec354779385c9c9cc571049f3043244c",
+      "url": "https://astroweb.case.edu/SPARC/MassModels_Lelli2016c.mrt"
+    },
+    "SPARC_Lelli2016c.mrt": {
+      "sha256": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+      "url": "https://astroweb.case.edu/SPARC/SPARC_Lelli2016c.mrt"
+    }
+  },
+  "core_omega": -0.8183349164548502,
+  "core_mass_coefficient": 2.653690117796726,
+  "summary": {
+    "0.5": {
+      "galaxies": 153,
+      "points": 3168,
+      "baryons_no_circular_orbit_rows": 2,
+      "baryon_median_chi2_per_valid_row": 113.26021284109157,
+      "core_lower_chi2_galaxies": 79,
+      "core": {
+        "median_reduced_chi2": 2.11865423350021,
+        "quartiles": [
+          0.48212516188289567,
+          6.768448851642794
+        ],
+        "below_2": 76,
+        "bound_hits": 5,
+        "failed": 0,
+        "max_amplitude_kms": 2999.9999999999923
+      },
+      "nfw": {
+        "median_reduced_chi2": 1.56337113707929,
+        "quartiles": [
+          0.7061584473561364,
+          4.1934383271560565
+        ],
+        "below_2": 85,
+        "bound_hits": 39,
+        "failed": 0,
+        "max_amplitude_kms": 1750.3508033712524
+      }
+    },
+    "0.3": {
+      "galaxies": 153,
+      "points": 3168,
+      "baryons_no_circular_orbit_rows": 3,
+      "baryon_median_chi2_per_valid_row": 154.5035163955065,
+      "core_lower_chi2_galaxies": 58,
+      "core": {
+        "median_reduced_chi2": 2.4018879416874057,
+        "quartiles": [
+          0.6377190359166371,
+          13.135444179586983
+        ],
+        "below_2": 71,
+        "bound_hits": 1,
+        "failed": 0,
+        "max_amplitude_kms": 2999.9999999999814
+      },
+      "nfw": {
+        "median_reduced_chi2": 1.650360839955016,
+        "quartiles": [
+          0.6283827712389061,
+          3.8777185984189644
+        ],
+        "below_2": 85,
+        "bound_hits": 28,
+        "failed": 0,
+        "max_amplitude_kms": 1796.5451419878996
+      }
+    },
+    "0.7": {
+      "galaxies": 153,
+      "points": 3168,
+      "baryons_no_circular_orbit_rows": 2,
+      "baryon_median_chi2_per_valid_row": 81.42451204052743,
+      "core_lower_chi2_galaxies": 98,
+      "core": {
+        "median_reduced_chi2": 1.9812075717769804,
+        "quartiles": [
+          0.567727872787248,
+          8.00206036708064
+        ],
+        "below_2": 78,
+        "bound_hits": 20,
+        "failed": 0,
+        "max_amplitude_kms": 2999.9999999999923
+      },
+      "nfw": {
+        "median_reduced_chi2": 2.2398897430029328,
+        "quartiles": [
+          0.882878115722452,
+          6.493119936284006
+        ],
+        "below_2": 71,
+        "bound_hits": 54,
+        "failed": 0,
+        "max_amplitude_kms": 1702.9889576017354
+      }
+    }
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

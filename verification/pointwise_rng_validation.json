@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "streams": 3,
+  "regenerated_values": 39199608,
+  "numpy_version": "2.5.3",
+  "method": "Native PCG64; full draw-stream SHA256 plus raw, rejection and batch-buffer tests"
+}

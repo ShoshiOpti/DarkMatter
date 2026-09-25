@@ -1,0 +1,5 @@
+comparator,n_galaxies,n_points,effect,percentile_ci_low,percentile_ci_high,estimand,interpretation
+scalar_core,131,659,-6.706760522926634,-11.167317512709669,-3.1451999249917404,pooled_point_weighted_ratio; clusters resampled and denominator recomputed,secondary_weighting_sensitivity_no_primary_p
+compact_plummer,131,659,-5.8758134603294545,-10.433849975458614,-2.2805682283129114,pooled_point_weighted_ratio; clusters resampled and denominator recomputed,secondary_weighting_sensitivity_no_primary_p
+nfw,131,659,19.665791898542338,-1.0542010404422055,45.269032245468004,pooled_point_weighted_ratio; clusters resampled and denominator recomputed,secondary_weighting_sensitivity_no_primary_p
+baryon_only,131,659,-550.133852065741,-754.4892165770256,-360.69830631020193,pooled_point_weighted_ratio; clusters resampled and denominator recomputed,secondary_weighting_sensitivity_no_primary_p

@@ -1,0 +1,2126 @@
+{
+  "parameters": {
+    "alpha": 0.3,
+    "beta": 0.5,
+    "field_density_integral": 33.3472535158758,
+    "isolated_R50": 2.0233770764584156,
+    "q_ratios": [
+      0.25,
+      4.0
+    ],
+    "fractions": [
+      0.1,
+      1.0,
+      3.0
+    ],
+    "flattenings": [
+      0,
+      0.8
+    ],
+    "grids": [
+      [
+        1919,
+        64,
+        24.0
+      ],
+      [
+        3839,
+        128,
+        24.0
+      ]
+    ]
+  },
+  "physical_effects": [
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "axis_ratio": 0.9999999999999459,
+      "R50": 1.7444617738376773,
+      "central_density": 1.6734140071368417,
+      "quadrupole_Q2": -4.983280813816031e-12,
+      "maximum_speed_change_from_isolated_template_percent": 14.193143007416452,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "axis_ratio": 0.9905752348411326,
+      "R50": 1.7728832876917,
+      "central_density": 1.5915061719931587,
+      "quadrupole_Q2": -0.8981915456458855,
+      "maximum_speed_change_from_isolated_template_percent": 12.481393514516203,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 1.5388856644544813,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 1.5386285796204158,
+      "disk_sphere_difference_at_R50_percent": -0.8727638946525736
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "axis_ratio": 0.9999999999999838,
+      "R50": 1.0160806823059378,
+      "central_density": 8.807324164861097,
+      "quadrupole_Q2": -5.09064719093391e-13,
+      "maximum_speed_change_from_isolated_template_percent": 22.54726036947783,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "axis_ratio": 0.9426628634638515,
+      "R50": 1.0592061279547476,
+      "central_density": 8.1041333178706,
+      "quadrupole_Q2": -1.9840205556135333,
+      "maximum_speed_change_from_isolated_template_percent": 21.350669730024862,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 1.5086473705986148,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 1.3483150617141781,
+      "disk_sphere_difference_at_R50_percent": 0.031835495033802744
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "axis_ratio": 1.0000000000000016,
+      "R50": 0.7067552213980282,
+      "central_density": 24.094069336752625,
+      "quadrupole_Q2": 2.2213733196802514e-14,
+      "maximum_speed_change_from_isolated_template_percent": 14.361923257831165,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "axis_ratio": 0.8915967225965685,
+      "R50": 0.7320367803818899,
+      "central_density": 23.288298638893814,
+      "quadrupole_Q2": -1.7656846790662417,
+      "maximum_speed_change_from_isolated_template_percent": 14.135897248323204,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.8615856789071952,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.2899712558803502,
+      "disk_sphere_difference_at_R50_percent": 0.2507077522239972
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "axis_ratio": 0.9999999999999305,
+      "R50": 2.017184583459772,
+      "central_density": 1.0084317569212682,
+      "quadrupole_Q2": -8.470836925714025e-12,
+      "maximum_speed_change_from_isolated_template_percent": 0.517035698461954,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "axis_ratio": 0.9966682214890669,
+      "R50": 2.0137510717977367,
+      "central_density": 1.0134455447765491,
+      "quadrupole_Q2": -0.4050556806529244,
+      "maximum_speed_change_from_isolated_template_percent": 0.6979579697293348,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.17999165018167673,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.16757521586112656,
+      "disk_sphere_difference_at_R50_percent": 0.13374605780428142
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "axis_ratio": 0.9999999999998958,
+      "R50": 1.9674841686210545,
+      "central_density": 1.0798001088989662,
+      "quadrupole_Q2": -1.2032438814934694e-11,
+      "maximum_speed_change_from_isolated_template_percent": 3.951686260265408,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "axis_ratio": 0.9715091325895289,
+      "R50": 1.9404158600657195,
+      "central_density": 1.1245279120379963,
+      "quadrupole_Q2": -3.212002945271131,
+      "maximum_speed_change_from_isolated_template_percent": 5.436379463342456,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 1.4282531207428395,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 1.3275806748921593,
+      "disk_sphere_difference_at_R50_percent": 1.0491415948144673
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "axis_ratio": 0.9999999999999348,
+      "R50": 1.8831283972422594,
+      "central_density": 1.2180098267064488,
+      "quadrupole_Q2": -6.8344252468829065e-12,
+      "maximum_speed_change_from_isolated_template_percent": 10.027225266770511,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 0.0,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 0.0,
+      "disk_sphere_difference_at_R50_percent": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "axis_ratio": 0.9338642639341066,
+      "R50": 1.8278718365369684,
+      "central_density": 1.3303376791526493,
+      "quadrupole_Q2": -6.600635249056834,
+      "maximum_speed_change_from_isolated_template_percent": 13.2524368424628,
+      "maximum_absolute_disk_sphere_speed_difference_percent": 2.9312850232044774,
+      "maximum_absolute_disk_sphere_speed_difference_above_half_R50_percent": 2.718703284244861,
+      "disk_sphere_difference_at_R50_percent": 2.110264459592799
+    }
+  ],
+  "resolution_comparisons": [
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00010599754090926269,
+      "maximum_speed_difference_over_peak_above_half_R50": 1.929962551325524e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 2.4136826136000877e-05,
+      "maximum_density_difference_over_peak": 6.154507830242612e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00010228020570245276,
+      "maximum_speed_difference_over_peak_above_half_R50": 1.9338975262821097e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 2.4400475391983534e-05,
+      "maximum_density_difference_over_peak": 6.238913761250896e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0022615664117542345,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0001952517808212484
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00010027894340633378,
+      "maximum_speed_difference_over_peak_above_half_R50": 7.000739364579425e-06,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 7.0017235136443645e-06,
+      "maximum_density_difference_over_peak": 9.648673409024822e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 9.484621977852634e-05,
+      "maximum_speed_difference_over_peak_above_half_R50": 7.961633822702875e-06,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 7.966456265107169e-06,
+      "maximum_density_difference_over_peak": 0.00010906526475980273,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0021861779481047172,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0006512747765530236
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 9.812894274197217e-05,
+      "maximum_speed_difference_over_peak_above_half_R50": 1.030982867186162e-06,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 1.0309818042619767e-06,
+      "maximum_density_difference_over_peak": 0.00010633445180422062,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 9.712069628421447e-05,
+      "maximum_speed_difference_over_peak_above_half_R50": 1.4493544548056658e-06,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 1.457524651415909e-06,
+      "maximum_density_difference_over_peak": 0.0001316606295910034,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0014103036611867736,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 5.41966727385379e-05
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.0001976797514426219,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.343082438041505e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.778301361789804e-05,
+      "maximum_density_difference_over_peak": 4.9974339558309984e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00019809638493692233,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.343082380824829e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.775858845689317e-05,
+      "maximum_density_difference_over_peak": 4.9851411030099064e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.00039050451627886673,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 8.293042124130068e-05
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00019685336459574426,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.249539043267602e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.605579328269659e-05,
+      "maximum_density_difference_over_peak": 4.851949986653792e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00020049439982139144,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.2562061552299263e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.597131591503988e-05,
+      "maximum_density_difference_over_peak": 4.7759399968962425e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0035370023486747115,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.00021271544943246568
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00019483864798135723,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.0936860495859244e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.327616627490926e-05,
+      "maximum_density_difference_over_peak": 4.651123288692054e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.0,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.0
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "principal_grid": [
+        1919,
+        64,
+        24.0
+      ],
+      "refined_grid": [
+        3839,
+        128,
+        24.0
+      ],
+      "radial_window": [
+        0.1,
+        12.0
+      ],
+      "maximum_speed_difference_over_peak": 0.00020359756200104292,
+      "maximum_speed_difference_over_peak_above_half_R50": 2.124861933689647e-05,
+      "maximum_pointwise_relative_speed_difference_above_half_R50": 3.33750060191873e-05,
+      "maximum_density_difference_over_peak": 4.547229302718511e-05,
+      "maximum_change_disk_sphere_difference_percentage_points": 0.008854218625176102,
+      "maximum_change_disk_sphere_difference_above_half_R50_percentage_points": 0.000222523951420861
+    }
+  ],
+  "independent_radial_checks": [
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "reference_epsilon": -1.0349137341255186,
+      "computed_epsilon": -1.0349187007468592,
+      "maximum_density_error_over_peak": 2.074258251336594e-05,
+      "maximum_vc2_error_over_peak": 1.289900028383876e-05,
+      "minimum_u_inside_R99": 0.053221533975056405
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "reference_epsilon": -3.1201209329654143,
+      "computed_epsilon": -3.120136696253438,
+      "maximum_density_error_over_peak": 3.361413540522009e-05,
+      "maximum_vc2_error_over_peak": 3.96819082461129e-05,
+      "minimum_u_inside_R99": 0.11907569179525049
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "reference_epsilon": -8.571954178590671,
+      "computed_epsilon": -8.571992542980752,
+      "maximum_density_error_over_peak": 3.779148936730923e-05,
+      "maximum_vc2_error_over_peak": 7.45995145832017e-05,
+      "minimum_u_inside_R99": 0.22409359849685156
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "reference_epsilon": -0.8512163478236308,
+      "computed_epsilon": -0.8512200273941426,
+      "maximum_density_error_over_peak": 1.669616416750913e-05,
+      "maximum_vc2_error_over_peak": 9.741299296652273e-06,
+      "minimum_u_inside_R99": 0.04413825564333493
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "reference_epsilon": -1.1463657158230056,
+      "computed_epsilon": -1.1463694712356782,
+      "maximum_density_error_over_peak": 1.620910918747451e-05,
+      "maximum_vc2_error_over_peak": 9.790108981655051e-06,
+      "minimum_u_inside_R99": 0.046685722753724214
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "reference_epsilon": -1.7989212516880806,
+      "computed_epsilon": -1.7989251934756978,
+      "maximum_density_error_over_peak": 1.553672165655519e-05,
+      "maximum_vc2_error_over_peak": 1.0124996644151222e-05,
+      "minimum_u_inside_R99": 0.051288746723687245
+    }
+  ],
+  "all_solution_checks": [
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.0349336012673815,
+      "number": 33.34725351673478,
+      "relative_number_error": 2.5758728483538107e-11,
+      "T": 9.252103963881543,
+      "Q": 2.5776785004079894,
+      "W": -21.705496553255628,
+      "V_b": -5.508661035241187,
+      "W_b": -4.531271941039291,
+      "energy": -15.384375124207281,
+      "relative_stationary_residual": 7.921210151948782e-11,
+      "relative_virial_residual": 1.8101874559773798e-05,
+      "relative_multiplier_residual": 7.545843073040128e-11,
+      "rms_axis_ratio": 0.9999999999999866,
+      "R50": 1.7444387276414834,
+      "R99": 4.284495656438697,
+      "quadrupole_Q2": -1.2365644813205253e-12,
+      "central_density_mean": 1.6735181007867395,
+      "central_density_angular_spread": 5.0182080713057076e-14,
+      "min_psi_over_peak": 1.2418344221431021e-13,
+      "green_reciprocity_relative": 1.0014982459625084e-15,
+      "exterior_monopole_relative": 4.3298697960381105e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.1936380622336998e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.1936380666938477e-05
+        }
+      ],
+      "newton_history": [
+        0.16187480480027797,
+        0.14316368708112848,
+        0.10958867412810692,
+        0.05658542063205695,
+        0.0013647073382975076,
+        1.0939977123692585e-05,
+        8.018368890439955e-11
+      ],
+      "seconds": 2.5571706000482664
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.0139494352972929,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 8.964815705101373,
+      "Q": 2.4547593624961253,
+      "W": -21.36294959800317,
+      "V_b": -4.960864105225061,
+      "W_b": -3.930511726791771,
+      "energy": -14.904238635630733,
+      "relative_stationary_residual": 2.7489601062276373e-12,
+      "relative_virial_residual": 1.771892310136439e-05,
+      "relative_multiplier_residual": 4.9120802624651484e-15,
+      "rms_axis_ratio": 0.9905765382633885,
+      "R50": 1.7728566395953105,
+      "R99": 4.346045170782749,
+      "quadrupole_Q2": -0.898038048680478,
+      "central_density_mean": 1.591607761691503,
+      "central_density_angular_spread": 1.2693638451466427e-07,
+      "min_psi_over_peak": 1.7515447568464188e-13,
+      "green_reciprocity_relative": 8.722727993852609e-16,
+      "exterior_monopole_relative": 2.220446049250313e-16,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.156840609657286e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.1554699094555185e-05
+        }
+      ],
+      "newton_history": [
+        0.006248660770325461,
+        5.24501511878288e-05,
+        1.0697769149123037e-08,
+        2.7489601062276297e-12
+      ],
+      "seconds": 1.2766994999255985
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -3.1201839885837366,
+      "number": 33.34725351614976,
+      "relative_number_error": 8.215428337621233e-12,
+      "T": 27.240003531657425,
+      "Q": 13.118515469857988,
+      "W": -37.24806974028714,
+      "V_b": -83.03046147598775,
+      "W_b": -56.58412507364321,
+      "energy": -79.92001221475948,
+      "relative_stationary_residual": 9.181754548641455e-12,
+      "relative_virial_residual": 3.579431308336e-05,
+      "relative_multiplier_residual": 8.221570259207382e-12,
+      "rms_axis_ratio": 1.0000000000000022,
+      "R50": 1.016065067733294,
+      "R99": 2.508888072338571,
+      "quadrupole_Q2": 6.84923440240371e-14,
+      "central_density_mean": 8.808210369350327,
+      "central_density_angular_spread": 3.8902214782865485e-13,
+      "min_psi_over_peak": 8.442399248830897e-24,
+      "green_reciprocity_relative": 3.4660201879137455e-16,
+      "exterior_monopole_relative": 5.551115123125783e-16,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 6.482595294018949e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 6.48259529751964e-05
+        }
+      ],
+      "newton_history": [
+        0.1395724132225936,
+        0.06497389867405372,
+        0.0014730480381249316,
+        2.5130769465765933e-06,
+        9.275655570375769e-12
+      ],
+      "seconds": 1.4347501000156626
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -2.8776491187772213,
+      "number": 33.34725351588383,
+      "relative_number_error": 2.4069635173873394e-13,
+      "T": 25.19154513329607,
+      "Q": 11.662033677847802,
+      "W": -35.74088361817808,
+      "V_b": -72.99553994628695,
+      "W_b": -49.62537988413101,
+      "energy": -71.88284475332117,
+      "relative_stationary_residual": 2.1997386168937097e-12,
+      "relative_virial_residual": 3.429689559256287e-05,
+      "relative_multiplier_residual": 2.889212996693915e-13,
+      "rms_axis_ratio": 0.942669864253921,
+      "R50": 1.059188191715203,
+      "R99": 2.625259238281171,
+      "quadrupole_Q2": -1.983684734658686,
+      "central_density_mean": 8.105103434759846,
+      "central_density_angular_spread": 7.007426013672102e-06,
+      "min_psi_over_peak": 7.847857903811312e-23,
+      "green_reciprocity_relative": 3.601280978493127e-16,
+      "exterior_monopole_relative": 2.55351295663786e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 6.409948954756152e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 6.398568958232258e-05
+        }
+      ],
+      "newton_history": [
+        0.03489534053962623,
+        0.000628258977452277,
+        4.889107455904037e-07,
+        2.2001357537677943e-12
+      ],
+      "seconds": 1.1562314999755472
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -8.572107641556185,
+      "number": 33.34725351599247,
+      "relative_number_error": 3.4987568398037183e-12,
+      "T": 57.03944001951906,
+      "Q": 38.699910264595786,
+      "W": -53.81309124203534,
+      "V_b": -312.6693247540751,
+      "W_b": -176.35297493709388,
+      "energy": -270.7430657119956,
+      "relative_stationary_residual": 2.1364301476234456e-12,
+      "relative_virial_residual": 5.45026202363992e-05,
+      "relative_multiplier_residual": 2.9629121309581413e-13,
+      "rms_axis_ratio": 1.000000000000003,
+      "R50": 0.7067498401561039,
+      "R99": 1.6780133731593652,
+      "quadrupole_Q2": 4.627861082683381e-14,
+      "central_density_mean": 24.09678794874636,
+      "central_density_angular_spread": 9.698908343125368e-13,
+      "min_psi_over_peak": 1.803345383202059e-39,
+      "green_reciprocity_relative": 3.9512129476221185e-16,
+      "exterior_monopole_relative": 3.3306690738754696e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 0.00012151838034967509
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 0.00012151838037908798
+        }
+      ],
+      "newton_history": [
+        0.0562768806932579,
+        0.0011145475203038447,
+        1.063801484290747e-06,
+        2.1461544256581573e-12
+      ],
+      "seconds": 1.0886163999093696
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -7.706984046581083,
+      "number": 33.34725351596956,
+      "relative_number_error": 2.8117508321656715e-12,
+      "T": 53.76833017863729,
+      "Q": 35.38424661792826,
+      "W": -51.95415669213297,
+      "V_b": -277.6352608752628,
+      "W_b": -161.7239504849785,
+      "energy": -240.43684077083023,
+      "relative_stationary_residual": 1.6660238403757625e-12,
+      "relative_virial_residual": 5.2850683193851634e-05,
+      "relative_multiplier_residual": 6.325599518591574e-13,
+      "rms_axis_ratio": 0.8916084270618503,
+      "R50": 0.7320292012445605,
+      "R99": 1.761941690045326,
+      "quadrupole_Q2": -1.7653850900345265,
+      "central_density_mean": 23.29191008969385,
+      "central_density_angular_spread": 6.103754366648673e-05,
+      "min_psi_over_peak": 2.04557972308088e-37,
+      "green_reciprocity_relative": 5.4134713378442405e-16,
+      "exterior_monopole_relative": 9.992007221626409e-16,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 0.00012538768111620394
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 0.00012524817352200157
+        }
+      ],
+      "newton_history": [
+        0.04946574956876513,
+        0.001140473750850808,
+        9.348031242303505e-07,
+        1.6759803109371782e-12
+      ],
+      "seconds": 1.1430455000372604
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.0349187007468592,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 9.251882313161401,
+      "Q": 2.5775404090003455,
+      "W": -21.705039663251593,
+      "V_b": -5.508580086785543,
+      "W_b": -4.531227463595511,
+      "energy": -15.38419702787539,
+      "relative_stationary_residual": 1.5627422128699797e-11,
+      "relative_virial_residual": 4.525280832077554e-06,
+      "relative_multiplier_residual": 9.058923130833194e-15,
+      "rms_axis_ratio": 0.9999999999999459,
+      "R50": 1.7444617738376773,
+      "R99": 4.284517547063093,
+      "quadrupole_Q2": -4.983280813816031e-12,
+      "central_density_mean": 1.6734140071368417,
+      "central_density_angular_spread": 1.0147438445073931e-13,
+      "min_psi_over_peak": 6.209600186840235e-14,
+      "green_reciprocity_relative": 0.0,
+      "exterior_monopole_relative": 1.2878587085651816e-14,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.482166270037595e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.482166287103196e-06
+        }
+      ],
+      "newton_history": [
+        0.23426197935726492,
+        3.586459912574389e-07,
+        1.5627422128833497e-11
+      ],
+      "seconds": 4.865473999991082
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.0139347767123452,
+      "number": 33.34725351587579,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 8.964598805629569,
+      "Q": 2.4546282542198408,
+      "W": -21.362503500355334,
+      "V_b": -4.960788360944398,
+      "W_b": -3.9304668375261955,
+      "energy": -14.904064801450321,
+      "relative_stationary_residual": 1.1153844926277715e-10,
+      "relative_virial_residual": 4.429532618407532e-06,
+      "relative_multiplier_residual": 1.08671496433739e-13,
+      "rms_axis_ratio": 0.9905752348411326,
+      "R50": 1.7728832876917,
+      "R99": 4.346063026223744,
+      "quadrupole_Q2": -0.8981915456458855,
+      "central_density_mean": 1.5915061719931587,
+      "central_density_angular_spread": 8.143819618666726e-09,
+      "min_psi_over_peak": 8.756780344274986e-14,
+      "green_reciprocity_relative": 4.826658063122884e-16,
+      "exterior_monopole_relative": 5.329070518200751e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.4471798999889645e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.3876321396293486e-06
+        }
+      ],
+      "newton_history": [
+        0.23161152928211937,
+        8.065179407620904e-05,
+        1.1153844926295172e-10
+      ],
+      "seconds": 4.77711869997438
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -3.120136696253438,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 27.239484636929692,
+      "Q": 13.117479729456635,
+      "W": -37.24671637081558,
+      "V_b": -83.02900076836355,
+      "W_b": -56.58385250129203,
+      "energy": -79.9187527727928,
+      "relative_stationary_residual": 1.2087313726242916e-11,
+      "relative_virial_residual": 8.947938094994894e-06,
+      "relative_multiplier_residual": 1.1199544491035444e-14,
+      "rms_axis_ratio": 0.9999999999999838,
+      "R50": 1.0160806823059378,
+      "R99": 2.508864792538914,
+      "quadrupole_Q2": -5.09064719093391e-13,
+      "central_density_mean": 8.807324164861097,
+      "central_density_angular_spread": 7.212008767965017e-13,
+      "min_psi_over_peak": 4.217956395353187e-24,
+      "green_reciprocity_relative": 6.66055067378099e-16,
+      "exterior_monopole_relative": 9.880984919163893e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.6179356763958974e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.617935677803867e-05
+        }
+      ],
+      "newton_history": [
+        0.22683276675031636,
+        2.4256021405085074e-05,
+        1.2087313726261875e-11
+      ],
+      "seconds": 4.522154700011015
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -2.8776031008759206,
+      "number": 33.34725351587581,
+      "relative_number_error": 4.440892098500626e-16,
+      "T": 25.19099704134315,
+      "Q": 11.661098014995975,
+      "W": -35.73960579538977,
+      "V_b": -72.99414160353552,
+      "W_b": -49.624950450805585,
+      "energy": -71.88165234258616,
+      "relative_stationary_residual": 1.3037799269142335e-11,
+      "relative_virial_residual": 8.573599056342574e-06,
+      "relative_multiplier_residual": 2.813732691179403e-15,
+      "rms_axis_ratio": 0.9426628634638515,
+      "R50": 1.0592061279547476,
+      "R99": 2.6252737096643672,
+      "quadrupole_Q2": -1.9840205556135333,
+      "central_density_mean": 8.1041333178706,
+      "central_density_angular_spread": 4.4938616916567753e-07,
+      "min_psi_over_peak": 3.916124168798345e-23,
+      "green_reciprocity_relative": 8.475530603371476e-16,
+      "exterior_monopole_relative": 8.881784197001252e-16,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.6429124505300544e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.596899163947294e-05
+        }
+      ],
+      "newton_history": [
+        0.22459520506403724,
+        8.41463018254284e-06,
+        1.3037799269225258e-11
+      ],
+      "seconds": 4.7305314999539405
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 0.5058442691146039,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -8.571992542980752,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 57.03930543978122,
+      "Q": 38.69606569335971,
+      "W": -53.81011246985719,
+      "V_b": -312.66362035376505,
+      "W_b": -176.35355962568633,
+      "energy": -270.7383616904813,
+      "relative_stationary_residual": 6.520333782822799e-12,
+      "relative_virial_residual": 1.362449629638125e-05,
+      "relative_multiplier_residual": 9.545079994083734e-15,
+      "rms_axis_ratio": 1.0000000000000016,
+      "R50": 0.7067552213980282,
+      "R99": 1.677956154526588,
+      "quadrupole_Q2": 2.2213733196802514e-14,
+      "central_density_mean": 24.094069336752625,
+      "central_density_angular_spread": 1.936228954946273e-12,
+      "min_psi_over_peak": 8.966416721581862e-40,
+      "green_reciprocity_relative": 9.583345612729124e-16,
+      "exterior_monopole_relative": 8.881784197001252e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.0298495730025355e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.0298495740787776e-05
+        }
+      ],
+      "newton_history": [
+        0.17430050386887988,
+        3.364468282953108e-07,
+        6.520333782827411e-12
+      ],
+      "seconds": 4.925411999924108
+    },
+    {
+      "q_over_isolated_R50": 0.25,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "a": 0.40467541529168316,
+      "b": 0.10116885382292076,
+      "q": 0.5058442691146039,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -7.706870471169143,
+      "number": 33.347253515876154,
+      "relative_number_error": 1.0658141036401503e-14,
+      "T": 53.76796882571412,
+      "Q": 35.38058171327567,
+      "W": -51.95130377632811,
+      "V_b": -277.6294881157912,
+      "W_b": -161.723556047815,
+      "energy": -240.43224135312954,
+      "relative_stationary_residual": 8.741803218435052e-12,
+      "relative_virial_residual": 1.321150796336717e-05,
+      "relative_multiplier_residual": 3.2933414291689734e-13,
+      "rms_axis_ratio": 0.8915967225965685,
+      "R50": 0.7320367803818899,
+      "R99": 1.7619268312215814,
+      "quadrupole_Q2": -1.7656846790662417,
+      "central_density_mean": 23.288298638893814,
+      "central_density_angular_spread": 3.916381661639434e-06,
+      "min_psi_over_peak": 1.0148358545099656e-37,
+      "green_reciprocity_relative": 1.3779057964056597e-16,
+      "exterior_monopole_relative": 3.552713678800501e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.175801260085128e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.121507928674054e-05
+        }
+      ],
+      "newton_history": [
+        0.1780405471998707,
+        3.18168606355482e-05,
+        8.741803245364489e-12
+      ],
+      "seconds": 4.892428599996492
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -0.8512310665996372,
+      "number": 33.347253515878556,
+      "relative_number_error": 8.260059303211165e-14,
+      "T": 6.953464850087283,
+      "Q": 1.656095402542305,
+      "W": -18.79990221415111,
+      "V_b": -1.0520694053637862,
+      "W_b": -0.07503184228533065,
+      "energy": -11.242411366885309,
+      "relative_stationary_residual": 2.1881120440351606e-12,
+      "relative_virial_residual": 1.4932574820938285e-05,
+      "relative_multiplier_residual": 1.5186933241731447e-13,
+      "rms_axis_ratio": 0.9999999999999817,
+      "R50": 2.017158894711968,
+      "R99": 4.879605468132913,
+      "quadrupole_Q2": -2.2361824751449708e-12,
+      "central_density_mean": 1.0084822658703718,
+      "central_density_angular_spread": 2.1316282072803006e-14,
+      "min_psi_over_peak": 3.4998618817405246e-12,
+      "green_reciprocity_relative": 1.3147375685493274e-15,
+      "exterior_monopole_relative": 1.6653345369377348e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.5762500030469832e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.576250007523051e-05
+        }
+      ],
+      "newton_history": [
+        0.031564425066355456,
+        0.00013483139006177547,
+        2.688160822443851e-07,
+        2.1885005371538097e-12
+      ],
+      "seconds": 1.287713999976404
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -0.8509263326768083,
+      "number": 33.34725351591186,
+      "relative_number_error": 1.0813572259849025e-12,
+      "T": 6.977524145206497,
+      "Q": 1.664571050613014,
+      "W": -18.83221770938797,
+      "V_b": -1.0182869668529637,
+      "W_b": -0.11626020581506488,
+      "energy": -11.208409480421421,
+      "relative_stationary_residual": 2.9330785486894222e-12,
+      "relative_virial_residual": 1.4963051400240396e-05,
+      "relative_multiplier_residual": 2.033328599916947e-12,
+      "rms_axis_ratio": 0.9966688646373205,
+      "R50": 2.0137228429997336,
+      "R99": 4.870871605871859,
+      "quadrupole_Q2": -0.4049657222117943,
+      "central_density_mean": 1.0134961808996765,
+      "central_density_angular_spread": 6.406186692231586e-11,
+      "min_psi_over_peak": 3.271903017350121e-12,
+      "green_reciprocity_relative": 9.846374301236045e-16,
+      "exterior_monopole_relative": 2.886579864025407e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.5875673291690013e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.587567301671641e-05
+        }
+      ],
+      "newton_history": [
+        0.0007425094549768962,
+        1.6453977791082015e-06,
+        2.982494070565118e-12
+      ],
+      "seconds": 0.8784633000614122
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.1463807379736244,
+      "number": 33.34725351589645,
+      "relative_number_error": 6.192824031359123e-13,
+      "T": 7.328599146996726,
+      "Q": 1.7845891679635897,
+      "W": -19.2929263245246,
+      "V_b": -10.540573928855407,
+      "W_b": -0.7177323088286406,
+      "energy": -20.72031193841969,
+      "relative_stationary_residual": 2.3889869047493336e-12,
+      "relative_virial_residual": 1.535004602339115e-05,
+      "relative_multiplier_residual": 8.839348749149906e-13,
+      "rms_axis_ratio": 0.9999999999999969,
+      "R50": 1.9674605347189835,
+      "R99": 4.722465965124576,
+      "quadrupole_Q2": -3.554197311490602e-13,
+      "central_density_mean": 1.079852614227783,
+      "central_density_angular_spread": 2.9976021664879227e-14,
+      "min_psi_over_peak": 3.536772585704457e-13,
+      "green_reciprocity_relative": 1.4468706647796487e-15,
+      "exterior_monopole_relative": 2.55351295663786e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.6460361614002253e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.6460361657075847e-05
+        }
+      ],
+      "newton_history": [
+        0.04321764873066803,
+        0.0002327286545222236,
+        7.311742654652427e-07,
+        2.404196367235435e-12
+      ],
+      "seconds": 1.2768208999186754
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.1425659221136044,
+      "number": 33.34725351587581,
+      "relative_number_error": 4.440892098500626e-16,
+      "T": 7.541117346022361,
+      "Q": 1.8606997290870482,
+      "W": -19.56444523779136,
+      "V_b": -10.235061791936744,
+      "W_b": -1.099566151079665,
+      "energy": -20.397689954618695,
+      "relative_stationary_residual": 2.0542262254820844e-12,
+      "relative_virial_residual": 1.5606381005594912e-05,
+      "relative_multiplier_residual": 5.7811010374573875e-15,
+      "rms_axis_ratio": 0.9715142358553689,
+      "R50": 1.9403914853517348,
+      "R99": 4.655701264534702,
+      "quadrupole_Q2": -3.211336682967178,
+      "central_density_mean": 1.124581745951288,
+      "central_density_angular_spread": 6.975207078596668e-10,
+      "min_psi_over_peak": 1.9371058516971784e-13,
+      "green_reciprocity_relative": 1.5888872219209106e-15,
+      "exterior_monopole_relative": 8.881784197001252e-16,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.7467232039724553e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.7467229491790826e-05
+        }
+      ],
+      "newton_history": [
+        0.006243315566850196,
+        0.00010200325893756986,
+        9.177436940015526e-09,
+        2.0542262288238706e-12
+      ],
+      "seconds": 1.3290096001001075
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.7989370193555474,
+      "number": 33.347253515877114,
+      "relative_number_error": 3.952393967665557e-14,
+      "T": 8.037001026776068,
+      "Q": 2.034983555082268,
+      "W": -20.18841223156819,
+      "V_b": -31.719752517352315,
+      "W_b": -1.9901829607779409,
+      "energy": -41.83618016706217,
+      "relative_stationary_residual": 1.262445853006915e-12,
+      "relative_virial_residual": 1.6120338087589142e-05,
+      "relative_multiplier_residual": 3.8672064662183994e-14,
+      "rms_axis_ratio": 0.9999999999999907,
+      "R50": 1.883106891667438,
+      "R99": 4.463343874294513,
+      "quadrupole_Q2": -9.699996829270812e-13,
+      "central_density_mean": 1.2180665946244118,
+      "central_density_angular_spread": 2.0872192862952943e-14,
+      "min_psi_over_peak": 4.327822529670052e-15,
+      "green_reciprocity_relative": 6.184049255590478e-16,
+      "exterior_monopole_relative": 1.1102230246251565e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.777123160022928e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 1.77712316428966e-05
+        }
+      ],
+      "newton_history": [
+        0.025852238626618732,
+        9.674788675094316e-05,
+        1.3635401629255124e-07,
+        1.2624932522978622e-12
+      ],
+      "seconds": 1.2126976000145078
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 1919,
+      "na": 64,
+      "radius": 24.0,
+      "dr": 0.0125,
+      "dmu": 0.015625,
+      "epsilon": -1.785107936659487,
+      "number": 33.347253515878805,
+      "relative_number_error": 9.015010959956271e-14,
+      "T": 8.56309704792869,
+      "Q": 2.228301568387959,
+      "W": -20.805054732594243,
+      "V_b": -30.938037636511353,
+      "W_b": -3.005646351815519,
+      "energy": -40.95169375278895,
+      "relative_stationary_residual": 1.3503578621801554e-12,
+      "relative_virial_residual": 1.670327178035465e-05,
+      "relative_multiplier_residual": 6.684265298916814e-14,
+      "rms_axis_ratio": 0.9338748633255964,
+      "R50": 1.8278504928924981,
+      "R99": 4.333710212284971,
+      "quadrupole_Q2": -6.599395564104718,
+      "central_density_mean": 1.330398332875455,
+      "central_density_angular_spread": 2.3914408231462403e-09,
+      "min_psi_over_peak": 9.461251726697247e-16,
+      "green_reciprocity_relative": 3.0145743923263106e-16,
+      "exterior_monopole_relative": 3.552713678800501e-15,
+      "angular_first_ell": [
+        0.0,
+        2.0000000000000493,
+        4.000000000000014,
+        6.000000000000026
+      ],
+      "maximum_angular_ell_error": 4.929390229335695e-14,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.0274310291470357e-05
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 2.0274304517706738e-05
+        }
+      ],
+      "newton_history": [
+        0.01119423575714503,
+        0.00034595227633115816,
+        1.672520031994169e-07,
+        1.3505936624988086e-12
+      ],
+      "seconds": 1.3255758000304922
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -0.8512200273941426,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 6.953307004240506,
+      "Q": 1.6560172529718935,
+      "W": -18.79956162867363,
+      "V_b": -1.0520683041402266,
+      "W_b": -0.07503367985806736,
+      "energy": -11.242305675601456,
+      "relative_stationary_residual": 1.2884825782031361e-11,
+      "relative_virial_residual": 3.7330000375513377e-06,
+      "relative_multiplier_residual": 1.0481975000282988e-15,
+      "rms_axis_ratio": 0.9999999999999305,
+      "R50": 2.017184583459772,
+      "R99": 4.879625181324037,
+      "quadrupole_Q2": -8.470836925714025e-12,
+      "central_density_mean": 1.0084317569212682,
+      "central_density_angular_spread": 1.3211653993039363e-13,
+      "min_psi_over_peak": 1.7500905179626973e-12,
+      "green_reciprocity_relative": 1.3431539354896555e-15,
+      "exterior_monopole_relative": 6.994405055138486e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.940127403062836e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.940127419703163e-06
+        }
+      ],
+      "newton_history": [
+        0.18549890755719098,
+        3.1154346302281624e-05,
+        1.2884825782205011e-11
+      ],
+      "seconds": 4.957591999904253
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 0.1,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -0.8509152527118834,
+      "number": 33.34725351587581,
+      "relative_number_error": 4.440892098500626e-16,
+      "T": 6.977366443282192,
+      "Q": 1.6644926874722898,
+      "W": -18.831877038702356,
+      "V_b": -1.018284393530701,
+      "W_b": -0.11626303251947545,
+      "energy": -11.208302301478573,
+      "relative_stationary_residual": 1.2925414241255901e-11,
+      "relative_virial_residual": 3.740618295960018e-06,
+      "relative_multiplier_residual": 2.433628231692245e-15,
+      "rms_axis_ratio": 0.9966682214890669,
+      "R50": 2.0137510717977367,
+      "R99": 4.870893377709175,
+      "quadrupole_Q2": -0.4050556806529244,
+      "central_density_mean": 1.0134455447765491,
+      "central_density_angular_spread": 4.046984969363621e-12,
+      "min_psi_over_peak": 1.6356554072055054e-12,
+      "green_reciprocity_relative": 6.704872904309378e-16,
+      "exterior_monopole_relative": 5.329070518200751e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.968416533748855e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 3.968416476959609e-06
+        }
+      ],
+      "newton_history": [
+        0.18614287198087306,
+        5.2870243555355903e-05,
+        1.292541424194909e-11
+      ],
+      "seconds": 5.343501099967398
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.1463694712356782,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 7.328443668892954,
+      "Q": 1.7845077287606441,
+      "W": -19.29258435408566,
+      "V_b": -10.54056379839958,
+      "W_b": -0.7177493830390702,
+      "energy": -20.72019675483164,
+      "relative_stationary_residual": 1.1298845850906362e-11,
+      "relative_virial_residual": 3.837364439807796e-06,
+      "relative_multiplier_residual": 4.6467095747052836e-17,
+      "rms_axis_ratio": 0.9999999999998958,
+      "R50": 1.9674841686210545,
+      "R99": 4.722489613349748,
+      "quadrupole_Q2": -1.2032438814934694e-11,
+      "central_density_mean": 1.0798001088989662,
+      "central_density_angular_spread": 6.217248937900877e-14,
+      "min_psi_over_peak": 1.7684344305836213e-13,
+      "green_reciprocity_relative": 1.3152863340005146e-16,
+      "exterior_monopole_relative": 8.548717289613705e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.114558884260208e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.114558900223915e-06
+        }
+      ],
+      "newton_history": [
+        0.1703757820854475,
+        2.0442662999766326e-05,
+        1.129884585090622e-11
+      ],
+      "seconds": 4.9918510999996215
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 1.0,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.1425542373855064,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 7.540962722512744,
+      "Q": 1.8606160691976197,
+      "W": -19.564100823090005,
+      "V_b": -10.235039024460221,
+      "W_b": -1.0995922112633962,
+      "energy": -20.397561055839862,
+      "relative_stationary_residual": 1.1820294053652745e-11,
+      "relative_virial_residual": 3.901445148785757e-06,
+      "relative_multiplier_residual": 1.0070408020465477e-14,
+      "rms_axis_ratio": 0.9715091325895289,
+      "R50": 1.9404158600657195,
+      "R99": 4.655705956551074,
+      "quadrupole_Q2": -3.212002945271131,
+      "central_density_mean": 1.1245279120379963,
+      "central_density_angular_spread": 4.404432374371936e-11,
+      "min_psi_over_peak": 9.661135250008228e-14,
+      "green_reciprocity_relative": 0.0,
+      "exterior_monopole_relative": 9.2148511043888e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.366238234911856e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.366237318048448e-06
+        }
+      ],
+      "newton_history": [
+        0.17588145738513666,
+        1.1437776717059594e-06,
+        1.1820294053797805e-11
+      ],
+      "seconds": 5.3306857999414206
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.0,
+      "a": 0.0,
+      "b": 8.093508305833662,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.7989251934756978,
+      "number": 33.347253515875806,
+      "relative_number_error": 2.220446049250313e-16,
+      "T": 8.036848198026453,
+      "Q": 2.0348949449846225,
+      "W": -20.188063329775325,
+      "V_b": -31.71972591137538,
+      "W_b": -1.9902285242863311,
+      "energy": -41.83604609813963,
+      "relative_stationary_residual": 7.439580280821804e-12,
+      "relative_virial_residual": 4.029929162560355e-06,
+      "relative_multiplier_residual": 5.033915934738091e-15,
+      "rms_axis_ratio": 0.9999999999999348,
+      "R50": 1.8831283972422594,
+      "R99": 4.463368052966845,
+      "quadrupole_Q2": -6.8344252468829065e-12,
+      "central_density_mean": 1.2180098267064488,
+      "central_density_angular_spread": 1.7053025658242404e-13,
+      "min_psi_over_peak": 2.1636313405247114e-15,
+      "green_reciprocity_relative": 6.341728149494801e-16,
+      "exterior_monopole_relative": 8.548717289613705e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.442208653156399e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 4.442208669179645e-06
+        }
+      ],
+      "newton_history": [
+        0.11892659937328011,
+        8.681338166658488e-06,
+        7.439580280914798e-12
+      ],
+      "seconds": 4.911049599992111
+    },
+    {
+      "q_over_isolated_R50": 4.0,
+      "fraction": 3.0,
+      "flattening": 0.8,
+      "a": 6.474806644666931,
+      "b": 1.6187016611667322,
+      "q": 8.093508305833662,
+      "nr": 3839,
+      "na": 128,
+      "radius": 24.0,
+      "dr": 0.00625,
+      "dmu": 0.0078125,
+      "epsilon": -1.7850949060082502,
+      "number": 33.347253515875906,
+      "relative_number_error": 3.1086244689504383e-15,
+      "T": 8.562945869204556,
+      "Q": 2.2282064643682333,
+      "W": -20.80469545987213,
+      "V_b": -30.937980258716777,
+      "W_b": -3.0057162475738783,
+      "energy": -40.95152338501612,
+      "relative_stationary_residual": 8.584939982070629e-12,
+      "relative_virial_residual": 4.175655130531962e-06,
+      "relative_multiplier_residual": 6.011108172757801e-13,
+      "rms_axis_ratio": 0.9338642639341066,
+      "R50": 1.8278718365369684,
+      "R99": 4.333714455880749,
+      "quadrupole_Q2": -6.600635249056834,
+      "central_density_mean": 1.3303376791526493,
+      "central_density_angular_spread": 1.511413216803703e-10,
+      "min_psi_over_peak": 4.697976407551164e-16,
+      "green_reciprocity_relative": 2.096158573264526e-15,
+      "exterior_monopole_relative": 5.551115123125783e-15,
+      "angular_first_ell": [
+        0.0,
+        1.9999999999997762,
+        3.999999999999843,
+        5.999999999999934
+      ],
+      "maximum_angular_ell_error": 2.2382096176443156e-13,
+      "differentiated_poisson_checks": [
+        {
+          "maximum_even_l": 20,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.067879264016264e-06
+        },
+        {
+          "maximum_even_l": 32,
+          "radial_window": [
+            0.2,
+            12.0
+          ],
+          "relative_volume_L2_residual": 5.067876316598348e-06
+        }
+      ],
+      "newton_history": [
+        0.12755063106473866,
+        3.873469527406623e-05,
+        8.584940025394291e-12
+      ],
+      "seconds": 4.989665700006299
+    }
+  ]
+}

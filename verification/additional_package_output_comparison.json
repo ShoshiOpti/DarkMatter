@@ -1,0 +1,394 @@
+{
+  "passed": true,
+  "baseline_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\additional_packages_baseline_f3cc5f67479b451389166c683a454ddf",
+  "csv_tables_compared": 73,
+  "csv_fields_compared": 2066861,
+  "changed_numeric_fields": 900,
+  "maximum_absolute_csv_difference": 1.688249540165998e-11,
+  "tolerance": "Existing reference tolerances: 1e-10 absolute + 1e-10 relative; p_* uses 1e-300 absolute + 1e-9 relative.",
+  "figures_compared": 47,
+  "figures_byte_identical": 47,
+  "bootstrap_values_bit_identical": 5199948,
+  "bootstrap_payloads": {
+    "means.npy": {
+      "bit_identical": true,
+      "sha256": "79cfff5934a9fecd1a470cc06b0ef5e773222bb314e3b3585971856b107c9138"
+    },
+    "tstats.npy": {
+      "bit_identical": true,
+      "sha256": "24a108765b5336fb12d516b971b8162858b3f8153d54038cf24b2f3084dc572f"
+    },
+    "pooled_means.npy": {
+      "bit_identical": true,
+      "sha256": "c93d066a1649daf69b72b5cdb22109a1103838db221f9fda62de02204ce0d2b0"
+    }
+  },
+  "tables": {
+    "baryons_only/galaxy_scores.csv": {
+      "rows": 2905,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "baryons_only/model_summary.csv": {
+      "rows": 28,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "baryons_only/paired_galaxy_scores.csv": {
+      "rows": 1420,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "baryons_only/paired_summary.csv": {
+      "rows": 20,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "baryons_only/sign_tests.csv": {
+      "rows": 5,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryonic_geometry_backreaction.series.csv": {
+      "rows": 17874,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryonic_scale_sensitivity.series.csv": {
+      "rows": 9606,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryonic_two_field_background.series.csv": {
+      "rows": 2240,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryonic_two_field_response.series.csv": {
+      "rows": 1444,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryonic_two_field_tracer.series.csv": {
+      "rows": 726,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryons_only_outer_examples.series.csv": {
+      "rows": 555,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/baryons_only_population.series.csv": {
+      "rows": 1999,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/carrier_mechanics_entropy.series.csv": {
+      "rows": 3355,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/coupled_galaxy_pilot.series.csv": {
+      "rows": 296,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/cubic_texture_response.series.csv": {
+      "rows": 54,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/cubic_thermal_controls.series.csv": {
+      "rows": 1822,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/equilibrium_shape_family.series.csv": {
+      "rows": 15615,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/galaxy_class_losses.series.csv": {
+      "rows": 150,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/galaxy_class_residuals.series.csv": {
+      "rows": 180,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/galaxy_class_wins.series.csv": {
+      "rows": 45,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/gr_internal_stress_comparison.series.csv": {
+      "rows": 5618,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/guarded_family_comparison.series.csv": {
+      "rows": 1015,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/internal_spectrum.series.csv": {
+      "rows": 18,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/legacy/coupled_pilot/coupled_pilot.series.csv": {
+      "rows": 6074,
+      "changed_numeric_fields": 900,
+      "max_absolute_error": 1.688249540165998e-11
+    },
+    "figures/legacy/morphology/morphology_diagnostics.series.csv": {
+      "rows": 653,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/legacy/population_family/results/family_population_comparison.series.csv": {
+      "rows": 1138,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/legacy/population_family/wide_results/family_population_comparison.series.csv": {
+      "rows": 1138,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/legacy/wide_bounds/sparc_rotation_comparison.series.csv": {
+      "rows": 7291,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/legacy/wide_bounds/sparc_sample_diagnostics.series.csv": {
+      "rows": 461,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/morphology_diagnostics.series.csv": {
+      "rows": 653,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/noisy_response.series.csv": {
+      "rows": 1252,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/nuisance_and_holdout.series.csv": {
+      "rows": 536,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/outer_growth_mechanism.series.csv": {
+      "rows": 1048,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/outer_prediction_mass_budget.series.csv": {
+      "rows": 1451,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/paired_prediction_diagnostics.series.csv": {
+      "rows": 134,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/pointwise_cluster_comparison.series.csv": {
+      "rows": 1984,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/pointwise_covariance_sensitivity.series.csv": {
+      "rows": 16,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/pointwise_radial_differences.series.csv": {
+      "rows": 1318,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/register_work.series.csv": {
+      "rows": 2861,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/residual_physics_diagnostics.series.csv": {
+      "rows": 620,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/sparc_fit_prediction_pair_a.series.csv": {
+      "rows": 420,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/sparc_fit_prediction_pair_b.series.csv": {
+      "rows": 690,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/sparc_guarded_predictions.series.csv": {
+      "rows": 555,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/sparc_rotation_comparison.series.csv": {
+      "rows": 7291,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/sparc_sample_diagnostics.series.csv": {
+      "rows": 461,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/synthetic_core_fit.series.csv": {
+      "rows": 22470,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/tier_baseline_full.series.csv": {
+      "rows": 7608,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/tier_baseline_outer.series.csv": {
+      "rows": 7608,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/tier_expanded_full.series.csv": {
+      "rows": 10107,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/tier_expanded_outer.series.csv": {
+      "rows": 10107,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/tier_population_comparison.series.csv": {
+      "rows": 1430,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "figures/time_scaling.series.csv": {
+      "rows": 86,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "galaxy_classes/class_comparisons.csv": {
+      "rows": 60,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "galaxy_classes/class_model_scores.csv": {
+      "rows": 180,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "galaxy_classes/per_galaxy_regions.csv": {
+      "rows": 3540,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "galaxy_classes/per_galaxy_scores.csv": {
+      "rows": 1704,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "galaxy_classes/residual_regions.csv": {
+      "rows": 360,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/plots/plotted_covariance_values.csv": {
+      "rows": 16,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/plots/plotted_ecdf_values.csv": {
+      "rows": 1977,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/plots/plotted_forest_values.csv": {
+      "rows": 4,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/galaxy_contrasts.csv": {
+      "rows": 131,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/galaxy_influence.csv": {
+      "rows": 524,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/model_galaxy_squared_losses.csv": {
+      "rows": 131,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/pointwise_paired_differences.csv": {
+      "rows": 3295,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/pooled_point_sensitivity.csv": {
+      "rows": 4,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/primary_cluster_results.csv": {
+      "rows": 4,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/residual_distribution_summary.csv": {
+      "rows": 7,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "pointwise_comparison/results/score_sensitivity.csv": {
+      "rows": 24,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "significance/paired_galaxy_losses.csv": {
+      "rows": 4588,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "significance/prediction_reconstruction.csv": {
+      "rows": 3320,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "significance/primary_summary.csv": {
+      "rows": 3,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "sparc/holdout_split.csv": {
+      "rows": 153,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    },
+    "sparc/selected_points.csv": {
+      "rows": 3168,
+      "changed_numeric_fields": 0,
+      "max_absolute_error": 0.0
+    }
+  },
+  "mismatches": []
+}

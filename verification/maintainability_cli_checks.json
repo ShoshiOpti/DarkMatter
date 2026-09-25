@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "checks": 9,
+  "cases": [
+    {
+      "name": "help",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "unknown command",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "unknown option",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "missing option value",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "import-only option",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "missing data directory",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "protect input directory",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "protect input subdirectory",
+      "passed": true,
+      "exit_code": 1
+    },
+    {
+      "name": "explicit import paths",
+      "passed": true,
+      "exit_code": 0
+    }
+  ]
+}

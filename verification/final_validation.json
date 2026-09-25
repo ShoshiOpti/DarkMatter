@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "framework": "net10.0",
+  "build_warnings": 0,
+  "build_errors": 0,
+  "current_analysis": "pointwise_comparison_2026_09_25",
+  "native_verify_passed": true,
+  "clean_relocated_verify_passed": true,
+  "clean_data_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\additional_packages_clean_6d770d96fa0e442c8a551c9cc318d953\\data",
+  "plot_variants": 47,
+  "figure_and_series_files_identical": 94,
+  "current_result_csv_files_identical": 8,
+  "source_edition_files_unchanged": 903,
+  "current_source_files_identical": 38,
+  "input_files_hash_checked": 141,
+  "pointwise_input_checks": 581538,
+  "pointwise_csv_fields_checked": 48438.0,
+  "pointwise_json_fields_checked": 55,
+  "pointwise_plot_fields_checked": 11958.0,
+  "pointwise_plot_audit_fields": 113,
+  "pointwise_random_draws_matched": 39199608,
+  "pointwise_bootstrap_values_matched": 5199948,
+  "pointwise_bootstrap_max_absolute_error": 4.547473508864641E-13,
+  "pointwise_primary_wild_exceedances": [
+    0,
+    0,
+    7145,
+    0
+  ],
+  "current_results": {
+    "analysis": "Pointwise continuous-loss comparison, 25 September 2026",
+    "outer_measurements": 659,
+    "galaxies": 131,
+    "resampling_unit": "whole galaxy",
+    "replicates_per_stream": 99999,
+    "core_mae_kms": 12.87931734692918,
+    "envelope_mae_kms": 10.53267041860983,
+    "nfw_mae_kms": 8.109015829746024,
+    "envelope_mae_reduction_vs_core_kms": 2.3466469283193487,
+    "reduction_marginal_bootstrap_t_ci95_kms": [
+      1.7051540821530775,
+      3.3157903002829823
+    ],
+    "nfw_primary_wild_p": 0.07146,
+    "nfw_primary_holm4_p": 0.07146,
+    "nfw_primary_two_sided_gaussian_equivalent_Z": 1.802543100250062,
+    "monte_carlo_resolution_reached_comparisons": [
+      "scalar_core",
+      "compact_plummer",
+      "baryon_only"
+    ],
+    "resolution_note": "Zero exceedances in 99,999 replicates. Plus-one p and its Gaussian-equivalent Z are finite-resolution display conventions, not measured extreme tails or bounds on true significance.",
+    "interval_note": "Marginal pairs-bootstrap-t intervals do not invert the null-imposed wild-bootstrap test and are not simultaneous Holm confidence intervals.",
+    "historical_sign_tests": "Retained separately in output/significance; they test win frequency rather than mean error magnitude."
+  },
+  "sparc_checks": 20516,
+  "historical_observational_plot_values": 132860,
+  "historical_baryon_bootstrap_resamples": 400000,
+  "nuget_dependencies": 1,
+  "runtime_python_required": false,
+  "mismatches": [],
+  "maintainability_refactor": {
+    "passed": true,
+    "unchanged_output_files": 143,
+    "bootstrap_values_bit_identical": 5199948,
+    "cli_checks": 9,
+    "scope": "Historical readability-only refactor, before adopting MathNet.Numerics."
+  },
+  "numerical_package": "MathNet.Numerics 5.0.0",
+  "locked_restore_passed": true,
+  "package_integration": {
+    "passed": true,
+    "csv_tables_compared": 73,
+    "csv_fields_compared": 2066861,
+    "maximum_absolute_csv_difference": 2.337130489138417E-12,
+    "figures_byte_identical": 47,
+    "bootstrap_values_bit_identical": 5199948,
+    "direct_packages": 1,
+    "transitive_packages": 0,
+    "scope": "Initial MathNet adoption; subsequent reuse is recorded in additional_package_reuse."
+  },
+  "additional_package_reuse": {
+    "passed": true,
+    "new_dependencies": 0,
+    "csv_fields_compared": 2066861,
+    "maximum_absolute_csv_difference": 1.688249540165998E-11,
+    "figures_byte_identical": 47,
+    "bootstrap_values_bit_identical": 5199948,
+    "clean_run_passed": true,
+    "clean_identical_figure_and_series_files": 94,
+    "clean_identical_current_csv_tables": 8
+  }
+}

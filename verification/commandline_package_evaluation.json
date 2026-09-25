@@ -1,0 +1,16 @@
+{
+  "package": "System.CommandLine",
+  "version": "2.0.12",
+  "prototype_nonblank_lines": 36,
+  "existing_parser_nonblank_lines": 29,
+  "existing_help_nonblank_lines": 8,
+  "case_count": 26,
+  "matching_cases": 25,
+  "differences": [
+    "duplicate_first_wins"
+  ],
+  "recommendation": "Keep the current small parser. Package provides generated help and subcommand grammar, but does not materially reduce the implementation; exact repeated-option compatibility needs additional handling.",
+  "official_package": "https://www.nuget.org/packages/System.CommandLine/2.0.12",
+  "official_docs": "https://learn.microsoft.com/en-us/dotnet/standard/commandline/how-to-parse-and-invoke",
+  "production_files_changed": false
+}

@@ -1,0 +1,224 @@
+{
+  "equations": "-.5 Laplacian(f)+(phi+eta*f^2)*f=epsilon*f; Laplacian(phi)=f^2; f(0)=1",
+  "caveats": [
+    "Computed positive radial stationary branches, not a certificate of global minimality, uniqueness, or continuum error.",
+    "eta=0 is the limiting noninteracting comparison. Fixed positive alpha_h gives eta>0 at positive central density.",
+    "No baryons, galaxy data, internal excitation or cosmological formation model are included."
+  ],
+  "shared_units": {
+    "Rstar": "sqrt(alpha_h/(4*pi*G))",
+    "Vstar_squared": "8*pi*G*beta_h/alpha_h",
+    "rhostar": "8*pi*G*beta_h/alpha_h^2",
+    "length": "Rstar/sqrt(eta)",
+    "speed": "Vstar*sqrt(eta)",
+    "central_density": "rhostar*eta^2"
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "runs": [
+    {
+      "eta": 0.0,
+      "R": 40.0,
+      "epsilon": -0.6922286849259847,
+      "N": 25.914840190018584,
+      "radial_mass_integral": 2.062237457838985,
+      "T": 5.979665248267921,
+      "Q": 0.0,
+      "W": -11.959330496536001,
+      "R50": 1.9033217683448074,
+      "R90": 3.314599267338299,
+      "R99": 4.822833524854403,
+      "R_half_density": 1.299270937757239,
+      "R99_over_R50": 2.533903413004361,
+      "R_half_density_over_R50": 0.6826333620337504,
+      "relative_virial_residual": 1.336798206156517e-14,
+      "relative_multiplier_residual": 2.5745743229681618e-14,
+      "poisson_integral_error": 1.2631612704136447e-11,
+      "minimum_f": -1.6883037613685104e-36,
+      "maximum_positive_fprime": 0.0,
+      "minimum_f_inside_R99": 0.03830635380507991,
+      "max_collocation_residual": 1.9992426426106688e-11,
+      "nodes": 4985,
+      "sensitivity": [
+        {
+          "R": 24.0,
+          "tol": 2e-09,
+          "relative_N_difference": 2.428390821762605e-12,
+          "relative_R50_difference": 1.920878711647589e-08,
+          "max_density_difference": 3.930300529475517e-12,
+          "max_potential_difference": 5.869027486227196e-12
+        },
+        {
+          "R": 32.0,
+          "tol": 2e-09,
+          "relative_N_difference": 8.180123245438153e-13,
+          "relative_R50_difference": 1.026114393454236e-08,
+          "max_density_difference": 1.3914425167627087e-12,
+          "max_potential_difference": 9.673095657802833e-12
+        },
+        {
+          "R": 40.0,
+          "tol": 2e-09,
+          "relative_N_difference": 1.9255708139098715e-12,
+          "relative_R50_difference": 5.1773030307344925e-12,
+          "max_density_difference": 1.1283640688475316e-11,
+          "max_potential_difference": 1.492650447687538e-11
+        }
+      ]
+    },
+    {
+      "eta": 0.3,
+      "R": 40.0,
+      "epsilon": -0.8183349164548351,
+      "N": 33.3472535158758,
+      "radial_mass_integral": 2.6536901177951098,
+      "T": 6.908567444916815,
+      "Q": 1.640879896290398,
+      "W": -18.739774578705173,
+      "R50": 2.0233770764584156,
+      "R90": 3.4363931924813254,
+      "R99": 4.899435619196111,
+      "R_half_density": 1.4597384313384845,
+      "R99_over_R50": 2.4214150077116403,
+      "R_half_density_over_R50": 0.7214366755076188,
+      "relative_virial_residual": 1.857898231700638e-14,
+      "relative_multiplier_residual": 1.1456493873367546e-14,
+      "poisson_integral_error": 1.0351465674262419e-11,
+      "minimum_f": -2.0754822131706014e-38,
+      "maximum_positive_fprime": 0.0,
+      "minimum_f_inside_R99": 0.04365078639655996,
+      "max_collocation_residual": 1.9996335322619674e-11,
+      "nodes": 4764,
+      "sensitivity": [
+        {
+          "R": 24.0,
+          "tol": 2e-09,
+          "relative_N_difference": 9.672262990534364e-13,
+          "relative_R50_difference": 1.5200457004205248e-08,
+          "max_density_difference": 1.9694593178520847e-12,
+          "max_potential_difference": 7.2311046039885696e-12
+        },
+        {
+          "R": 32.0,
+          "tol": 2e-09,
+          "relative_N_difference": 8.038014698286133e-14,
+          "relative_R50_difference": 5.59457369320171e-09,
+          "max_density_difference": 1.567634910770721e-12,
+          "max_potential_difference": 9.704681502853418e-12
+        },
+        {
+          "R": 40.0,
+          "tol": 2e-09,
+          "relative_N_difference": 5.190514684727532e-12,
+          "relative_R50_difference": 2.6079138848444927e-13,
+          "max_density_difference": 7.333467166859009e-12,
+          "max_potential_difference": 1.8361090425855764e-11
+        }
+      ]
+    },
+    {
+      "eta": 1.0,
+      "R": 40.0,
+      "epsilon": -1.2457784450984788,
+      "N": 60.791887815330306,
+      "radial_mass_integral": 4.83766472284889,
+      "T": 9.860491528275617,
+      "Q": 11.537937223088848,
+      "W": -54.3347947258191,
+      "R50": 2.352617200643576,
+      "R90": 3.7774562950896127,
+      "R99": 5.138796220914696,
+      "R_half_density": 1.9214503161911818,
+      "R99_over_R50": 2.1842891480640962,
+      "R_half_density_over_R50": 0.8167288395517787,
+      "relative_virial_residual": 2.4323446792848135e-14,
+      "relative_multiplier_residual": 2.0453152432151406e-14,
+      "poisson_integral_error": 6.441851181796279e-12,
+      "minimum_f": -8.744102417386859e-41,
+      "maximum_positive_fprime": 0.0,
+      "minimum_f_inside_R99": 0.058920660076484874,
+      "max_collocation_residual": 1.999280693251806e-11,
+      "nodes": 4409,
+      "sensitivity": [
+        {
+          "R": 24.0,
+          "tol": 2e-09,
+          "relative_N_difference": 3.660183267584216e-12,
+          "relative_R50_difference": 1.5435941413954879e-09,
+          "max_density_difference": 5.2694515417783805e-12,
+          "max_potential_difference": 1.6108669953496246e-11
+        },
+        {
+          "R": 32.0,
+          "tol": 2e-09,
+          "relative_N_difference": 5.03597163969971e-12,
+          "relative_R50_difference": 3.118387326139782e-09,
+          "max_density_difference": 1.2036482921473635e-12,
+          "max_potential_difference": 1.3609557925065019e-11
+        },
+        {
+          "R": 40.0,
+          "tol": 2e-09,
+          "relative_N_difference": 8.911094084851356e-12,
+          "relative_R50_difference": 4.085398686015651e-12,
+          "max_density_difference": 4.11226608321158e-12,
+          "max_potential_difference": 2.7161606297454455e-11
+        }
+      ]
+    },
+    {
+      "eta": 3.0,
+      "R": 40.0,
+      "epsilon": -3.0505003002234914,
+      "N": 217.1642362768953,
+      "radial_mass_integral": 17.281380833122093,
+      "T": 20.355308891241233,
+      "Q": 150.34841032168512,
+      "W": -491.75584874754463,
+      "R50": 3.4048201357184062,
+      "R90": 5.009894722143194,
+      "R99": 6.260297698842459,
+      "R_half_density": 3.239731509736199,
+      "R99_over_R50": 1.8386573884383928,
+      "R_half_density_over_R50": 0.9515132607886277,
+      "relative_virial_residual": 1.3871131946208542e-14,
+      "relative_multiplier_residual": 5.14839742167023e-15,
+      "poisson_integral_error": 2.3719869854054145e-12,
+      "minimum_f": 8.686485307799636e-51,
+      "maximum_positive_fprime": 0.0,
+      "minimum_f_inside_R99": 0.09853467857909266,
+      "max_collocation_residual": 1.999810345763848e-11,
+      "nodes": 5091,
+      "sensitivity": [
+        {
+          "R": 24.0,
+          "tol": 2e-09,
+          "relative_N_difference": 3.4654501490649636e-12,
+          "relative_R50_difference": 2.7627655718731603e-10,
+          "max_density_difference": 2.8267943541493423e-12,
+          "max_potential_difference": 2.2798207766072665e-11
+        },
+        {
+          "R": 32.0,
+          "tol": 2e-09,
+          "relative_N_difference": 3.943734228073481e-12,
+          "relative_R50_difference": 1.3910850249487794e-10,
+          "max_density_difference": 3.79674069961311e-12,
+          "max_potential_difference": 3.012878835306765e-11
+        },
+        {
+          "R": 40.0,
+          "tol": 2e-09,
+          "relative_N_difference": 4.1380232573828835e-12,
+          "relative_R50_difference": 2.02038386021286e-12,
+          "max_density_difference": 3.705591389291385e-12,
+          "max_potential_difference": 3.5493386008056405e-11
+        }
+      ]
+    }
+  ]
+}

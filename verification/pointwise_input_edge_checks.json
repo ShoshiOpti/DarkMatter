@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "baseline": {
+    "passed": true,
+    "checks": 581538,
+    "snapshot_hashes": 5,
+    "models": [
+      "extended",
+      "scalar_core",
+      "compact_plummer",
+      "nfw",
+      "baryon_only",
+      "profiled_baryons",
+      "adaptive_primary"
+    ],
+    "galaxies": 131,
+    "all_measurements": 3034,
+    "outer_measurements": 659,
+    "outer_model_rows": 4613,
+    "maximum_absolute_difference": 5.684341886080802E-14,
+    "raw_sparc_coordinates_and_splits_match": true,
+    "predictions_match_frozen_sources": true,
+    "failed_profiled_galaxy": "UGC01281",
+    "failed_outer_measurements": 5,
+    "fitted_parameters_or_observations_changed": false
+  },
+  "negative_cases": [
+    {
+      "case": "wrong_holdout",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "original outer split",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input mismatch: original outer split"
+    },
+    {
+      "case": "altered_error_with_consistent_scores",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "raw SPARC error",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input raw SPARC error: 2 != 1.5"
+    },
+    {
+      "case": "repeated_model_point",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "duplicate model-point key",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input mismatch: duplicate model-point key"
+    },
+    {
+      "case": "dropped_galaxy",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "complete model-point rows",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input mismatch: complete model-point rows"
+    },
+    {
+      "case": "changed_prediction_with_consistent_scores",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "current prediction snapshot",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input current prediction snapshot: 3.865548596789006 != 2.865548596789006"
+    },
+    {
+      "case": "profiled_failure_hidden_as_finite",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "profiled prediction snapshot",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input profiled prediction snapshot: 1.41 != NaN"
+    },
+    {
+      "case": "fractional_outer_point_index",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "integer outer point index",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input mismatch: integer outer point index"
+    },
+    {
+      "case": "modified_frozen_source_snapshot",
+      "rejected_as_expected": true,
+      "expected_message_fragment": "immutable source snapshot saved_galaxy_scores.csv",
+      "exception": "InvalidDataException",
+      "message": "Pointwise input mismatch: immutable source snapshot saved_galaxy_scores.csv"
+    }
+  ],
+  "original_data_files_unchanged": true,
+  "original_data_files_checked": 18,
+  "harness_source": "verification/pointwise_input_edge_checks.cs.txt",
+  "isolation": "Independent .NET10 harness linking only Data.cs, Sparc.cs and PointwiseInputs.cs; modified copies under tmp/pointwise_input_edge_check",
+  "source_sha256": {
+    "Data.cs": "b43d0ef09829907a075011732d20548c185d69e19d2ce94e59b1d427ccfd3111",
+    "Sparc.cs": "5fc43650b4f8d225dd19361d5576403d4c0e629866bce025993810b85eda3252",
+    "PointwiseInputs.cs": "5a86d3706a519683a0da464aea1d1c4434fcd28370d74d366285f99850a9d05d"
+  }
+}

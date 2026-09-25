@@ -1,0 +1,37 @@
+[
+  {
+    "file": "checks.json",
+    "sha256": "9154a4f26eee3704e011c9a3f8e6fb432f188185c36b23bc284d3af84438060e",
+    "bytes": 2762
+  },
+  {
+    "file": "galaxy_availability.csv",
+    "sha256": "ad3577ef158264740d021f2ee262e6ff642dc055389aa0718133ccbdc093b367",
+    "bytes": 30363
+  },
+  {
+    "file": "model_inventory.csv",
+    "sha256": "22aaf601f04ae2770e29c1c062c6aa24cc432935d6094f7520e6519d2ff533fb",
+    "bytes": 579
+  },
+  {
+    "file": "outer_wide.csv",
+    "sha256": "dd899a5310d1493ff341cab6c227b9c2a67269e1e12bd7a6b206d2ed39068eb1",
+    "bytes": 166776
+  },
+  {
+    "file": "pointwise_all.csv",
+    "sha256": "2bf5d6323cf92b232dfed60d04d2e7b4ed95f8eba0005f4865a4f883bd396052",
+    "bytes": 4827021
+  },
+  {
+    "file": "pointwise_outer.csv",
+    "sha256": "a057d37495824894874e3bcd0127a0752df145851cafd273fb9f378af38ed9a6",
+    "bytes": 1050072
+  },
+  {
+    "file": "reproduced_galaxy_losses.csv",
+    "sha256": "7cda219929d7089966d28fcde84173b74ceb7be86ca4e04bacf2ff99787b2f7e",
+    "bytes": 60454
+  }
+]

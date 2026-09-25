@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "reference": "student_plot_code/revision/galaxy_classes/plot_audit.json",
+  "reference_sha256": "2636526e85b0fbb1036b279a25d69b8e13de747b5f638ebac9687e020dfb360c",
+  "tables": {
+    "wins": {
+      "rows": 45,
+      "fields": 315,
+      "passed": true,
+      "csv_sha256": "69a50fc955e8ccc76e67c188025204a2c8af2df44d43542168531449cb2f56ee"
+    },
+    "losses": {
+      "rows": 150,
+      "fields": 1200,
+      "passed": true,
+      "csv_sha256": "7f9a57f62f014d73e709402268c24d650f9e324a7259379b7211597c29da0c5e"
+    },
+    "residuals": {
+      "rows": 180,
+      "fields": 1260,
+      "passed": true,
+      "csv_sha256": "8915c13f75a97d82748dd504d7814d6891766d0af4bbbdad02ab8b452099f650"
+    }
+  },
+  "fields_checked": 2775,
+  "residual_symmetric_color_limit": 7,
+  "numeric_tolerance": {
+    "relative": 2e-14,
+    "absolute": 2e-13
+  },
+  "visual_qa": "All three native SVGs rendered with isolated headless Edge and inspected: readable class labels/counts, interval markers, heatmap cells, legends and color scale.",
+  "scope": "Independent development verification; application runtime is native C#."
+}

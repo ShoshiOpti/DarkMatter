@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "baseline_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\maintainability_baseline_2b7769e196f14adaad2c12208cfbfa96",
+  "native_verify_passed": true,
+  "clean_relocated_verify_passed": true,
+  "clean_data_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\maintainability_clean_505aadd84e384913a6158b053622ad49\\data",
+  "unchanged_output_files": 143,
+  "output_hash_comparison_scope": "Every pre-refactor output file except the ZIP container; uncompressed bootstrap entries compared separately.",
+  "plot_variants": 47,
+  "clean_identical_figure_and_series_files": 94,
+  "bootstrap_arrays_bit_identical": 3,
+  "bootstrap_values_bit_identical": 5199948,
+  "bootstrap_payload_sha256": {
+    "means.npy": "79cfff5934a9fecd1a470cc06b0ef5e773222bb314e3b3585971856b107c9138",
+    "tstats.npy": "24a108765b5336fb12d516b971b8162858b3f8153d54038cf24b2f3084dc572f",
+    "pooled_means.npy": "c93d066a1649daf69b72b5cdb22109a1103838db221f9fda62de02204ce0d2b0"
+  },
+  "input_files_hash_checked": 141,
+  "build_warnings": 0,
+  "build_errors": 0,
+  "nuget_dependencies": 0,
+  "runtime_python_required": false,
+  "mismatches": [],
+  "formatting_check_passed": true,
+  "clean_source_files_identical": 18
+}

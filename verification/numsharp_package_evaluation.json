@@ -1,0 +1,32 @@
+{
+  "package": "NumSharp",
+  "version": "0.70.0",
+  "dependencies": [],
+  "passed": true,
+  "values": 5199948,
+  "seconds": 0.9951223,
+  "assemblyBytes": 2439168,
+  "checks": [
+    {
+      "name": "means",
+      "values": 2399976,
+      "strictHeader": true,
+      "headersIdentical": true,
+      "unequal": 0
+    },
+    {
+      "name": "tstats",
+      "values": 2399976,
+      "strictHeader": true,
+      "headersIdentical": true,
+      "unequal": 0
+    },
+    {
+      "name": "pooled_means",
+      "values": 399996,
+      "strictHeader": true,
+      "headersIdentical": true,
+      "unequal": 0
+    }
+  ]
+}

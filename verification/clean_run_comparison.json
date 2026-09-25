@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "native_verify_passed": true,
+  "clean_relocated_verify_passed": true,
+  "clean_data_directory": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverse\\tmp\\additional_packages_clean_6d770d96fa0e442c8a551c9cc318d953\\data",
+  "plot_variants": 47,
+  "figure_and_series_files_identical": 94,
+  "current_result_csv_files_identical": 8,
+  "source_edition_files_unchanged": 903,
+  "current_source_files_identical": 38,
+  "input_files_hash_checked": 141,
+  "mismatches": []
+}

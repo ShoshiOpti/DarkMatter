@@ -1,0 +1,262 @@
+{
+  "scope": "Validation of this declared finite-time controlled experiment; no continuum certificate or long-time stability claim",
+  "gates": {
+    "source_hashes_match": true,
+    "number_energy_below_1e-8": true,
+    "mixed_sector_below_1e-16": true,
+    "finest_force_jet_L2_below_5e-4": true,
+    "jets_improve_each_refinement": true,
+    "resolved_response_medium_fine_below_one_percent": true,
+    "domain_force_abs_below_1e-10": true,
+    "time_force_abs_below_1e-10": true
+  },
+  "peaks": {
+    "number_relative_drift": 2.886579864025407e-15,
+    "energy_relative_drift": 3.774758283725532e-15,
+    "unexcited_mixed_leakage_max": 4.9634094197570086e-29,
+    "unexcited_Es_max": 2.052026072198366e-24,
+    "unexcited_Ea_max": 7.690313470082606e-28,
+    "unexcited_density_max_change": 0.04076777210190086,
+    "stationary_density_drift": 6.559197629485425e-13
+  },
+  "comparisons": {
+    "mesh_medium": {
+      "isolated_mixed": {
+        "rho_absolute_max": 0.0008012003204647122,
+        "vf2_absolute_max": 0.0003428199626749895,
+        "mass_field_absolute_max": 0.006636759578942275,
+        "rho_relative_peak": 0.0008036441914667136
+      },
+      "isolated_rotated": {
+        "rho_absolute_max": 0.0007977417954407873,
+        "vf2_absolute_max": 0.00034246168057344706,
+        "mass_field_absolute_max": 0.0066349626683877005,
+        "rho_relative_peak": 0.0008022845939573525,
+        "force_response_relative_peak": 0.001658828491100929,
+        "Es_relative_difference": 0.0021790204338025913
+      },
+      "coupled_mixed": {
+        "rho_absolute_max": 0.0017862761345672773,
+        "vf2_absolute_max": 0.0007500705369689019,
+        "mass_field_absolute_max": 0.006815677051619673,
+        "rho_relative_peak": 0.0007726073409940911
+      },
+      "coupled_rotated": {
+        "rho_absolute_max": 0.0017644109728216506,
+        "vf2_absolute_max": 0.0007437804600762994,
+        "mass_field_absolute_max": 0.006828180322434818,
+        "rho_relative_peak": 0.00076986336432876,
+        "force_response_relative_peak": 0.002433070408008409,
+        "Es_relative_difference": 0.0023412416042049825
+      },
+      "baryon_quench": {
+        "rho_absolute_max": 0.0008027539301174169,
+        "vf2_absolute_max": 0.00034109927838715803,
+        "mass_field_absolute_max": 0.006573701355709005,
+        "rho_relative_peak": 0.0007738732136168928,
+        "force_response_relative_peak": 0.0015089381540164687
+      },
+      "tracer": {
+        "delta_radius_final": 0.0003533844938512498,
+        "delta_radial_speed_final": 0.0002844270627464507,
+        "delta_tangential_speed_final": 2.8046887896482353e-05
+      }
+    },
+    "mesh_coarse": {
+      "isolated_mixed": {
+        "rho_absolute_max": 0.004088348612926618,
+        "vf2_absolute_max": 0.0018802309016371001,
+        "mass_field_absolute_max": 0.033232013484953526,
+        "rho_relative_peak": 0.004100819147905197
+      },
+      "isolated_rotated": {
+        "rho_absolute_max": 0.00407042450105044,
+        "vf2_absolute_max": 0.0018753152459037008,
+        "mass_field_absolute_max": 0.03322297088683612,
+        "rho_relative_peak": 0.004093603828610864,
+        "force_response_relative_peak": 0.009650106954001217,
+        "Es_relative_difference": 0.010958328417561706
+      },
+      "coupled_mixed": {
+        "rho_absolute_max": 0.009237903199478925,
+        "vf2_absolute_max": 0.004331868625085101,
+        "mass_field_absolute_max": 0.03412873011741446,
+        "rho_relative_peak": 0.003995615061519709
+      },
+      "coupled_rotated": {
+        "rho_absolute_max": 0.00912172316398241,
+        "vf2_absolute_max": 0.004294781722183099,
+        "mass_field_absolute_max": 0.03419168262126249,
+        "rho_relative_peak": 0.003980070738433863,
+        "force_response_relative_peak": 0.014345618903588287,
+        "Es_relative_difference": 0.011766275866936682
+      },
+      "baryon_quench": {
+        "rho_absolute_max": 0.004106408697226671,
+        "vf2_absolute_max": 0.0019534678170518,
+        "mass_field_absolute_max": 0.032916028996814006,
+        "rho_relative_peak": 0.003958672235316677,
+        "force_response_relative_peak": 0.008846506303084084
+      },
+      "tracer": {
+        "delta_radius_final": 0.0017799837416657693,
+        "delta_radial_speed_final": 0.0014385289028765458,
+        "delta_tangential_speed_final": 0.0001535103143354144
+      }
+    },
+    "domain": {
+      "isolated_mixed": {
+        "rho_absolute_max": 1.0103029524088925e-13,
+        "vf2_absolute_max": 2.831068712794149e-15,
+        "mass_field_absolute_max": 7.815970093361102e-14,
+        "rho_relative_peak": 1.0133846412519479e-13
+      },
+      "isolated_rotated": {
+        "rho_absolute_max": 8.881784197001252e-14,
+        "vf2_absolute_max": 3.2751579226442118e-15,
+        "mass_field_absolute_max": 7.815970093361102e-14,
+        "rho_relative_peak": 8.932362161331546e-14,
+        "force_response_relative_peak": 1.743616154017138e-12,
+        "Es_relative_difference": 4.275754868060792e-14
+      },
+      "coupled_mixed": {
+        "rho_absolute_max": 9.059419880941277e-14,
+        "vf2_absolute_max": 1.4432899320127035e-15,
+        "mass_field_absolute_max": 7.105427357601002e-14,
+        "rho_relative_peak": 3.918416738439286e-14
+      },
+      "coupled_rotated": {
+        "rho_absolute_max": 1.3100631690576847e-13,
+        "vf2_absolute_max": 7.771561172376096e-16,
+        "mass_field_absolute_max": 3.552713678800501e-14,
+        "rho_relative_peak": 5.71618321552965e-14,
+        "force_response_relative_peak": 7.730034943177601e-13,
+        "Es_relative_difference": 1.5761233917568106e-15
+      },
+      "baryon_quench": {
+        "rho_absolute_max": 8.038014698286133e-14,
+        "vf2_absolute_max": 3.219646771412954e-15,
+        "mass_field_absolute_max": 7.283063041541027e-14,
+        "rho_relative_peak": 7.748830659418466e-14,
+        "force_response_relative_peak": 1.4751787978122034e-13
+      },
+      "tracer": {
+        "delta_radius_final": 9.476863738200336e-13,
+        "delta_radial_speed_final": 1.5276668818842154e-13,
+        "delta_tangential_speed_final": 0.0
+      }
+    },
+    "time": {
+      "isolated_mixed": {
+        "rho_absolute_max": 1.389999226830696e-13,
+        "vf2_absolute_max": 9.992007221626409e-16,
+        "mass_field_absolute_max": 6.394884621840902e-14,
+        "rho_relative_peak": 1.3942390888433393e-13
+      },
+      "isolated_rotated": {
+        "rho_absolute_max": 1.596500709410975e-13,
+        "vf2_absolute_max": 7.771561172376096e-16,
+        "mass_field_absolute_max": 3.197442310920451e-14,
+        "rho_relative_peak": 1.6055920984993455e-13,
+        "force_response_relative_peak": 3.2692802887821337e-12,
+        "Es_relative_difference": 5.938548427862211e-16
+      },
+      "coupled_mixed": {
+        "rho_absolute_max": 7.505107646466058e-14,
+        "vf2_absolute_max": 6.661338147750939e-16,
+        "mass_field_absolute_max": 4.263256414560601e-14,
+        "rho_relative_peak": 3.24613935684431e-14
+      },
+      "coupled_rotated": {
+        "rho_absolute_max": 7.593925488436071e-14,
+        "vf2_absolute_max": 7.771561172376096e-16,
+        "mass_field_absolute_max": 3.552713678800501e-14,
+        "rho_relative_peak": 3.313448575781594e-14,
+        "force_response_relative_peak": 5.153356628785067e-13,
+        "Es_relative_difference": 1.541098427495548e-14
+      },
+      "baryon_quench": {
+        "rho_absolute_max": 6.039613253960852e-14,
+        "vf2_absolute_max": 9.992007221626409e-16,
+        "mass_field_absolute_max": 5.684341886080802e-14,
+        "rho_relative_peak": 5.822325799342052e-14,
+        "force_response_relative_peak": 1.0728573074997842e-13
+      },
+      "tracer": {
+        "delta_radius_final": 6.732392421326949e-13,
+        "delta_radial_speed_final": 7.784883848671598e-13,
+        "delta_tangential_speed_final": 0.0
+      }
+    }
+  },
+  "continuous": {
+    "0": {
+      "N": 33.34725351587308,
+      "epsilon": -0.8183349164548437,
+      "central_density": 0.999999999999774,
+      "R50": 2.023377141714329,
+      "virial_relative": 5.3461969524453195e-14,
+      "stationary_bvp_residual": 1.9976754825925826e-10,
+      "number_relative_error": 8.1601392309949e-14
+    },
+    "1": {
+      "N": 33.34725351587443,
+      "epsilon": -1.933697546578067,
+      "central_density": 2.324345269613233,
+      "R50": 1.5127902154326764,
+      "virial_relative": 7.582197871837766e-14,
+      "stationary_bvp_residual": 1.9998701347013262e-10,
+      "number_relative_error": 4.107825191113079e-14
+    }
+  },
+  "physical_unit_illustration": {
+    "length_kpc": 1.0,
+    "velocity_kms": 30.0,
+    "time_unit_Myr": 32.5930740560263,
+    "density_Msun_kpc3": 16652225.782765256,
+    "number_mass_Msun": 555305994.7814763,
+    "tracer_radius_change_pc": 0.02012445121346881,
+    "tracer_radial_velocity_change_kms": 0.007866409307343655,
+    "tracer_tangential_velocity_change_kms": -0.0005352703597993891,
+    "max_abs_potential_over_c2": 3.4726059755494115e-08
+  },
+  "source_sha256": {
+    "numerics\\baryonic_two_field\\run_experiment.py": "5acb4eff3b89c5fead8ae7702610a5bf7edc06c55d98dd8919440f9b1f210415",
+    "numerics\\dynamics\\synthetic_dynamics.py": "3d4f136628cb48bac7abb52d612a0847b5242aab15cb47a1f0cdb9a9fded8642",
+    "numerics\\baryonic_geometry\\axisymmetric_gpp.py": "9eb9a58141ea8315fb81bbc6116b508f131c0e30687b2f7c8eadebb4ed5d3302"
+  },
+  "saved_data_sha256": {
+    "energies.csv": "f4112f6b431fad06e2c63dc185abef6ee73ef1007adc08b0334ad4406e494525",
+    "initial_jets.csv": "27c62623846b0200788ca8ca28d151dab1083426b28edea035aef9d15d991f1d",
+    "J1279_R32_baryon_quench.npz": "21cf016c5ad889eb73f95895ce8029c0325b2e873805b8ce7555fb11af5b9c5b",
+    "J1279_R32_coupled_mixed.npz": "83efcb5219c0ed8b662b2b8201b67d99e9c9f208846559a239e3534dd2d51f42",
+    "J1279_R32_coupled_rotated.npz": "e94960bb58317bc9880076581af785208a62b46d4eeb6ac0d4aff280b75f3640",
+    "J1279_R32_isolated_mixed.npz": "59e148328798019032ca5551d9a9f0b51088b0a0675f0c7f41eefffa7968d35b",
+    "J1279_R32_isolated_rotated.npz": "76a9634e9a8a932cf4a276370bc6efe06ccc8567e9b5d4c77b9e98eb2f7d10b2",
+    "J239_R24_baryon_quench.npz": "1bb832b38fb54258edde1768d79048dd1fd34490a07e8cb4bcaf68e8433fdbe0",
+    "J239_R24_coupled_mixed.npz": "b14fb4aaf904ddba92577de851fdc754b0be1e87ed6d24bc3e50ad29776d19d2",
+    "J239_R24_coupled_rotated.npz": "0d2f919eaddb41984bf6cc621816fefd9685efb7bdf0fc03fd2e0aad95b26898",
+    "J239_R24_isolated_mixed.npz": "40e37ecf6d848c5c1a2a576111746fa2b9990f247b1452e0f58479398773f95c",
+    "J239_R24_isolated_rotated.npz": "5c441e8837029a64bf6f25692f08c1543656645f727b7767196c16dd3aa65ce1",
+    "J479_R24_baryon_quench.npz": "b0d4714e8db7d7d10e355c5dfdf42649a4a6fec20f6575149df71bcdace9794f",
+    "J479_R24_coupled_mixed.npz": "ed4463d38998b5dad227bb18e2edb9553584ad0f9304031544ec727582cefaed",
+    "J479_R24_coupled_rotated.npz": "2b6507a98f5e3733d3fccf575933cf9096c31a2547ebe8686f475a601254a13f",
+    "J479_R24_isolated_mixed.npz": "0ab72dca39c14704defa4a40640f447cbb8e8da71e412db13e76aab4997f58cf",
+    "J479_R24_isolated_rotated.npz": "3c6e0b22b351753a4d608aa6713b18c51bd04c3e245b38f5e8a8d254df1d8e34",
+    "J959_R24_baryon_quench.npz": "8d683812d5f9fa064c899cc8ffab94c638b5bb243ad597406009b82ee1b3b853",
+    "J959_R24_coupled_mixed.npz": "ed30ee966404a1fd9b023d423007a25dd7fdb4a2248f54515ca58b53b85efd27",
+    "J959_R24_coupled_rotated.npz": "64bba1a54a0237dcfaa16084e5dcfa5a6c855ee29ab8b4e65522874b9ba59c60",
+    "J959_R24_isolated_mixed.npz": "27feb7883ffbe22c64fe51eb1b19f71f8d9ead8d45fe69450a0c0842b251189e",
+    "J959_R24_isolated_rotated.npz": "2fbb20137ab96bf8eb8c0b6f7a02883c15aa34f815980990ab8f60e09880588c",
+    "J959_R24_tight_baryon_quench.npz": "8f6aacb598da422d6c5d6b9d7714bc15e596b5713e72fba0ee54b915f26c750d",
+    "J959_R24_tight_coupled_mixed.npz": "28300586d5e377028775cd5fe91d92a157b84075842ee493c669e88546585597",
+    "J959_R24_tight_coupled_rotated.npz": "028bba57411c13bfa86d397e3588cbfc2c9c9be801ca7687b2f30a91b63fc914",
+    "J959_R24_tight_isolated_mixed.npz": "cc68adf65f6e222a77eb140e8f912094d6c12a255850b2d3a6a2874bec931c5d",
+    "J959_R24_tight_isolated_rotated.npz": "e3d414788cfd415498769b56e54e5e3f4c93b178ce6842172941854326eada5d",
+    "probe_effects.csv": "a56964a99cd8ccb94f38786d62d917459db6f8dcc051eb2689302dd9fdf06a7e",
+    "protocol.json": "d16464492118c54196d8e2257ea12acc1bdb4dec3cee9e39e58955f47cc31ae3",
+    "radial_profiles.csv": "c433b41e62ab4860e40d048fb80cfa799ce814a1ed396bfc55e188964a08f2c7",
+    "summary.json": "3c2f27d162faa23f6df2dfe81748ac22f68dc644220e14a9d3d5f747559959d2",
+    "tracers.csv": "bf97ed617547ede4710d20fd6d2022386c8f688ad32dbb9f1f6646de7d36daf2"
+  }
+}
