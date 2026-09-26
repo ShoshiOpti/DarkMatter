@@ -1,3 +1,4 @@
+using System.CommandLine;
 using System.Globalization;
 using System.Text;
 using System.Text.Json;
@@ -6,130 +7,184 @@ using DarkUniverse;
 CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.CurrentUICulture = CultureInfo.InvariantCulture;
 
-try
+return CreateCommandLine().Parse(args).Invoke();
+
+static RootCommand CreateCommandLine()
 {
-    if (args.Contains("--help") || args.FirstOrDefault() == "help")
+    var dataOption = new Option<DirectoryInfo?>("--data")
     {
-        Console.WriteLine(
-            "DarkUniverse.Console [all|import|statistics|pointwise|plots|verify] [--data PATH] [--out PATH]\n" +
-            "Import only: --catalogue FILE.mrt|.zip --mass-models FILE.mrt|.zip\n" +
-            "Default: all. Native C#; saved-fit reconstruction, no population refitting.");
-        return 0;
-    }
-
-    var options = ParseOptions(args);
-    string command = options.Command;
-    string dataRoot = options.DataRoot;
-    string outputRoot = options.OutputRoot;
-    Directory.CreateDirectory(outputRoot);
-
-    string reportPath = Path.Combine(outputRoot, "run_report.json");
-    Data.SaveJson(reportPath, new
+        Description = "Directory containing the input data. Defaults to the project's data directory.",
+        Recursive = true
+    };
+    var outputOption = new Option<DirectoryInfo?>("--out")
     {
-        command,
-        passed = false,
-        status = "running"
-    });
-    var inputHashes = CheckInputManifest(dataRoot);
-    var report = new Dictionary<string, object?>
-    {
-        ["command"] = command,
-        ["runtime"] = Environment.Version.ToString(),
-        ["mathnet_numerics"] = typeof(MathNet.Numerics.SpecialFunctions).Assembly.GetName().Version!.ToString(),
-        ["data_directory"] = dataRoot,
-        ["output_directory"] = outputRoot,
-        ["scope"] = "Native import, saved-fit statistical reconstruction and plotting; no new population fit or PDE solve"
+        Description = "Directory for generated reports and figures. Defaults to the project's output directory.",
+        Recursive = true
     };
 
-    if (command is "all" or "import" or "verify")
+    var root = new RootCommand(
+        "Reconstruct the Dark Universe analyses from saved fits and render their figures.")
     {
-        Console.WriteLine("Importing SPARC tables...");
-        var data = Sparc.Run(dataRoot, outputRoot, options.CataloguePath, options.MassModelsPath);
-        Console.WriteLine($"Selected {data.SelectedNames.Length} galaxies / {data.SelectedPoints.Count()} radii.");
-        if (options.CataloguePath == null && options.MassModelsPath == null)
-            report["sparc"] = SparcChecks.Run(data, dataRoot, outputRoot);
+        dataOption,
+        outputOption
+    };
+    root.SetAction(result => Run(() =>
+        CreateOptions("all", result.GetValue(dataOption), result.GetValue(outputOption))));
+
+    (string Name, string Description)[] commands =
+    [
+        ("all", "Run the complete reconstruction."),
+        ("statistics", "Reconstruct the current and historical statistical analyses."),
+        ("pointwise", "Reconstruct the current pointwise analysis and its three figures."),
+        ("plots", "Reconstruct the current analysis and render all figures."),
+        ("verify", "Run the complete reconstruction with all verification checks.")
+    ];
+    foreach (var (name, description) in commands)
+    {
+        var command = new Command(name, description);
+        command.SetAction(result => Run(() =>
+            CreateOptions(name, result.GetValue(dataOption), result.GetValue(outputOption))));
+        root.Subcommands.Add(command);
     }
 
-    string currentSummaryHtml = "";
-    if (command is "all" or "statistics" or "pointwise" or "plots" or "verify")
+    var catalogueOption = new Option<FileInfo?>("--catalogue")
     {
-        Console.WriteLine("Reconstructing the current 25 September pointwise comparison...");
-        report["current_analysis"] = "pointwise_comparison_2026_09_25";
-        report["pointwise_inputs"] = PointwiseInputs.Verify(dataRoot, outputRoot);
-        report["pointwise_statistics"] = PointwiseStatistics.Run(dataRoot, outputRoot);
-        currentSummaryHtml = PointwiseReport.Write(outputRoot);
-    }
-
-    if (command is "all" or "statistics" or "verify")
+        Description = "SPARC catalogue in MRT or ZIP format."
+    };
+    var massModelsOption = new Option<FileInfo?>("--mass-models")
     {
-        Console.WriteLine("Reconstructing historical sign tests and auditing their saved predictions...");
-        Statistics.Run(dataRoot, outputRoot);
-        report["baryon_bootstrap"] = BaryonBootstrap.Run(dataRoot, outputRoot);
-        report["statistics"] = "passed";
-    }
-
-    if (command is "all" or "plots" or "pointwise" or "verify")
+        Description = "SPARC mass-model table in MRT or ZIP format."
+    };
+    var importCommand = new Command("import", "Import the SPARC tables and verify the selected sample.")
     {
-        Console.WriteLine("Generating native SVG plots and numerical sidecars...");
-        bool currentOnly = command == "pointwise";
-        var figures = RenderFigures(dataRoot, outputRoot, currentOnly);
-        report["plots"] = figures.Select(path => RelativePath(outputRoot, path)).ToArray();
-        WriteGallery(outputRoot, figures, currentSummaryHtml, currentOnly);
-        Console.WriteLine($"Generated {figures.Count} figures.");
-    }
+        catalogueOption,
+        massModelsOption
+    };
+    importCommand.SetAction(result => Run(() => CreateOptions(
+        "import",
+        result.GetValue(dataOption),
+        result.GetValue(outputOption),
+        result.GetValue(catalogueOption),
+        result.GetValue(massModelsOption))));
+    root.Subcommands.Add(importCommand);
 
-    foreach (var (file, hash) in inputHashes)
-    {
-        if (Data.FileSha256(Path.Combine(dataRoot, file)) != hash)
-            throw new InvalidDataException("Input changed during run: " + file);
-    }
-
-    report["consumed_csv_inputs"] = Csv.Inputs
-        .Where(entry => entry.Key.StartsWith(dataRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
-        .ToDictionary(entry => RelativePath(dataRoot, entry.Key), entry => entry.Value);
-    report["input_files_unchanged"] = inputHashes.Count;
-    report["passed"] = true;
-    Data.SaveJson(reportPath, report);
-    Console.WriteLine("Completed. Results: " + outputRoot);
-    return 0;
-}
-catch (Exception exception)
-{
-    Console.Error.WriteLine(exception.ToString());
-    return 1;
+    return root;
 }
 
-static Options ParseOptions(string[] arguments)
+static int Run(Func<Options> createOptions)
 {
-    bool hasCommand = arguments.Length > 0 && !arguments[0].StartsWith('-');
-    string command = hasCommand ? arguments[0] : "all";
-    if (command is not ("all" or "import" or "statistics" or "pointwise" or "plots" or "verify"))
-        throw new ArgumentException("Unknown command: " + command);
-
-    var values = new Dictionary<string, string>();
-    for (int i = hasCommand ? 1 : 0; i < arguments.Length; i += 2)
+    try
     {
-        string name = arguments[i];
-        if (name is not ("--data" or "--out" or "--catalogue" or "--mass-models"))
-            throw new ArgumentException("Unknown option: " + name);
-        if (i + 1 >= arguments.Length || arguments[i + 1].StartsWith("--"))
-            throw new ArgumentException("Missing value for " + name);
-        if (command != "import" && name is "--catalogue" or "--mass-models")
-            throw new ArgumentException("Custom raw tables are supported by the import command.");
-        values.TryAdd(name, arguments[i + 1]);
-    }
+        Options options = createOptions();
+        string command = options.Command;
+        string dataRoot = options.DataRoot;
+        string outputRoot = options.OutputRoot;
+        Directory.CreateDirectory(outputRoot);
 
+        string reportPath = Path.Combine(outputRoot, "run_report.json");
+        Data.SaveJson(reportPath, new
+        {
+            command,
+            passed = false,
+            status = "running"
+        });
+        var inputHashes = CheckInputManifest(dataRoot);
+        var report = new Dictionary<string, object?>
+        {
+            ["command"] = command,
+            ["runtime"] = Environment.Version.ToString(),
+            ["mathnet_numerics"] = typeof(MathNet.Numerics.SpecialFunctions).Assembly.GetName().Version!.ToString(),
+            ["data_directory"] = dataRoot,
+            ["output_directory"] = outputRoot,
+            ["scope"] = "Native import, saved-fit statistical reconstruction and plotting; no new population fit or PDE solve"
+        };
+
+        if (command is "all" or "import" or "verify")
+        {
+            Console.WriteLine("Importing SPARC tables...");
+            var data = Sparc.Run(dataRoot, outputRoot, options.CataloguePath, options.MassModelsPath);
+            Console.WriteLine($"Selected {data.SelectedNames.Length} galaxies / {data.SelectedPoints.Count()} radii.");
+            if (options.CataloguePath == null && options.MassModelsPath == null)
+                report["sparc"] = SparcChecks.Run(data, dataRoot, outputRoot);
+        }
+
+        string currentSummaryHtml = "";
+        if (command is "all" or "statistics" or "pointwise" or "plots" or "verify")
+        {
+            Console.WriteLine("Reconstructing the current 25 September pointwise comparison...");
+            report["current_analysis"] = "pointwise_comparison_2026_09_25";
+            report["pointwise_inputs"] = PointwiseInputs.Verify(dataRoot, outputRoot);
+            report["pointwise_statistics"] = PointwiseStatistics.Run(dataRoot, outputRoot);
+            currentSummaryHtml = PointwiseReport.Write(outputRoot);
+        }
+
+        if (command is "all" or "statistics" or "verify")
+        {
+            Console.WriteLine("Reconstructing historical sign tests and auditing their saved predictions...");
+            Statistics.Run(dataRoot, outputRoot);
+            report["baryon_bootstrap"] = BaryonBootstrap.Run(dataRoot, outputRoot);
+            report["statistics"] = "passed";
+        }
+
+        if (command is "all" or "plots" or "pointwise" or "verify")
+        {
+            Console.WriteLine("Generating native SVG plots and numerical sidecars...");
+            bool currentOnly = command == "pointwise";
+            var figures = RenderFigures(dataRoot, outputRoot, currentOnly);
+            report["plots"] = figures.Select(path => RelativePath(outputRoot, path)).ToArray();
+            WriteGallery(outputRoot, figures, currentSummaryHtml, currentOnly);
+            Console.WriteLine($"Generated {figures.Count} figures.");
+        }
+
+        foreach (var (file, hash) in inputHashes)
+        {
+            if (Data.FileSha256(Path.Combine(dataRoot, file)) != hash)
+                throw new InvalidDataException("Input changed during run: " + file);
+        }
+
+        report["consumed_csv_inputs"] = Csv.Inputs
+            .Where(entry => entry.Key.StartsWith(dataRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
+            .ToDictionary(entry => RelativePath(dataRoot, entry.Key), entry => entry.Value);
+        report["input_files_unchanged"] = inputHashes.Count;
+        report["passed"] = true;
+        Data.SaveJson(reportPath, report);
+        Console.WriteLine("Completed. Results: " + outputRoot);
+        return 0;
+    }
+    catch (ArgumentException exception)
+    {
+        Console.Error.WriteLine(exception.Message);
+        return 1;
+    }
+    catch (DirectoryNotFoundException exception)
+    {
+        Console.Error.WriteLine($"Data directory not found: {exception.Message}");
+        return 1;
+    }
+    catch (Exception exception)
+    {
+        Console.Error.WriteLine(exception.ToString());
+        return 1;
+    }
+}
+
+static Options CreateOptions(
+    string command,
+    DirectoryInfo? dataDirectory,
+    DirectoryInfo? outputDirectory,
+    FileInfo? catalogue = null,
+    FileInfo? massModels = null)
+{
     string project = FindProject();
-    string dataRoot = Path.GetFullPath(values.GetValueOrDefault("--data") ?? Path.Combine(project, "data"));
-    string outputRoot = Path.GetFullPath(values.GetValueOrDefault("--out") ?? Path.Combine(project, "output"));
+    string dataRoot = dataDirectory?.FullName ?? Path.Combine(project, "data");
+    string outputRoot = outputDirectory?.FullName ?? Path.Combine(project, "output");
     if (!Directory.Exists(dataRoot))
         throw new DirectoryNotFoundException(dataRoot);
     if (outputRoot.Equals(dataRoot, StringComparison.OrdinalIgnoreCase) ||
         outputRoot.StartsWith(dataRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
         throw new ArgumentException("Output must be outside the input data directory.");
 
-    return new Options(command, dataRoot, outputRoot,
-        values.GetValueOrDefault("--catalogue"), values.GetValueOrDefault("--mass-models"));
+    return new Options(command, dataRoot, outputRoot, catalogue?.FullName, massModels?.FullName);
 }
 
 static string FindProject()
