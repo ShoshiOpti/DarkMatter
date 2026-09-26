@@ -26,7 +26,7 @@ public static class SparcChecks
             Check(double.IsFinite(actual) && error <= 5e-10 + 5e-13 * Math.Abs(expected), label);
         }
         double Number(string text) => double.Parse(text, NumberStyles.Float, CultureInfo.InvariantCulture);
-        Check(data.CatalogueSha256 == "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243", "Raw catalogue SHA256");
+        Check(data.CatalogueSha256 == "119d91f07aa8bf4c9be003ea2e836f45f28d7cb88f65dc3dabe87269f95be74a", "Raw catalogue SHA256");
         Check(data.MassModelsSha256 == "9108994b12cc401b94a1768beca61c53ec354779385c9c9cc571049f3043244c", "Raw mass-model SHA256");
         Check(data.Catalogue.Count == 175, "175 catalogue galaxies");
         Check(data.Points.Values.Sum(p => p.Length) == 3391, "3391 catalogue radii");

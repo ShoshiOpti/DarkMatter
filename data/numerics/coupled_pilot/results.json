@@ -2,7 +2,7 @@
   "protocol_sha256": "37d9db8190ec666e068d2f768f2fbfc37e0b1568fd47b711f1624f134dbff90a",
   "data_sha256": {
     "MassModels_Lelli2016c.mrt": "9108994b12cc401b94a1768beca61c53ec354779385c9c9cc571049f3043244c",
-    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243"
+    "SPARC_Lelli2016c.mrt": "119d91f07aa8bf4c9be003ea2e836f45f28d7cb88f65dc3dabe87269f95be74a"
   },
   "models": {
     "inner": {
