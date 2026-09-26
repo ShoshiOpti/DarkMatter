@@ -22,6 +22,7 @@ public static class BaryonBootstrap
         var data = Csv.Read(Path.Combine(folder, "paired_galaxy_scores.csv"));
         var results = new List<Result>();
         foreach (var (mode, region) in new[] { ("full", "all"), ("inner", "outer") })
+        {
             foreach (var (augmented, baseline) in Pairs)
             {
                 var all = data.Where(r => r["augmented"] == augmented && r["baseline"] == baseline && r["fit_mode"] == mode && r["region"] == region)
@@ -58,6 +59,8 @@ public static class BaryonBootstrap
                     results.Add(row);
                 }
             }
+        }
+
         string output = Path.Combine(folder, "paired_summary.csv");
         Csv.Write(output, results);
         var verification = Statistics.ValidateCsv(Path.Combine(numerics, "baryons_only", "paired_summary.csv"), output);
@@ -198,8 +201,7 @@ public static class BaryonBootstrap
         }
         public int Next(int upper)
         {
-            if (upper <= 0)
-                throw new ArgumentOutOfRangeException(nameof(upper));
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(upper);
             if (upper == 1)
                 return 0;
             // Lemire bounded integers; uint32 caching matches NumPy PCG64.
