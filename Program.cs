@@ -6,21 +6,13 @@ using DarkUniverse;
 CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.CurrentUICulture = CultureInfo.InvariantCulture;
 
-try
-{
-    if (args.Contains("--help") || args.FirstOrDefault() == "help")
-    {
-        Console.WriteLine(
-            "DarkUniverse.Console [all|import|statistics|pointwise|plots|verify] [--data PATH] [--out PATH]\n" +
-            "Import only: --catalogue FILE.mrt|.zip --mass-models FILE.mrt|.zip\n" +
-            "Default: all. Native C#; saved-fit reconstruction, no population refitting.");
-        return 0;
-    }
+return Cli.Invoke(args, Run);
 
-    var options = ParseOptions(args);
+static int Run(CommandOptions options)
+{
     string command = options.Command;
-    string dataRoot = options.DataRoot;
-    string outputRoot = options.OutputRoot;
+    string dataRoot = options.DataRoot.FullName;
+    string outputRoot = options.OutputRoot.FullName;
     Directory.CreateDirectory(outputRoot);
 
     string reportPath = Path.Combine(outputRoot, "run_report.json");
@@ -93,62 +85,6 @@ try
     Console.WriteLine("Completed. Results: " + outputRoot);
     return 0;
 }
-catch (Exception exception)
-{
-    Console.Error.WriteLine(exception.ToString());
-    return 1;
-}
-
-static Options ParseOptions(string[] arguments)
-{
-    bool hasCommand = arguments.Length > 0 && !arguments[0].StartsWith('-');
-    string command = hasCommand ? arguments[0] : "all";
-    if (command is not ("all" or "import" or "statistics" or "pointwise" or "plots" or "verify"))
-        throw new ArgumentException("Unknown command: " + command);
-
-    var values = new Dictionary<string, string>();
-    for (int i = hasCommand ? 1 : 0; i < arguments.Length; i += 2)
-    {
-        string name = arguments[i];
-        if (name is not ("--data" or "--out" or "--catalogue" or "--mass-models"))
-            throw new ArgumentException("Unknown option: " + name);
-        if (i + 1 >= arguments.Length || arguments[i + 1].StartsWith("--"))
-            throw new ArgumentException("Missing value for " + name);
-        if (command != "import" && name is "--catalogue" or "--mass-models")
-            throw new ArgumentException("Custom raw tables are supported by the import command.");
-        values.TryAdd(name, arguments[i + 1]);
-    }
-
-    string project = FindProject();
-    string dataRoot = Path.GetFullPath(values.GetValueOrDefault("--data") ?? Path.Combine(project, "data"));
-    string outputRoot = Path.GetFullPath(values.GetValueOrDefault("--out") ?? Path.Combine(project, "output"));
-    if (!Directory.Exists(dataRoot))
-        throw new DirectoryNotFoundException(dataRoot);
-    if (outputRoot.Equals(dataRoot, StringComparison.OrdinalIgnoreCase) ||
-        outputRoot.StartsWith(dataRoot + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
-        throw new ArgumentException("Output must be outside the input data directory.");
-
-    return new Options(command, dataRoot, outputRoot,
-        values.GetValueOrDefault("--catalogue"), values.GetValueOrDefault("--mass-models"));
-}
-
-static string FindProject()
-{
-    const string projectFile = "DarkUniverse.Console.csproj";
-    foreach (string start in new[] { AppContext.BaseDirectory, Environment.CurrentDirectory })
-    {
-        for (var directory = new DirectoryInfo(start); directory != null; directory = directory.Parent)
-        {
-            if (File.Exists(Path.Combine(directory.FullName, projectFile)))
-                return directory.FullName;
-
-            string nested = Path.Combine(directory.FullName, "DarkUniverse.Console");
-            if (File.Exists(Path.Combine(nested, projectFile)))
-                return nested;
-        }
-    }
-    return Environment.CurrentDirectory;
-}
 
 static string RelativePath(string root, string path) => Path.GetRelativePath(root, path).Replace('\\', '/');
 
@@ -214,5 +150,3 @@ static void WriteGallery(string outputRoot, IEnumerable<string> figures, string 
     html.Append("</html>");
     File.WriteAllText(Path.Combine(outputRoot, "index.html"), html.ToString());
 }
-
-sealed record Options(string Command, string DataRoot, string OutputRoot, string? CataloguePath, string? MassModelsPath);
