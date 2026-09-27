@@ -1,0 +1,7 @@
+# Frozen text inputs have byte-level SHA-256 checks recorded with CRLF endings.
+/data/**/*.csv text eol=crlf
+/data/**/*.json text eol=crlf
+/data/**/*.md text eol=crlf
+/data/**/*.mrt text eol=crlf
+/data/**/*.py text eol=crlf
+/data/**/*.txt text eol=crlf
