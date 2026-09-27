@@ -1,0 +1,2 @@
+Mechanism resolution: maximum saved speed difference 3.07518E-05 km/s; speed assessment no_margin_specified.
+Completed. Results: C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\output\runs\20260927T1237082572998Z-403bcf13ee59431f9ff5d92f8c262c95

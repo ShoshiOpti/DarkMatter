@@ -1,0 +1,8 @@
+  DarkUniverse.Console -> C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\bin\Release\net10.0\DarkUniverse.Console.dll
+  DarkMatter.Tests -> C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter.Tests\bin\Release\net10.0\DarkMatter.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.88

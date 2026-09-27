@@ -249,7 +249,7 @@ public static partial class PointwiseStatistics
                         ["delta_squared"] = a * a - b * b,
                         ["delta_absolute"] = Math.Abs(a) - Math.Abs(b),
                         ["delta_absolute_kms"] = (Math.Abs(a) - Math.Abs(b)) * point.Sigma,
-                        ["comparison_valid"] = double.IsFinite(a) && double.IsFinite(b),
+                        ["comparison_valid"] = !point.Failed[0] && !point.Failed[m] && double.IsFinite(a) && double.IsFinite(b),
                         ["comparator_fit_failed"] = point.Failed[m]
                     });
                 }
@@ -446,7 +446,7 @@ public static partial class PointwiseStatistics
                 foreach (Point point in group)
                 {
                     double z = point.Z[m], weight = 1.0 / group.Count();
-                    if (!double.IsFinite(z))
+                    if (point.Failed[m] || !double.IsFinite(z))
                     {
                         failed++;
                         continue;

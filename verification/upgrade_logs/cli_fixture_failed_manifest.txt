@@ -1,0 +1,4 @@
+System.IO.InvalidDataException: The input manifest must not be empty.
+   at DarkUniverse.InputManifest.Verify(String dataRoot) in C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\InputManifest.cs:line 72
+   at Program.<<Main>$>g__Run|0_0(CommandOptions options) in C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\Program.cs:line 19
+   at Cli.Execute(Func`2 action, Func`1 createOptions) in C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\Cli.cs:line 114

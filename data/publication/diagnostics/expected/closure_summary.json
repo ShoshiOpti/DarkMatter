@@ -1,0 +1,69 @@
+{
+  "interpretation": "Necessary equilibrium tests at frozen empirical density and calibration; no new fit, field population, particle-mass bound or significance test.",
+  "reference_mass_eV": 5.525436919564594e-25,
+  "galaxies": 131,
+  "outer_rows": 659,
+  "active_outer_rows": 512,
+  "wrong_sign_rows": 163,
+  "wrong_sign_galaxies": 51,
+  "numerically_robust_wrong_sign_rows": 163,
+  "shared_minimax": {
+    "x_min": -2822.8986015916603,
+    "x_max": 162336.1736207549,
+    "c": 0.0,
+    "error": 1.0,
+    "finite_mass": false
+  },
+  "active_shared_minimax": {
+    "x_min": -2822.8986015916603,
+    "x_max": 23903.23734907471,
+    "c": 0.0,
+    "error": 1.0,
+    "finite_mass": false
+  },
+  "finite_mass_per_galaxy_count": 80,
+  "per_galaxy_minimax_median": 0.34482788982111545,
+  "active_per_galaxy_minimax_median": 0.9932594437073855,
+  "galaxies_with_minimax_error_at_most_10percent": 38,
+  "galaxies_with_minimax_error_at_most_25percent": 61,
+  "galaxies_with_minimax_error_at_most_50percent": 72,
+  "pointwise_positive_mass_min_eV": 4.5517819709607084e-29,
+  "pointwise_positive_mass_min_galaxy": "CamB",
+  "pointwise_positive_mass_max_eV": 2.226251770042552e-22,
+  "pointwise_positive_mass_max_galaxy": "UGC04483",
+  "positive_only_shared_minimax": {
+    "x_min": 6.7862468362171515e-09,
+    "x_max": 162336.1736207549,
+    "c": 1.2320112981548148e-05,
+    "error": 0.9999999999999164,
+    "finite_mass": true
+  },
+  "retained_mass_inner_loss_min": 22.48260458456995,
+  "inverse_floor_eV": 2.226251770042552e-22,
+  "floor_bracketing_existing_forward_results": [
+    {
+      "log10_m": -22.0,
+      "m_eV": 1e-22,
+      "mean_inner_loss": 155.00862339632806,
+      "zero_charge_count": 1,
+      "seconds": 5.183782339096069
+    },
+    {
+      "log10_m": -21.5,
+      "m_eV": 3.16227766016838e-22,
+      "mean_inner_loss": 181.7902048072684,
+      "zero_charge_count": 3,
+      "seconds": 4.838639736175537
+    }
+  ],
+  "orientation_f_star": 0.5891240926596002,
+  "preparation_beta_star": 1.0,
+  "orientation_r": 0.8553410237429735,
+  "phase_contact_concavity_coefficient_over_C0": -2.953347187559144,
+  "median_outer_galaxy_contact_reduction": 0.2966209352147353,
+  "optimized_node_crossing_galaxies": 59,
+  "optimized_observed_interval_node_crossings": 75,
+  "median_galaxy_relative_speed_lower_kms": 514.5408467050847,
+  "phase_energy_unit": "C0 rho_t^2/(16 Mphi^2 m^2), and displayed fractional reduction includes b_g n^2",
+  "shape_diagnostic_warning": "Minimax residual is force imbalance relative to frozen gravitational force, not velocity error or a statistical goodness-of-fit statistic."
+}

@@ -1,22 +1,16 @@
 using System.Globalization;
-using System.Numerics;
 using System.Security.Cryptography;
 using System.Text.Json;
 
 namespace DarkUniverse;
 
+// Frozen protocol adapter over the shared PCG64 core; NumPy states and buffer semantics are unchanged.
 internal sealed class PointwiseRandom
 {
-    static readonly UInt128 Multiplier = ((UInt128)2549297995355413924UL << 64) | 4865540595714422341UL;
-    UInt128 state;
-    readonly UInt128 increment;
-    uint cached32, byteBuffer;
-    bool hasCached32;
-    int bytesRemaining;
+    readonly Pcg64Random random;
 
     public PointwiseRandom(ulong seed)
     {
-        // Frozen NumPy SeedSequence states for the three protocol seeds.
         var initial = seed switch
         {
             2026092501 => ("213948995852192707599246433140438501816", "321904506844260870564164000364087464915"),
@@ -24,74 +18,12 @@ internal sealed class PointwiseRandom
             2026092503 => ("171364352295095532094269204547027915199", "231027942869066986000708987154309789453"),
             _ => throw new ArgumentOutOfRangeException(nameof(seed), "Use one of the three frozen PROTOCOL.json seeds.")
         };
-        state = UInt128.Parse(initial.Item1, CultureInfo.InvariantCulture);
-        increment = UInt128.Parse(initial.Item2, CultureInfo.InvariantCulture);
+        random = new Pcg64Random(UInt128.Parse(initial.Item1, CultureInfo.InvariantCulture), UInt128.Parse(initial.Item2, CultureInfo.InvariantCulture));
     }
-
-    public ulong Next64()
-    {
-        state = unchecked(state * Multiplier + increment);
-        return BitOperations.RotateRight((ulong)(state >> 64) ^ (ulong)state, (int)(state >> 122));
-    }
-
-    uint Next32()
-    {
-        if (hasCached32)
-        {
-            hasCached32 = false;
-            return cached32;
-        }
-        ulong value = Next64();
-        cached32 = (uint)(value >> 32);
-        hasCached32 = true;
-        return (uint)value;
-    }
-
-    public int NextInt(int upper)
-    {
-        if (upper <= 0)
-            throw new ArgumentOutOfRangeException(nameof(upper));
-        if (upper == 1)
-            return 0;
-        // Lemire bounded integers, with rejection to avoid modulo bias.
-        uint bound = (uint)upper, threshold = unchecked(0u - bound) % bound;
-        ulong product;
-        do
-        {
-            product = (ulong)Next32() * bound;
-        } while ((uint)product < threshold);
-        return (int)(product >> 32);
-    }
-
-    // NumPy discards unused bytes between separate integers(dtype=int8) calls.
-    public void StartInt8Batch() => bytesRemaining = 0;
-
-    int NextByte()
-    {
-        if (bytesRemaining == 0)
-        {
-            byteBuffer = Next32();
-            bytesRemaining = 4;
-        }
-        int value = (int)(byteBuffer & 255);
-        byteBuffer >>= 8;
-        bytesRemaining--;
-        return value;
-    }
-
-    public int NextInt8(int upper)
-    {
-        if (upper <= 0 || upper > 128)
-            throw new ArgumentOutOfRangeException(nameof(upper));
-        if (upper == 1)
-            return 0;
-        int threshold = 256 % upper, product;
-        do
-        {
-            product = NextByte() * upper;
-        } while ((product & 255) < threshold);
-        return product >> 8;
-    }
+    public ulong Next64() => random.Next64();
+    public int NextInt(int upper) => random.NextInt(upper);
+    public void StartInt8Batch() => random.StartInt8Batch();
+    public int NextInt8(int upper) => random.NextInt8(upper);
 
     public static Dictionary<string, object?> SelfCheck(string referencePath)
     {
@@ -146,3 +78,4 @@ internal sealed class PointwiseRandom
         };
     }
 }
+

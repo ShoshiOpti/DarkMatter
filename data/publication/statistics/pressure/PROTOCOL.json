@@ -1,0 +1,28 @@
+{
+  "title": "Derived 3+2 nonlinear halo: retrospective fixed-prediction comparison",
+  "date": "2026-09-26",
+  "status": "Specified before reading any new nonlinear-EOS prediction or score. Existing galaxies, outcomes and model-development history have already been explored; this is not prospective registration.",
+  "primary_model": "nonlinear_eos",
+  "primary_comparators": ["inherited_baryons", "profiled_baryons", "derived_quartic", "original_core", "envelope", "nfw"],
+  "quartic_control": "Retained as a distinct physical truncation control even if its predictions happen to coincide with another model; do not drop a family member after observing its results.",
+  "primary_sample": "Original 131 SPARC galaxies and 659 outer rows; all supplied models must cover every original outer observation. Full 3034-row input is preferred; outer-only input is accepted and labeled.",
+  "primary_loss": "Mean pointwise squared standardized velocity residual within each galaxy, then equal galaxy weight.",
+  "effect": "Mean nonlinear_eos-minus-comparator galaxy loss; negative favors nonlinear_eos.",
+  "sign_tolerance": "abs(L_left-L_right) <= 1e-4*(1+max(L_left,L_right)); evaluate only when both losses are finite.",
+  "sign_probability": "Two-sided fair-sign binomial probability conditional on informative galaxy pairs; finite prediction wins over failed fit; joint failures have no sign. Holm6 covers all six prespecified sign comparisons.",
+  "bootstrap_draws": 99999,
+  "pairs_seed": 2026092601,
+  "wild_seed": 2026092602,
+  "finite_subset_seed": 2026092603,
+  "interval": "Marginal 95% whole-galaxy pairs bootstrap-t; percentile interval retained as secondary description.",
+  "wild_test": "Two-sided null-imposed studentized mean-loss bootstrap d_g*=w_g*d_g with independent Rademacher multipliers at galaxy level; zero restricted intercept. Approximate under a mean-only null, not generally exact sign randomization.",
+  "p_value": "(exceedances+1)/(draws+1), with raw binomial Monte Carlo 95% interval and explicit resolution-floor flag. No extrapolation of zero exceedances.",
+  "continuous_multiplicity": "Six prespecified slots. For a nonfinite full-sample contrast, no p value exists: retain a conservative p=1 adjustment placeholder only when Holm-adjusting other valid contrasts. Never publish the placeholder as that failed contrast's p value.",
+  "failure_policy": "Any explicit fit_failed flag anywhere in a supplied galaxy/model block, or any nonfinite/negative predicted outer speed, invalidates that galaxy/model for continuous scoring. Keep all 131 galaxies in failure-aware signs. Full-sample continuous contrast is undefined when either model has a failure. Report feasible-pair effect and interval separately, without a primary p value; no arbitrary finite penalty, imputation, or hidden deletion.",
+  "uncertainty_scope": "Conditions on saved predictions; no refitting, nuisance-estimation uncertainty, shared survey systematics, model-history correction, covariance estimation or new data validation.",
+  "secondary_descriptions": ["mean and median galaxy loss", "equal-galaxy MAE in km/s and absolute standardized residual", "median and symmetric 10% trimmed paired differences", "pooled-point effect", "leave-one-galaxy-out effects and variance concentration", "assumed equicorrelation rho=0,0.25,0.5,0.75, frozen predictions"],
+  "gaussian_equivalent": "Unsigned two-sided normal equivalent norm.isf(p/2); never a field detection significance, test of GR, or proof of mechanism.",
+  "predictions_interface": "predicted_rows.csv columns galaxy,index,radius,observed,sigma,is_outer,model,predicted; optional fit_failed and failure_reason. Speeds/errors in original catalogue coordinates, radius in catalogue kpc. A finite outer prediction does not override an explicitly failed training fit.",
+  "fixed_observational_reference": "../../pointwise_comparison_2026_09_25/data/pointwise_all.csv relative to the statistics directory; validate original galaxy/index, observed speed, quoted error, radius and split. Do not fit, repair, or reorder the experimental split."
+}
+

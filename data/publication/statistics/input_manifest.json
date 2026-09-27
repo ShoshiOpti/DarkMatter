@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "path": "generate_rng_reference.py",
+      "sha256": "eed00290db62b4b73ce6f3e7c81a0d3fe42a4cea7f46e60e58002b0a6ffb8a19"
+    },
+    {
+      "path": "numpy_rng_reference.json",
+      "sha256": "470f3c1c3bac6d7d532e544f6ca9d8ca79e6f19e371927e1520d469688a5cb2e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fc336de791dc2a21ee50d349dd3ee381f917db677c9fe3fe43955c063ac027d4"
+    },
+    {
+      "path": "charged/predicted_rows.csv",
+      "sha256": "d63204ea7ab521d905018a8f93f834e0814dddf341b5c9ad87795671ae3aabfe"
+    },
+    {
+      "path": "charged/PROTOCOL.json",
+      "sha256": "120d48345ea591ff222d2b7bd098533f408c60812ae32153a1d92955edaf6281"
+    },
+    {
+      "path": "charged/reference/continuous_comparisons.csv",
+      "sha256": "1ea08184fff8dcb0cefc7e8138538ca5a20f023a7941358fa05e97e69ef2e5f6"
+    },
+    {
+      "path": "charged/reference/covariance_sensitivity.csv",
+      "sha256": "87e27f7c215c835bd51f9d578a5789f317b90e74d9820cbe914b82898cad4f82"
+    },
+    {
+      "path": "charged/reference/evaluate_predictions.py",
+      "sha256": "138ff6b9195645e62288696ba148d6c26b108e3b0dfd010624a637f52fd254cb"
+    },
+    {
+      "path": "charged/reference/model_summary.csv",
+      "sha256": "5fffa2d1c7ef7d4099a46ceae98e640816c7dfc8d1c9d7f262345f96ca2fcf21"
+    },
+    {
+      "path": "charged/reference/sign_comparisons.csv",
+      "sha256": "7977f64919274c25cf15e26ab30dccf0f53a977693e42ca5722fcde588fbe94e"
+    },
+    {
+      "path": "envelope/saved_galaxy_scores.csv",
+      "sha256": "106bdea25ca2f647af41071983a07ee58f2605900c9cfbcc6ed07cc6899b1e98"
+    },
+    {
+      "path": "envelope/reference/sign_family_h10.csv",
+      "sha256": "18c1eed30a3ba330a58e11738a0698718012901beebd450be0b2f699b739214d"
+    },
+    {
+      "path": "envelope/reference/sign_family_original.csv",
+      "sha256": "d8d50b0d0d35ffb7f77cfe6e1b9abd3a5a5ef7121272633799a1b1c75e59ee47"
+    },
+    {
+      "path": "pressure/predicted_rows.csv",
+      "sha256": "7e89f48b9ea1436cfa6b65e028691c5ae8b0a48746e78af54de9a2d847100d93"
+    },
+    {
+      "path": "pressure/PROTOCOL.json",
+      "sha256": "c8471075f6c4668c30e9b7c47647548649727143f71e3e74552f339584d25b43"
+    },
+    {
+      "path": "pressure/reference/continuous_comparisons.csv",
+      "sha256": "ab55cf7ce5ea70571c93f00cb4cef2897153f0dec1479f1fcf3537a883f76b7b"
+    },
+    {
+      "path": "pressure/reference/covariance_sensitivity.csv",
+      "sha256": "6c387281986f813964d3f915250368af4917ffd9eb6958c5e40476c05fb5b82f"
+    },
+    {
+      "path": "pressure/reference/evaluate_predictions.py",
+      "sha256": "46e136b7195e7bf861a58a46a5609a0a65d8fb573e1c18212eda38cbddf61b5e"
+    },
+    {
+      "path": "pressure/reference/model_summary.csv",
+      "sha256": "96edf215613e449ce3927ea6b00715e5c68d39066c0e5025f1861166da5b1145"
+    },
+    {
+      "path": "pressure/reference/sign_comparisons.csv",
+      "sha256": "99eb52461eacd677d119abb46b8380b3706b02945c4b07ddf809f56c62aafbd5"
+    }
+  ],
+  "description": "Frozen inputs and independent reference outputs for native publication statistics; predictions and protocols preserved from the consolidated source archive."
+}

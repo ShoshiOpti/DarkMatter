@@ -1,0 +1,13 @@
+{
+  "simulationReplicates": 500,
+  "bootstrapDraws": 999,
+  "galaxyCount": 131,
+  "seed": 2026092701,
+  "confidenceLevel": 0.95,
+  "testAlpha": 0.05,
+  "standardizedEffect": 0.3,
+  "maxParallelism": 4,
+  "mechanismSpeedToleranceKms": null,
+  "mechanismLossMargin": null,
+  "solverSpeedErrorBoundKms": null
+}

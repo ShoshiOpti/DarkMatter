@@ -1,0 +1,1178 @@
+{
+  "status": "pass",
+  "created_at_utc": "2026-09-27T12:37:52.651503+00:00",
+  "scope": "Implemented native reliability and research workflows; full publication replay unchanged; empirical pilot is retrospective sensitivity, not new independent evidence or a full shared-physical-parameter refit.",
+  "locked_restore_previously_passed": true,
+  "checks": [
+    {
+      "check": "build",
+      "command": [
+        "dotnet",
+        "build",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkUniverse.slnx",
+        "-c",
+        "Release",
+        "--no-restore",
+        "--nologo"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 1.1099999998696148,
+      "log": "DarkMatter\\verification\\upgrade_logs\\build.txt"
+    },
+    {
+      "check": "regressions",
+      "command": [
+        "dotnet",
+        "run",
+        "--project",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter.Tests",
+        "-c",
+        "Release",
+        "--no-build"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 2.093000000109896,
+      "log": "DarkMatter\\verification\\upgrade_logs\\regressions.txt"
+    },
+    {
+      "check": "calibration",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "calibrate",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\research\\calibration.example.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 1.9379999998491257,
+      "log": "DarkMatter\\verification\\upgrade_logs\\calibration.txt"
+    },
+    {
+      "check": "resolution",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "resolution",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\research\\resolution.example.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.7029999999795109,
+      "log": "DarkMatter\\verification\\upgrade_logs\\resolution.txt"
+    },
+    {
+      "check": "research_create",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "research-create"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.46800000010989606,
+      "log": "DarkMatter\\verification\\upgrade_logs\\research_create.txt"
+    },
+    {
+      "check": "research_lock",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "research-lock",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\studies\\upgrade-7c496835a552\\protocol.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.5470000000204891,
+      "log": "DarkMatter\\verification\\upgrade_logs\\research_lock.txt"
+    },
+    {
+      "check": "research_validate",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "research-validate",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\studies\\upgrade-7c496835a552\\protocol.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.5160000000614673,
+      "log": "DarkMatter\\verification\\upgrade_logs\\research_validate.txt"
+    },
+    {
+      "check": "research_pilot",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "research-pilot",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\studies\\upgrade-7c496835a552\\protocol.json",
+        "--reference",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\reference",
+        "--python",
+        "C:\\Users\\shosh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "--packages",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-python-packages-20260927"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 3.4839999999385327,
+      "log": "DarkMatter\\verification\\upgrade_logs\\research_pilot.txt"
+    },
+    {
+      "check": "research_evaluate",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "research-evaluate",
+        "--protocol",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\studies\\upgrade-7c496835a552\\protocol.json",
+        "--predictions",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\runs\\20260927T1237105264513Z-1cbba266f7e44738973027d092df4ee1\\predictions.csv",
+        "--fit-artifact",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\output\\runs\\20260927T1237105264513Z-1cbba266f7e44738973027d092df4ee1\\fit_artifact.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.625,
+      "log": "DarkMatter\\verification\\upgrade_logs\\research_evaluate.txt"
+    },
+    {
+      "check": "full_native_verify",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\bin\\Release\\net10.0\\DarkUniverse.Console.dll",
+        "verify"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 23.219000000040978,
+      "log": "DarkMatter\\verification\\upgrade_logs\\full_native_verify.txt"
+    },
+    {
+      "check": "publish",
+      "command": [
+        "dotnet",
+        "publish",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter",
+        "-c",
+        "Release",
+        "--no-restore",
+        "--nologo",
+        "-o",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.8590000001713634,
+      "log": "DarkMatter\\verification\\upgrade_logs\\publish.txt"
+    },
+    {
+      "check": "isolated_published_publication",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514\\DarkUniverse.Console.dll",
+        "publication"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 8.812999999849126,
+      "log": "DarkMatter\\verification\\upgrade_logs\\isolated_published_publication.txt"
+    },
+    {
+      "check": "cli_fixture_success",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514\\DarkUniverse.Console.dll",
+        "calibrate",
+        "--data",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\data",
+        "--out",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\out",
+        "--protocol",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\settings.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.2029999999795109,
+      "log": "DarkMatter\\verification\\upgrade_logs\\cli_fixture_success.txt"
+    },
+    {
+      "check": "cli_fixture_failed_manifest",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514\\DarkUniverse.Console.dll",
+        "calibrate",
+        "--data",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\data",
+        "--out",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\out",
+        "--protocol",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\settings.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.14000000013038516,
+      "log": "DarkMatter\\verification\\upgrade_logs\\cli_fixture_failed_manifest.txt"
+    },
+    {
+      "check": "cli_fixture_rejected_overlap",
+      "command": [
+        "dotnet",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514\\DarkUniverse.Console.dll",
+        "calibrate",
+        "--data",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\data",
+        "--out",
+        "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-cli-8375889e417e\\data\\unsafe"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.06299999984912574,
+      "log": "DarkMatter\\verification\\upgrade_logs\\cli_fixture_rejected_overlap.txt"
+    },
+    {
+      "check": "integrity",
+      "command": [
+        "C:\\Users\\shosh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\verify_project.py",
+        "--report",
+        "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\DarkMatter\\verification\\upgrade_integrity.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 2.844000000040978,
+      "log": "DarkMatter\\verification\\upgrade_logs\\integrity.txt"
+    }
+  ],
+  "regression_report": {
+    "passed": true,
+    "tests": 29,
+    "scientific_checks": {
+      "statistical_engine": {
+        "status": "pass",
+        "checks": 18,
+        "algorithm": "PCG64-XSL-RR with SplitMix64 seed expansion v1; research seed mapping is explicitly distinct from NumPy SeedSequence"
+      },
+      "mechanism_resolution": {
+        "status": "pass",
+        "checks": 14
+      },
+      "research_workflow": {
+        "status": "pass",
+        "checks": 21,
+        "passed": [
+          "valid-lock",
+          "nonfinite-radius_kpc",
+          "nonfinite-sigma_kms",
+          "nonfinite-gas_kms",
+          "overlap",
+          "invalid-inclination",
+          "radius-order",
+          "omitted-lock-entry",
+          "changed-input",
+          "false-prospective",
+          "shared-flag",
+          "shared-outer-leak",
+          "shared-transfer-change",
+          "valid-shared-transfer",
+          "descriptive-family",
+          "replicate-00",
+          "replicate-+0",
+          "replicate-_0",
+          "replicate--1",
+          "derived-score-overflow",
+          "shared-training-inference-gate"
+        ],
+        "temporary_fixture_root": "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-research-selfcheck-04ac9e7e97714588ba7475fb95a8af7a"
+      },
+      "publication_result_compatibility": {
+        "status": "pass",
+        "checks": 12
+      }
+    },
+    "results": [
+      {
+        "name": "complete manifest and unchanged snapshot",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "missing manifest creates terminal failed attempt",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "empty and malformed manifests rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "unlisted input rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "missing and changed inputs rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "duplicate and case-aliased manifest keys rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "portable path traversal and alias guards",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "snapshot detects new file and changed manifest",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "equal descendant and ancestor output roots rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "junction or symlink output alias cannot write into inputs",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "output subtree reparse point rejected before writing",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "input subtree links are rejected without traversal",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "failed rerun is isolated and preserves last successful gallery",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "failed initialization does not leave a running report",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "abandoned session becomes failed",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "latest promotion failure restores previous gallery",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "Windows device namespace aliases cannot overlap input and output roots",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "hardlinked inputs rejected",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "atomic gallery replacement does not truncate hardlink target",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract verifies reordered rows and normalized numeric keys",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract rejects changed recomputed effect",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract rejects missing result row",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract rejects substituted result key with unchanged row count",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract rejects missing result column",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure contract rejects changed bound scientific source",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "shared statistical engine properties and golden RNG",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "mechanism resolution algebra and error bounds",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "research workflow protocol and baseline adversarial checks",
+        "passed": true,
+        "error": null
+      },
+      {
+        "name": "figure result compatibility tolerances and invalid values",
+        "passed": true,
+        "error": null
+      }
+    ]
+  },
+  "run_directories": {
+    "verified": "DarkMatter\\output\\runs\\20260927T1237146567178Z-a38b0424c8af4d6cb5ecfd0305dd778f",
+    "calibration": "DarkMatter\\output\\runs\\20260927T1237063109710Z-7d95b5b55f8340ae9ad9474b0ee0540e",
+    "resolution": "DarkMatter\\output\\runs\\20260927T1237082572998Z-403bcf13ee59431f9ff5d92f8c262c95",
+    "study": "DarkMatter\\output\\studies\\upgrade-7c496835a552",
+    "pilot": "DarkMatter\\output\\runs\\20260927T1237105264513Z-1cbba266f7e44738973027d092df4ee1",
+    "evaluation": "DarkMatter\\output\\runs\\20260927T1237140235470Z-0a43a133070d4982bc0bd0e5e976fca4"
+  },
+  "published_validation_directory": "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-upgrade-publish-494009f14514\\output\\runs\\20260927T1237386863742Z-45f5071aefd74a9aa8ccac76af4f3b67",
+  "previous_scientific_outputs_byte_identical": 195,
+  "published_scientific_outputs_byte_identical": 89,
+  "figure_result_tables_verified": 15,
+  "figure_result_values_verified": 64928,
+  "gallery_links_checked": {
+    "index.html": 110,
+    "current_results/index.html": 6,
+    "historical_figures.html": 144
+  },
+  "negative_cli_failure_did_not_change_latest_success": true,
+  "archive_required": false,
+  "source_sha256": {
+    "DarkMatter/BaryonBootstrap.cs": "1e4067487fa656107929f59bad6c59ca2aa8fc9055b98798dfb1d1c9b43c80ce",
+    "DarkMatter/CalibrationStudy.cs": "f699e5a88c3144954fd7440337908d2291e0136a915ba3a771597d79446870d7",
+    "DarkMatter/Cli.cs": "4f6921799de5a363ddd2360e09f136bc7631bf8ef4e4da7c0a7f6eb20323726b",
+    "DarkMatter/ControlledPlots.cs": "2418585cdec0b601faf12fd19acdee5c936e7d7b07fe5e65914ffdd2924cf6c4",
+    "DarkMatter/CurrentResultsPlots.cs": "4c75b04b4b8d9967bdad7797c1c387a759d0d5c4a38ec1d357a49f537470aedd",
+    "DarkMatter/Data.cs": "87e83dad1ca07c44946bc83c832661fd2496c3867d5044da14e83a1507ca6fe7",
+    "DarkMatter/ExecutionSafety.cs": "1e9cfc5b54913491b61bcf4455f18f700ecae5cab9832d217279c716ac7a7707",
+    "DarkMatter/GalaxyClassPlots.cs": "3c4bc60f109ee8a2f92022f699303480920963620b674eb29723c15c3f11ad54",
+    "DarkMatter/InputManifest.cs": "a5c92f0ae8e712dc6ac1afe9e30b931d3e550b98f6c8eae3a6d685f5903fe6eb",
+    "DarkMatter/LegacyPilot.cs": "604f40ca62e11a0851f1b39663f78e3ba81ee9e102eb6c1ddb75feba8de235e1",
+    "DarkMatter/MechanismResolution.cs": "78a2bfe74873f5fae636bf24a8cc68039f403c3fb4c920be609d340289225a0d",
+    "DarkMatter/ObservationPlots.cs": "008cdb8997f707609b6db64798064b49fc556430d24cf768f1f158392b429d89",
+    "DarkMatter/Plot.cs": "b55bcc1e71a17a742bac09fc54744d7e6308c00580d3d7fe97db06075670d692",
+    "DarkMatter/PointwiseInputs.cs": "b2006f49cde2201aa16efa92e3f35dcb5dadb20bdea7e44b6474b342eaddcef9",
+    "DarkMatter/PointwisePlots.cs": "bccc8ecd722e49e180e0df8c405fb0839276223d58907ac3ebd530da05a3f6e3",
+    "DarkMatter/PointwiseRandom.cs": "4850d472df2a28d5574364090f7222f06dc0afed96d988cf4e4708b9981aeaf1",
+    "DarkMatter/PointwiseReport.cs": "78dedce3a8473eb974be685a223e51de645b8607d8c7cbaa5580eba01cf7e2c3",
+    "DarkMatter/PointwiseStatistics.cs": "4ffe9c88e8cdd39c58eda5363c4529014113c3ecb12ebb18d78908f6a9c600b3",
+    "DarkMatter/PointwiseStatisticsChecks.cs": "a16ec5f1ee4d35b62fce400db3142ae865df8a8ba02c597d52cfc37e5f60cd94",
+    "DarkMatter/Program.cs": "be2b7706b304f37f55a748185d622914bb0f59dadca08d3a91147a4ec30e58e8",
+    "DarkMatter/PublicationCompatibility.cs": "54de00124516aee08c0a91d7b8928dbe5e6e3bd85d4c82727508171c7e1a6a3c",
+    "DarkMatter/PublicationDiagnostics.cs": "0221944c87da838e3a0eb743bfbf8885c5095c3aef7f0b4ef3b5dc09b692ea2d",
+    "DarkMatter/PublicationPlots.cs": "a5b5503e544d7695d83db93acab838968532ad073b4ea8a01e228e759679d183",
+    "DarkMatter/PublicationStatistics.cs": "3e34abcf549d75b77f273cdc979d2de8c3b613b06cb783cdcb5d0c817bb0ca35",
+    "DarkMatter/PublicationStatisticsBootstrap.cs": "17db5c0f11fdc6da75ec250f98a8ee3383c9ce6ebffbbe1d8a26930d973c642f",
+    "DarkMatter/PublicationStatisticsChecks.cs": "630ec6d5748d305badf0e5666d4a51423fda3069e50ca75e33f67f350ef443a0",
+    "DarkMatter/PublicationStatisticsRandom.cs": "35bbf20c6060d0d63695f24d74a18883791ece06b89a16f7a56d820b29086738",
+    "DarkMatter/ResearchWorkflow.cs": "6cdea7945d4520acd71ca4619be62424b11303e9a39b79dc70ec56ad570dcd24",
+    "DarkMatter/RunSession.cs": "3588f0d9e3888ce3be66dd19268a7ce60f7b0cde6f7bb9d0398ca7bcf08a6ecb",
+    "DarkMatter/Sparc.cs": "ab4346acdbfc4ae9311aea6c18e22399a95ae22d254819f2c8f5231c24f611a8",
+    "DarkMatter/SparcChecks.cs": "ca25224e0959fcde91ed35198b0b773b5742535416756eeea0e98a8d92ea5f7b",
+    "DarkMatter/StatisticalEngine.cs": "7caee1c581ff6266d05d030dd37962663ee4d11c1bed0581aa38b860dfdddcd6",
+    "DarkMatter/Statistics.cs": "a870aadb28352f34d25329c97cdd5a0441fa5a95c8b8c343b50c5366334ffb20",
+    "DarkMatter/StatisticsChecks.cs": "524699390b6ba1576d7315a1e99072d126341cc59eee71884af295619c4f212c",
+    "DarkMatter.Tests/Program.cs": "155604fa3aeef90347f410d24819a57f7beee6c3a32c04f0cd373ada8dfba788",
+    "DarkMatter/research/calibration.example.json": "15330b18c2a73c8b82007e77999e9ebcf815f785201f0ab53f23d362dd52b323",
+    "DarkMatter/research/README.md": "49cdb00b9a98a0dc557f2db809babd73bd6fab8c52e9f38fea27a7e2a5c9052f",
+    "DarkMatter/research/resolution.example.json": "6680b1457ad9f4eda98b3b2800e2338a6128f939824e3459d35077bf2407da44",
+    "DarkMatter/research/STATISTICAL_METHODS.md": "33989f119f9c869b5dcbcf4b01f9fe10d9f7e5e83ceae579ba0d57b9779378b6",
+    "DarkUniverse.slnx": "724219f12ed3826283ed27b9efad02c9345a44c258b723f9033da084ce492168",
+    "DarkMatter/DarkUniverse.Console.csproj": "d086d3951f0e8e02cc84a61f5b991b7d36ea8a4ba1f14d0f24e2b4b6fc23f7ec",
+    "DarkMatter/packages.lock.json": "04b085f7a388e9914b0d368ba6358cb084a4ed03f08cdf7e05b52fe81a6b2e35",
+    "DarkMatter.Tests/DarkMatter.Tests.csproj": "cf590e986e6c8b8d527c23f8755f6ee72170629db53c9de6f0b8d7e3c9264b67",
+    "DarkMatter.Tests/packages.lock.json": "c5048716e7c0352d1cf7982f2f936a490bab7b32ac4afb7a6f434c4ca5cda668",
+    "DarkMatter/tools/research_python_runner.py": "6134aa65f6d23e88bf03cc6a68e8e4d671d06b799280d017adf3a925f1ea36ec",
+    "DarkMatter/README.md": "0eef837ab1b7df4de838ed96626b02712b25bf1f88f175e6e2cfdde3085d83f4",
+    "README.md": "320f57e57dce4119dd197108ddcbd8d91aba7ebbe0ab7f05d56397eb64ca659a",
+    "DarkMatter/data/input_manifest.json": "5497a1d1cae8866c9129139861310f04be68ec39e58e12f1aa796267dbca7acf",
+    "DarkMatter/data/publication/figures/result_contract.json": "6ed92e02a74177fc135bfd6a9c0c164303ad51dcf4097b9a19495f2127659c13"
+  },
+  "calibration": {
+    "schema_version": 1,
+    "status": "completed",
+    "protocol": {
+      "SimulationReplicates": 500,
+      "BootstrapDraws": 999,
+      "GalaxyCount": 131,
+      "Seed": 2026092701,
+      "ConfidenceLevel": 0.95,
+      "TestAlpha": 0.05,
+      "StandardizedEffect": 0.3,
+      "MaxParallelism": 4,
+      "MechanismSpeedToleranceKms": null,
+      "MechanismLossMargin": null,
+      "SolverSpeedErrorBoundKms": null
+    },
+    "random_algorithm": "PCG64-XSL-RR with SplitMix64 seed expansion v1; research seed mapping is explicitly distinct from NumPy SeedSequence",
+    "elapsed_seconds": 1.4753974,
+    "scenario_count": 5,
+    "total_simulated_datasets": 5000,
+    "purpose": "Measure finite-sample null rejection, known-effect power and interval coverage; successful execution does not mean a method is calibrated.",
+    "scope": "Synthetic stress tests, not validation of actual SPARC galaxies or a fitted physical model. Shared-systematic scenarios intentionally violate independent-galaxy assumptions.",
+    "paired_scenarios": "Null and known-effect datasets reuse the same error realization and bootstrap streams; comparisons across these cases are correlated by design.",
+    "monte_carlo_intervals": "Marginal 95% Clopper-Pearson intervals for simulation rejection and coverage proportions; not simultaneous across scenarios.",
+    "invalid_policy": "Invalid tests and intervals are counted separately. Reported rates condition explicitly on valid outcomes; degenerate draws are never silently discarded within a run.",
+    "bootstrap_resolution_floor": 0.001,
+    "alpha_below_resolution_floor": false,
+    "summary": [
+      {
+        "scenario": "normal",
+        "case": "null",
+        "description": "Independent standard normal galaxy effects.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 28,
+        "rate_interpretation": "type_I_rejection",
+        "rejection_rate_valid_only": 0.056,
+        "rejection_mc95_lower": 0.03753044447494034,
+        "rejection_mc95_upper": 0.0799213006042752,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": true,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 473,
+        "coverage_valid_only": 0.946,
+        "coverage_mc95_lower": 0.9224025315050859,
+        "coverage_mc95_upper": 0.9641157402781753,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.0001467781975731876,
+        "rmse": 0.08934222771695857,
+        "mean_reported_cluster_se": 0.08710164427162055,
+        "mean_ci_width_valid_only": 0.3426353274731625,
+        "mean_maximum_variance_share": 0.0627740041860073,
+        "mc_floor_replicates": 1
+      },
+      {
+        "scenario": "normal",
+        "case": "known_effect",
+        "description": "Independent standard normal galaxy effects.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 464,
+        "rate_interpretation": "power_for_configured_nonzero_mean",
+        "rejection_rate_valid_only": 0.928,
+        "rejection_mc95_lower": 0.9017125626631419,
+        "rejection_mc95_upper": 0.9490656668748658,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": null,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 473,
+        "coverage_valid_only": 0.946,
+        "coverage_mc95_lower": 0.9224025315050859,
+        "coverage_mc95_upper": 0.9641157402781753,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.00014677819757319698,
+        "rmse": 0.08934222771695857,
+        "mean_reported_cluster_se": 0.08710164427162055,
+        "mean_ci_width_valid_only": 0.3426353274731625,
+        "mean_maximum_variance_share": 0.06277400418600732,
+        "mc_floor_replicates": 237
+      },
+      {
+        "scenario": "skewed",
+        "case": "null",
+        "description": "Independent centered exponential galaxy effects, mean zero and variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 25,
+        "rate_interpretation": "type_I_rejection",
+        "rejection_rate_valid_only": 0.05,
+        "rejection_mc95_lower": 0.032615180149323374,
+        "rejection_mc95_upper": 0.0729276216504778,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": true,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 472,
+        "coverage_valid_only": 0.944,
+        "coverage_mc95_lower": 0.9200786993957246,
+        "coverage_mc95_upper": 0.9624695555250602,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.0037619777158435087,
+        "rmse": 0.0903728156778749,
+        "mean_reported_cluster_se": 0.08777586387445598,
+        "mean_ci_width_valid_only": 0.35606279793585965,
+        "mean_maximum_variance_share": 0.15774390502817084,
+        "mc_floor_replicates": 3
+      },
+      {
+        "scenario": "skewed",
+        "case": "known_effect",
+        "description": "Independent centered exponential galaxy effects, mean zero and variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 483,
+        "rate_interpretation": "power_for_configured_nonzero_mean",
+        "rejection_rate_valid_only": 0.966,
+        "rejection_mc95_lower": 0.9461196492639256,
+        "rejection_mc95_upper": 0.9800713999537909,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": null,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 472,
+        "coverage_valid_only": 0.944,
+        "coverage_mc95_lower": 0.9200786993957246,
+        "coverage_mc95_upper": 0.9624695555250602,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.003761977715843516,
+        "rmse": 0.0903728156778749,
+        "mean_reported_cluster_se": 0.08777586387445598,
+        "mean_ci_width_valid_only": 0.35606279793585965,
+        "mean_maximum_variance_share": 0.15774390502817084,
+        "mc_floor_replicates": 262
+      },
+      {
+        "scenario": "heteroskedastic",
+        "case": "null",
+        "description": "Independent normal effects with a smooth 0.2-to-3 standard-deviation gradient, normalized to average variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 22,
+        "rate_interpretation": "type_I_rejection",
+        "rejection_rate_valid_only": 0.044,
+        "rejection_mc95_lower": 0.02777676728549949,
+        "rejection_mc95_upper": 0.06586100032359331,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": true,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 474,
+        "coverage_valid_only": 0.948,
+        "coverage_mc95_lower": 0.9247336289693776,
+        "coverage_mc95_upper": 0.9657543019172318,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.008596596059369533,
+        "rmse": 0.08654889222742476,
+        "mean_reported_cluster_se": 0.08668306646662256,
+        "mean_ci_width_valid_only": 0.3406116305713875,
+        "mean_maximum_variance_share": 0.1000534154695639,
+        "mc_floor_replicates": 0
+      },
+      {
+        "scenario": "heteroskedastic",
+        "case": "known_effect",
+        "description": "Independent normal effects with a smooth 0.2-to-3 standard-deviation gradient, normalized to average variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 473,
+        "rate_interpretation": "power_for_configured_nonzero_mean",
+        "rejection_rate_valid_only": 0.946,
+        "rejection_mc95_lower": 0.9224025315050859,
+        "rejection_mc95_upper": 0.9641157402781753,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": null,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 474,
+        "coverage_valid_only": 0.948,
+        "coverage_mc95_lower": 0.9247336289693776,
+        "coverage_mc95_upper": 0.9657543019172318,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": true,
+        "mean_bias": 0.008596596059369526,
+        "rmse": 0.08654889222742476,
+        "mean_reported_cluster_se": 0.08668306646662256,
+        "mean_ci_width_valid_only": 0.34061163057138755,
+        "mean_maximum_variance_share": 0.1000534154695639,
+        "mc_floor_replicates": 251
+      },
+      {
+        "scenario": "influential",
+        "case": "null",
+        "description": "Independent normal effects with two high-variance galaxies (scale 8) and remaining scale 0.3, normalized to average variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 18,
+        "rate_interpretation": "type_I_rejection",
+        "rejection_rate_valid_only": 0.036,
+        "rejection_mc95_lower": 0.021472856586094543,
+        "rejection_mc95_upper": 0.056300176201789946,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": true,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 437,
+        "coverage_valid_only": 0.874,
+        "coverage_mc95_lower": 0.8416860057009953,
+        "coverage_mc95_upper": 0.9018038822152734,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": false,
+        "mean_bias": 0.005459637426046971,
+        "rmse": 0.08697366651646603,
+        "mean_reported_cluster_se": 0.08043418531123774,
+        "mean_ci_width_valid_only": 0.4821951209162401,
+        "mean_maximum_variance_share": 0.6620722532794596,
+        "mc_floor_replicates": 0
+      },
+      {
+        "scenario": "influential",
+        "case": "known_effect",
+        "description": "Independent normal effects with two high-variance galaxies (scale 8) and remaining scale 0.3, normalized to average variance one.",
+        "independence_assumption_holds": true,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 469,
+        "rate_interpretation": "power_for_configured_nonzero_mean",
+        "rejection_rate_valid_only": 0.938,
+        "rejection_mc95_lower": 0.9131474025207375,
+        "rejection_mc95_upper": 0.9574889387036138,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": null,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 437,
+        "coverage_valid_only": 0.874,
+        "coverage_mc95_lower": 0.8416860057009953,
+        "coverage_mc95_upper": 0.9018038822152734,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": false,
+        "mean_bias": 0.005459637426046966,
+        "rmse": 0.08697366651646603,
+        "mean_reported_cluster_se": 0.08043418531123774,
+        "mean_ci_width_valid_only": 0.4821951209162401,
+        "mean_maximum_variance_share": 0.6620722532794596,
+        "mc_floor_replicates": 431
+      },
+      {
+        "scenario": "shared_systematic",
+        "case": "null",
+        "description": "A common N(0,0.25) offset plus independent N(0,0.75) terms; pair correlation 0.25 intentionally violates galaxy independence.",
+        "independence_assumption_holds": false,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 393,
+        "rate_interpretation": "type_I_rejection",
+        "rejection_rate_valid_only": 0.786,
+        "rejection_mc95_lower": 0.7474108657133426,
+        "rejection_mc95_upper": 0.821167773350075,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": false,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 109,
+        "coverage_valid_only": 0.218,
+        "coverage_mc95_lower": 0.18256730066622748,
+        "coverage_mc95_upper": 0.25680543499888275,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": false,
+        "mean_bias": -0.016497311905502847,
+        "rmse": 0.5055728955598472,
+        "mean_reported_cluster_se": 0.0756758084800364,
+        "mean_ci_width_valid_only": 0.2981374741683447,
+        "mean_maximum_variance_share": 0.061971513946671435,
+        "mc_floor_replicates": 301
+      },
+      {
+        "scenario": "shared_systematic",
+        "case": "known_effect",
+        "description": "A common N(0,0.25) offset plus independent N(0,0.75) terms; pair correlation 0.25 intentionally violates galaxy independence.",
+        "independence_assumption_holds": false,
+        "attempted_replicates": 500,
+        "valid_tests": 500,
+        "invalid_tests": 0,
+        "rejects_zero": 412,
+        "rate_interpretation": "power_for_configured_nonzero_mean",
+        "rejection_rate_valid_only": 0.824,
+        "rejection_mc95_lower": 0.7877324296532331,
+        "rejection_mc95_upper": 0.8563814050773377,
+        "nominal_test_alpha": 0.05,
+        "null_rejection_mc_interval_contains_nominal": null,
+        "valid_intervals": 500,
+        "invalid_intervals": 0,
+        "covers_true_effect": 109,
+        "coverage_valid_only": 0.218,
+        "coverage_mc95_lower": 0.18256730066622748,
+        "coverage_mc95_upper": 0.25680543499888275,
+        "nominal_interval_coverage": 0.95,
+        "coverage_mc_interval_contains_nominal": false,
+        "mean_bias": -0.016497311905502854,
+        "rmse": 0.5055728955598471,
+        "mean_reported_cluster_se": 0.0756758084800364,
+        "mean_ci_width_valid_only": 0.29813747416834463,
+        "mean_maximum_variance_share": 0.06197151394667144,
+        "mc_floor_replicates": 339
+      }
+    ]
+  },
+  "mechanism_resolution": {
+    "schema_version": 1,
+    "status": "completed",
+    "protocol": {
+      "SimulationReplicates": 500,
+      "BootstrapDraws": 999,
+      "GalaxyCount": 131,
+      "Seed": 2026092701,
+      "ConfidenceLevel": 0.95,
+      "TestAlpha": 0.05,
+      "StandardizedEffect": 0.3,
+      "MaxParallelism": 4,
+      "MechanismSpeedToleranceKms": null,
+      "MechanismLossMargin": null,
+      "SolverSpeedErrorBoundKms": null
+    },
+    "source": "publication/statistics/charged/predicted_rows.csv",
+    "source_sha256": "d63204ea7ab521d905018a8f93f834e0814dddf341b5c9ad87795671ae3aabfe",
+    "total_galaxies": 131,
+    "outer_points": 659,
+    "failed_galaxies": [],
+    "full_sample_continuous_defined": true,
+    "scope": "Resolution of frozen charged/control predictions. This neither estimates solver error nor demonstrates physical equivalence or population formation.",
+    "stable_contrast_formula": "(v_charged-v_free)*(v_charged+v_free-2*v_observed)/sigma^2, averaged within galaxy and then equally across galaxies",
+    "maximum_absolute_speed_difference_kms": 3.0751778126614226e-05,
+    "median_absolute_speed_difference_kms": 1.2100888682198274e-06,
+    "p95_absolute_speed_difference_kms": 8.132458637533092e-06,
+    "stable_effect_inference": {
+      "Status": "pass",
+      "Galaxies": 131,
+      "Points": 659,
+      "Effect": -9.532725248986488e-06,
+      "ClusterStandardError": 6.120842046999973e-06,
+      "PooledPointEffect": -1.3171918455603922e-05,
+      "MedianEffect": 6.080882049661832e-08,
+      "Trimmed10Effect": -9.36423410528227e-08,
+      "ObservedT": -1.5574205600778066,
+      "BootstrapTInterval": {
+        "Lower": -6.753672010144203e-05,
+        "Upper": -6.721860596360502e-07
+      },
+      "PercentileInterval": {
+        "Lower": -2.3559323550955284e-05,
+        "Upper": -4.136308634116437e-07
+      },
+      "PooledPercentileInterval": {
+        "Lower": -2.9668813865892497e-05,
+        "Upper": -1.3868004700898567e-06
+      },
+      "WildPValue": 0.061,
+      "WildExceedances": 60,
+      "WildMonteCarloInterval": {
+        "Lower": 0.046141492362699696,
+        "Upper": 0.0766364485753112
+      },
+      "MonteCarloFloor": false,
+      "Draws": 999,
+      "DegeneratePairsDraws": 0,
+      "DegenerateWildDraws": 0,
+      "MaximumVarianceShare": 0.7466124379359943,
+      "VarianceConcentrationCount": 1.6630622078016928,
+      "PairsSeed": 14027896460083969745,
+      "WildSeed": 6979537692920808706,
+      "ConfidenceLevel": 0.95,
+      "RandomAlgorithm": "PCG64-XSL-RR with SplitMix64 seed expansion v1; research seed mapping is explicitly distinct from NumPy SeedSequence",
+      "Scope": "Conditional paired-galaxy mean inference assuming independent clusters. Marginal pairs-bootstrap-t intervals do not invert the approximate null-imposed Rademacher wild test."
+    },
+    "solver_budget": {
+      "per_prediction_speed_error_bound_kms": null,
+      "provenance": "User-supplied bound, not an internally estimated or independently certified error. Absent bounds remain absent.",
+      "effect_error_bound": null,
+      "maximum_speed_difference_including_error_kms": null,
+      "formula": "Per outer row: [2*|vA-vobs|*epsilon + epsilon^2 + 2*|vB-vobs|*epsilon + epsilon^2]/sigma^2; equal-galaxy averaging bounds the mean effect. Bounds are added adversarially, without assuming error independence."
+    },
+    "speed_margin_assessment": {
+      "status": "no_margin_specified",
+      "configured_margin_kms": null,
+      "within_margin_including_supplied_error": null
+    },
+    "loss_margin_assessment": {
+      "status": "no_margin_specified",
+      "configured_symmetric_margin": null,
+      "confidence_level": 0.9,
+      "bootstrap_t_interval": null,
+      "interval_expanded_by_supplied_solver_error": null,
+      "within_margin_including_supplied_error": null,
+      "interpretation": "An optional two-one-sided-test-style interval-inclusion diagnostic using a marginal pairs-bootstrap-t interval; not an inversion of the wild test. Conditional on the selected margin, claimed solver bound, independent galaxies and bootstrap calibration."
+    },
+    "no_equivalence_from_nonsignificance": true,
+    "published_reproduction_unchanged": true
+  },
+  "pilot_evaluation": {
+    "status": "pass",
+    "study_status": "retrospective_development",
+    "independence_verified": false,
+    "scope": "Declared development/transfer predictions; nuisance perturbation pilot is not posterior inference, a calibrated confidence interval or new independent evidence.",
+    "replicates": 3,
+    "galaxies": 2,
+    "models": [
+      "core",
+      "nfw",
+      "profiled_baryons",
+      "envelope"
+    ],
+    "summary": [
+      {
+        "replicate": "0",
+        "model": "core",
+        "failed_galaxies": 0,
+        "full_mean_loss": 8.616395392938093,
+        "finite_subset_mean_loss": 8.616395392938093
+      },
+      {
+        "replicate": "0",
+        "model": "nfw",
+        "failed_galaxies": 0,
+        "full_mean_loss": 10.979937471222781,
+        "finite_subset_mean_loss": 10.979937471222781
+      },
+      {
+        "replicate": "0",
+        "model": "profiled_baryons",
+        "failed_galaxies": 0,
+        "full_mean_loss": 562.1607727483754,
+        "finite_subset_mean_loss": 562.1607727483754
+      },
+      {
+        "replicate": "0",
+        "model": "envelope",
+        "failed_galaxies": 0,
+        "full_mean_loss": 8.64855952405644,
+        "finite_subset_mean_loss": 8.64855952405644
+      },
+      {
+        "replicate": "1",
+        "model": "core",
+        "failed_galaxies": 0,
+        "full_mean_loss": 6.038516784957988,
+        "finite_subset_mean_loss": 6.038516784957988
+      },
+      {
+        "replicate": "1",
+        "model": "nfw",
+        "failed_galaxies": 0,
+        "full_mean_loss": 13.108759171265403,
+        "finite_subset_mean_loss": 13.108759171265403
+      },
+      {
+        "replicate": "1",
+        "model": "profiled_baryons",
+        "failed_galaxies": 0,
+        "full_mean_loss": 568.4081866006825,
+        "finite_subset_mean_loss": 568.4081866006825
+      },
+      {
+        "replicate": "1",
+        "model": "envelope",
+        "failed_galaxies": 0,
+        "full_mean_loss": 6.127356624509478,
+        "finite_subset_mean_loss": 6.127356624509478
+      },
+      {
+        "replicate": "2",
+        "model": "core",
+        "failed_galaxies": 0,
+        "full_mean_loss": 1.8904411529743252,
+        "finite_subset_mean_loss": 1.8904411529743252
+      },
+      {
+        "replicate": "2",
+        "model": "nfw",
+        "failed_galaxies": 0,
+        "full_mean_loss": 16.438765590624776,
+        "finite_subset_mean_loss": 16.438765590624776
+      },
+      {
+        "replicate": "2",
+        "model": "profiled_baryons",
+        "failed_galaxies": 0,
+        "full_mean_loss": 565.4465862343403,
+        "finite_subset_mean_loss": 565.4465862343403
+      },
+      {
+        "replicate": "2",
+        "model": "envelope",
+        "failed_galaxies": 0,
+        "full_mean_loss": 2.5207980957211316,
+        "finite_subset_mean_loss": 2.5207980957211316
+      }
+    ],
+    "source_artifact_sha256": "e636c13c6043d8b71df0d6e70201965a69615834ba3c681cee305302d3d8a4e5",
+    "comparisons": [
+      {
+        "primary": "envelope",
+        "comparator": "core",
+        "difference_direction": "comparator minus primary; positive favors primary",
+        "status": "descriptive_operational_gate",
+        "jointly_feasible_galaxies": 2,
+        "full_sample_effect": -0.032164131118345596,
+        "joint_feasible_subset_effect": -0.032164131118345596,
+        "conditional_baseline_inference": null,
+        "wild_p_value": null,
+        "holm_p_value": null
+      },
+      {
+        "primary": "envelope",
+        "comparator": "nfw",
+        "difference_direction": "comparator minus primary; positive favors primary",
+        "status": "descriptive_operational_gate",
+        "jointly_feasible_galaxies": 2,
+        "full_sample_effect": 2.3313779471663416,
+        "joint_feasible_subset_effect": 2.3313779471663416,
+        "conditional_baseline_inference": null,
+        "wild_p_value": null,
+        "holm_p_value": null
+      },
+      {
+        "primary": "envelope",
+        "comparator": "profiled_baryons",
+        "difference_direction": "comparator minus primary; positive favors primary",
+        "status": "descriptive_operational_gate",
+        "jointly_feasible_galaxies": 2,
+        "full_sample_effect": 553.5122132243189,
+        "joint_feasible_subset_effect": 553.5122132243189,
+        "conditional_baseline_inference": null,
+        "wild_p_value": null,
+        "holm_p_value": null
+      }
+    ],
+    "contract_scope": "External provenance is self-attested consistency, not proof of scientific correctness or outcome blindness. Conditional baseline inference assumes independent galaxy clusters. Minimum galaxy count is an operational gate, not calibration certification. No calibrated full-procedure interval is produced."
+  },
+  "pilot_fit_artifact": {
+    "protocol_sha256": "5a4681c3f5ef4bba2fe94a32ea572be8216a8128a154279de5085806971323c5",
+    "predictions_sha256": "6ef0ab03dd8a80d0a3760c82faf6991a78d1627706ac05e75be312f1464b2e0c",
+    "fitting_rules_json": "{\"stellar_centres\":[0.5,0.7],\"stellar_width_dex\":0.1,\"pull_bound\":6,\"distance_ratio_floor\":0.001,\"core_depth_guard\":0.001,\"envelope_taper\":20,\"training_weight\":\"pooled_points\",\"failure_policy\":\"retain_failed_fit_no_finite_penalty\",\"calibration\":\"same_prior_centres_and_bounds; envelope conditional on newly fitted guarded core\",\"optimizer_budget\":\"original_multistart_and_tolerances\",\"shared_parameter_policy\":\"learn_only_population_train_galaxies_then_freeze_for_transfer\",\"local_state_policy\":\"inner_rows_only_in_both_train_and_transfer_galaxies\"}",
+    "read_evaluation_outcomes": false,
+    "training_keys": [
+      "DDO154:0",
+      "DDO154:1",
+      "DDO154:2",
+      "DDO154:3",
+      "DDO154:4",
+      "DDO154:5",
+      "DDO154:6",
+      "DDO154:7",
+      "DDO154:8",
+      "NGC0300:0",
+      "NGC0300:1",
+      "NGC0300:10",
+      "NGC0300:11",
+      "NGC0300:12",
+      "NGC0300:13",
+      "NGC0300:14",
+      "NGC0300:15",
+      "NGC0300:16",
+      "NGC0300:17",
+      "NGC0300:18",
+      "NGC0300:19",
+      "NGC0300:2",
+      "NGC0300:3",
+      "NGC0300:4",
+      "NGC0300:5",
+      "NGC0300:6",
+      "NGC0300:7",
+      "NGC0300:8",
+      "NGC0300:9"
+    ],
+    "shared_training_keys": [],
+    "has_shared_parameters": false,
+    "replicates": 3,
+    "ensemble_kind": "nuisance_sensitivity",
+    "backend": "empirical_original",
+    "source_hashes": {
+      "holdout_scoring.py": "8584cbb75ecee1a3c9c37980a696d00d2cc56aeffea7e6e02c35a0f771198ac2",
+      "observations/fit_sparc.py": "68e22576d5dc6724edc11d014dcec6425c7f30a94935f30624b83ad2f05b0877",
+      "observations/uncertainty_sensitivity.py": "ec5f3b0d96c07ddb6b8733692e6eae0bcf5bf4ed2630bf3f65ddf82c8793c912",
+      "core/core_study.py": "7f3ebd8396e5969875b856b71c38a9cf7bf87bb21ba5ca93a330ddbd8b635770",
+      "regime_baseline/guard_fixed_core.py": "39928e80b8b82c7d7d5a8e9f0e751a9403ae4722e4655d0ba08cee2e7a5b9122",
+      "baryons_only/fit_baselines.py": "2de7d5ce530710cfbad31395ff3651ef9b913c0c068379e72b2e193bec0b46d7",
+      "conditional_envelope/fit_envelopes.py": "c2c283fe6168abbf8e5d5b96f5772565e95b016b029c9913d8b05c1da512f591"
+    },
+    "adapter_sha256": "6134aa65f6d23e88bf03cc6a68e8e4d671d06b799280d017adf3a925f1ea36ec",
+    "scope": "Baseline plus paired measurement/prior-centre sensitivity refits; empirical independent galaxy parameters, no shared physical fit, no posterior draws or calibrated interval",
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.1"
+    }
+  },
+  "equal_galaxy_training_pilot": {
+    "status": "pass",
+    "study": "DarkMatter/output/studies/equal-weight-338967209864",
+    "run": "DarkMatter/output/weighting-check/runs/20260927T1238507257223Z-d4f49e5706ce4b8494703c1a44a5d4ee",
+    "model_replicate_summaries": 12,
+    "failed_model_galaxy_replicates": 0,
+    "scope": "Training-weight branch regression only, not independent evidence or a calibrated uncertainty analysis."
+  },
+  "known_fit_failure_regression": {
+    "status": "pass",
+    "run_directory": "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-weight-check-c4ba136b8a1f4236b6456ab292f3cf8e\\runs\\runs\\20260927T1238010675363Z-e73b643936744491a16befa0d403f83f",
+    "galaxies": 3,
+    "replicates": 3,
+    "known_failed_model": "profiled_baryons",
+    "known_failed_galaxy": "UGC01281",
+    "failed_replicates": 3,
+    "full_mean_losses_undefined": true,
+    "predeclared_comparisons_retained": 3,
+    "no_p_values_reported": true,
+    "evidence_sha256": "f4695ec47e4a9b719de978c2958969f9b68ebd3b70ce8fc02d55dfb774e1ec35",
+    "retained_evaluation": "DarkMatter/verification/known_fit_failure_evaluation.json"
+  },
+  "post_run_documentation_updates": [],
+  "visual_review": {
+    "current_result_panels": [
+      "envelope",
+      "pressure",
+      "charged"
+    ],
+    "zero_tick_and_envelope_caption_verified": true,
+    "labels_and_intervals_unclipped": true,
+    "frozen_publication_graphics_byte_unchanged": true
+  },
+  "source_snapshot_verified_after_all_checks": true,
+  "envelope_failure_regression": {
+    "status": "pass",
+    "retained_proof": "DarkMatter/verification/envelope_failure_regression.json",
+    "sha256": "82a889cac4a7b25b62c57be23355c13e16b14cdb29d867954ccd6ab01e6c7972",
+    "scope": "One deliberately injected solver exception; engineering regression, not a scientific failed observation."
+  }
+}

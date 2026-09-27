@@ -1,0 +1,11 @@
+Reconstructing the original empirical pointwise comparison...
+Pointwise: 659 outer measurements, 131 galaxy clusters; 99,999 pairs and wild bootstrap draws.
+Pointwise: core MAE 12.87932 -> envelope 10.53267 km/s; reduction 2.34665, 95% CI [1.70515, 3.31579].
+Pointwise: NFW Holm4 p=0.07146, Z=1.80254; 3 comparisons at Monte Carlo resolution limit.
+Current pointwise analysis: 659 measurements / 131 galaxies; core MAE 12.88 -> envelope 10.53 km/s; reduction 2.35 [1.71, 3.32].
+NFW mean-loss p = 0.07146, Z = 1.80; 3 primary comparisons flagged at the Monte Carlo resolution limit.
+Recomputing consolidated envelope, pressure and charged comparison families...
+Publication pressure: 131 galaxies, 659 outer rows; 99,999 pairs and wild draws.
+Publication charged: 131 galaxies, 659 outer rows; 99,999 pairs and wild draws.
+Recomputing frozen-target scalar and parent compatibility diagnostics...
+Completed. Results: C:\Users\shosh\AppData\Local\Temp\du-upgrade-publish-494009f14514\output\runs\20260927T1237386863742Z-45f5071aefd74a9aa8ccac76af4f3b67

@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "injections": [
+    "C:/Users/shosh/AppData/Local/Temp/darkmatter-envelope-fault-c40ec3f1/fit/replicate_0/envelope_0/fit_envelopes.py"
+  ],
+  "prediction_rows": 96,
+  "expected_rows": 96,
+  "replicates": 3,
+  "galaxies": [
+    "DDO154",
+    "NGC0300"
+  ],
+  "models": [
+    "core",
+    "nfw",
+    "profiled_baryons",
+    "envelope"
+  ],
+  "retained_failed_envelope_rows": 3,
+  "successful_other_envelope_rows": 21,
+  "artifact": "C:\\Users\\shosh\\AppData\\Local\\Temp\\darkmatter-envelope-fault-c40ec3f1\\fit\\fit_artifact.json"
+}

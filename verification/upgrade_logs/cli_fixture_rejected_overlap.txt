@@ -1,0 +1,1 @@
+Input and output directories must not overlap, including resolved links and ancestor paths.

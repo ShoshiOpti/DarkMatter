@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "tests": 29,
+  "scientific_checks": {
+    "statistical_engine": {
+      "status": "pass",
+      "checks": 18,
+      "algorithm": "PCG64-XSL-RR with SplitMix64 seed expansion v1; research seed mapping is explicitly distinct from NumPy SeedSequence"
+    },
+    "mechanism_resolution": {
+      "status": "pass",
+      "checks": 14
+    },
+    "research_workflow": {
+      "status": "pass",
+      "checks": 21,
+      "passed": [
+        "valid-lock",
+        "nonfinite-radius_kpc",
+        "nonfinite-sigma_kms",
+        "nonfinite-gas_kms",
+        "overlap",
+        "invalid-inclination",
+        "radius-order",
+        "omitted-lock-entry",
+        "changed-input",
+        "false-prospective",
+        "shared-flag",
+        "shared-outer-leak",
+        "shared-transfer-change",
+        "valid-shared-transfer",
+        "descriptive-family",
+        "replicate-00",
+        "replicate-\u002B0",
+        "replicate-_0",
+        "replicate--1",
+        "derived-score-overflow",
+        "shared-training-inference-gate"
+      ],
+      "temporary_fixture_root": "C:\\Users\\shosh\\AppData\\Local\\Temp\\du-research-selfcheck-04ac9e7e97714588ba7475fb95a8af7a"
+    },
+    "publication_result_compatibility": {
+      "status": "pass",
+      "checks": 12
+    }
+  },
+  "results": [
+    {
+      "name": "complete manifest and unchanged snapshot",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "missing manifest creates terminal failed attempt",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "empty and malformed manifests rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "unlisted input rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "missing and changed inputs rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "duplicate and case-aliased manifest keys rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "portable path traversal and alias guards",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "snapshot detects new file and changed manifest",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "equal descendant and ancestor output roots rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "junction or symlink output alias cannot write into inputs",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "output subtree reparse point rejected before writing",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "input subtree links are rejected without traversal",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "failed rerun is isolated and preserves last successful gallery",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "failed initialization does not leave a running report",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "abandoned session becomes failed",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "latest promotion failure restores previous gallery",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Windows device namespace aliases cannot overlap input and output roots",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "hardlinked inputs rejected",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "atomic gallery replacement does not truncate hardlink target",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract verifies reordered rows and normalized numeric keys",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract rejects changed recomputed effect",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract rejects missing result row",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract rejects substituted result key with unchanged row count",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract rejects missing result column",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure contract rejects changed bound scientific source",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "shared statistical engine properties and golden RNG",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "mechanism resolution algebra and error bounds",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "research workflow protocol and baseline adversarial checks",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "figure result compatibility tolerances and invalid values",
+      "passed": true,
+      "error": null
+    }
+  ]
+}

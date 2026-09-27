@@ -1,4 +1,5 @@
 using System.CommandLine;
+using DarkUniverse;
 
 internal static class Cli
 {
@@ -16,26 +17,28 @@ internal static class Cli
         };
         var outputOption = new Option<DirectoryInfo?>("--out")
         {
-            Description = "Directory for generated reports and figures. Defaults to the project's output directory.",
+            Description = "Directory for generated reports and figures. Defaults to the project's output directory; each run gets a new subdirectory.",
             Recursive = true
         };
 
         var root = new RootCommand(
-            "Reconstruct the Dark Universe analyses from saved fits and render their figures.")
+            "Reproduce the consolidated scalar-reduction paper from retained inputs.")
         {
             dataOption,
             outputOption
         };
 
         root.SetAction(result => Execute(action, () =>
-            ResolveOptions("all", result.GetValue(dataOption), result.GetValue(outputOption))));
+            ResolveOptions("publication", result.GetValue(dataOption), result.GetValue(outputOption))));
 
         (string Name, string Description)[] commands =
         [
-            ("all", "Run the complete reconstruction."),
+            ("publication", "Recompute three current statistical families and inverse diagnostics; replay all 25 publication figures."),
+            ("diagnostics", "Recompute frozen-target inverse algebra and summarize retained persistence audits."),
+            ("all", "Run the current publication and historical reconstruction."),
             ("statistics", "Reconstruct the current and historical statistical analyses."),
-            ("pointwise", "Reconstruct the current pointwise analysis and its three figures."),
-            ("plots", "Reconstruct the current analysis and render all figures."),
+            ("pointwise", "Reconstruct the original empirical pointwise analysis and its three figures."),
+            ("plots", "Recompute current inference and reproduce current and historical figures."),
             ("verify", "Run the complete reconstruction with all verification checks.")
         ];
         foreach (var (name, description) in commands)
@@ -43,6 +46,39 @@ internal static class Cli
             var command = new Command(name, description);
             command.SetAction(result => Execute(action, () =>
                 ResolveOptions(name, result.GetValue(dataOption), result.GetValue(outputOption))));
+            root.Subcommands.Add(command);
+        }
+
+        foreach (string name in new[] { "calibrate", "resolution", "research-create", "research-lock", "research-validate", "research-evaluate", "research-pilot" })
+        {
+            var protocolOption = new Option<FileInfo?>("--protocol") { Description = "Versioned study or research protocol JSON file.", Required = name.StartsWith("research-") && name != "research-create" };
+            var predictionsOption = new Option<FileInfo?>("--predictions") { Description = "Fresh prediction CSV for the locked research protocol.", Required = name == "research-evaluate" };
+            var artifactOption = new Option<FileInfo?>("--fit-artifact") { Description = "Fitter provenance and training contract JSON.", Required = name == "research-evaluate" };
+            var referenceOption = new Option<DirectoryInfo?>("--reference") { Description = "Retained scientific reference tree (required for the Python pilot)." };
+            var pythonOption = new Option<string?>("--python") { Description = "Python executable for the optional empirical-refit pilot." };
+            var packagesOption = new Option<DirectoryInfo?>("--packages") { Description = "Optional installed Python scientific-package directory." };
+            var descriptions = new Dictionary<string, string>
+            {
+                ["calibrate"] = "Run versioned synthetic null/coverage calibration; does not alter published statistics.",
+                ["resolution"] = "Measure charged/free differences against explicitly configured numerical/practical budgets.",
+                ["research-create"] = "Create an editable development protocol and separated training/evaluation inputs.",
+                ["research-lock"] = "Validate and hash-lock a research protocol and its input/split files.",
+                ["research-validate"] = "Validate the locked research contract without fitting.",
+                ["research-evaluate"] = "Evaluate fresh predictions against the locked protocol and fitter artifact.",
+                ["research-pilot"] = "Run the original Python empirical fit pipeline with paired uncertainty perturbations."
+            };
+            var command = new Command(name, descriptions[name]) { protocolOption };
+            if (name == "research-evaluate") { command.Options.Add(predictionsOption); command.Options.Add(artifactOption); }
+            if (name == "research-pilot") { command.Options.Add(referenceOption); command.Options.Add(pythonOption); command.Options.Add(packagesOption); }
+            command.SetAction(result => Execute(action, () => ResolveOptions(name, result.GetValue(dataOption), result.GetValue(outputOption)) with
+            {
+                ProtocolPath = result.GetValue(protocolOption)?.FullName,
+                PredictionsPath = name == "research-evaluate" ? result.GetValue(predictionsOption)?.FullName : null,
+                FitArtifactPath = name == "research-evaluate" ? result.GetValue(artifactOption)?.FullName : null,
+                ReferencePath = name == "research-pilot" ? result.GetValue(referenceOption)?.FullName ?? Path.GetFullPath(Path.Combine(FindProject(), "..", "reference")) : null,
+                PythonExecutable = name == "research-pilot" ? result.GetValue(pythonOption) ?? "python" : null,
+                PackagesPath = name == "research-pilot" ? result.GetValue(packagesOption)?.FullName : null
+            }));
             root.Subcommands.Add(command);
         }
 
@@ -108,20 +144,11 @@ internal static class Cli
 
         if (!dataRoot.Exists)
             throw new DirectoryNotFoundException(dataRoot.FullName);
-        if (ContainsPath(dataRoot, outputRoot))
-            throw new ArgumentException("Output must be outside the input data directory.");
+        var safe = ExecutionSafety.ValidateRoots(dataRoot.FullName, outputRoot.FullName);
+        dataRoot = new DirectoryInfo(safe.DataRoot);
+        outputRoot = new DirectoryInfo(safe.OutputRoot);
 
         return new CommandOptions(command, dataRoot, outputRoot, cataloguePath, massModelsPath);
-    }
-
-    /// <summary>Determines whether a candidate path is the given directory or one of its descendants.</summary>
-    private static bool ContainsPath(DirectoryInfo directory, DirectoryInfo candidate)
-    {
-        string relativePath = Path.GetRelativePath(directory.FullName, candidate.FullName);
-        return relativePath == "." ||
-            (!Path.IsPathRooted(relativePath) &&
-             relativePath != ".." &&
-             !relativePath.StartsWith(".." + Path.DirectorySeparatorChar));
     }
 
     /// <summary>Locates the project directory from either the executable or current working directory.</summary>
@@ -131,7 +158,8 @@ internal static class Cli
         {
             for (var directory = new DirectoryInfo(start); directory != null; directory = directory.Parent)
             {
-                if (File.Exists(Path.Combine(directory.FullName, "DarkUniverse.Console.csproj")))
+                if (File.Exists(Path.Combine(directory.FullName, "DarkUniverse.Console.csproj")) ||
+                    File.Exists(Path.Combine(directory.FullName, "data", "input_manifest.json")))
                     return directory.FullName;
             }
         }
@@ -147,6 +175,12 @@ internal sealed record CommandOptions
     public DirectoryInfo OutputRoot { get; }
     public string? CataloguePath { get; }
     public string? MassModelsPath { get; }
+    public string? ProtocolPath { get; init; }
+    public string? PredictionsPath { get; init; }
+    public string? FitArtifactPath { get; init; }
+    public string? ReferencePath { get; init; }
+    public string? PythonExecutable { get; init; }
+    public string? PackagesPath { get; init; }
 
     /// <summary>Captures the validated paths and inputs for one requested analysis.</summary>
     public CommandOptions(string command, DirectoryInfo dataRoot, DirectoryInfo outputRoot, string? cataloguePath = null, string? massModelsPath = null)

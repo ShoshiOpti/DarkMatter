@@ -1,0 +1,12 @@
+{
+  "purpose": "Necessary-condition diagnostic of frozen targets; no observational refits or new significance tests.",
+  "scalar_model": "Stationary spherical zero-flux charged dilute scalar, same frozen baryonic force proxy, fixed Mphi/reduced_Mpl=1.",
+  "normalization": "q/Vt^2 = 1-c*x; c=(m0/m)^2>=0; x=-R U_sc,0_prime/Vt^2. Both contact and quantum terms scale with c.",
+  "primary_sample": "All reliable outer points; preserve all failures and signs. Also report active-envelope and per-galaxy subsets.",
+  "criterion": "Analytic minimax inf over c>=0 of max_i |1-c*x_i|. Report infimum at infinite mass explicitly, not as a finite solution.",
+  "uncertainty": "Frozen target/calibration only. No propagated empirical parameter covariance, no observational goodness-of-fit probability.",
+  "constructive_phase": "Compare the original eta=pi/2 lift to contact-minimizing constant eta=pi in the declared parent. Density and composition-gradient stress unchanged.",
+  "remaining_conditions": "Phase minimization is not satisfaction of both amplitude equations, gravity, stability, or population formation.",
+  "velocity_bound": "Replace illustrative population fraction by |v2-v1|>=2sqrt(q) for positive tangential demand; bound is conditional on that closure.",
+  "new_rotation_predictions": false
+}

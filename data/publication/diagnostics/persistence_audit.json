@@ -1,0 +1,317 @@
+{
+  "status": "pass",
+  "scope": "Resolved finite-time spherical retained-GPP evolution; not infinite-time/full-target/relativistic stability",
+  "input_sha256": "99ab9ab8892363bc7d7ae5080b3d2a591ba8775c0ca47d59a62a80950a29d37c",
+  "adopted_runs": 14,
+  "galaxies": [
+    "DDO154",
+    "F568-3",
+    "NGC2955",
+    "NGC4559",
+    "UGC01281",
+    "UGC06614",
+    "UGC11557"
+  ],
+  "rejected_numerical_runs": [
+    {
+      "galaxy": "NGC4559",
+      "mode": "stationary",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.00011579709371119283
+    },
+    {
+      "galaxy": "NGC4559",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.00011550833187889103
+    },
+    {
+      "galaxy": "UGC06614",
+      "mode": "stationary",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.00026188164371116537
+    },
+    {
+      "galaxy": "UGC06614",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.00026186525704031163
+    },
+    {
+      "galaxy": "NGC2955",
+      "mode": "stationary",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.0001725076174835679
+    },
+    {
+      "galaxy": "NGC2955",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "reason": "Energy-drift threshold exceeded at dt=.01",
+      "max_relative_energy_drift": 0.00017210083995465705
+    }
+  ],
+  "duration_Gyr_range": [
+    9.999999999999998,
+    12.510473496767442
+  ],
+  "orbital_period_range": [
+    10.0,
+    71.03292649437847
+  ],
+  "max_relative_norm_drift": 2.367047668982991e-10,
+  "max_relative_energy_drift": 1.0298836207675327e-07,
+  "max_tail_fraction": 7.471139353737625e-07,
+  "max_grid_correction_L2": 8.50192299432782e-05,
+  "max_grid_charge_to_bvp_relative": 7.815732727678437e-09,
+  "max_stationary_mass_change": 5.430751149523233e-06,
+  "max_perturbed_mass_change": 0.003951019740757411,
+  "max_perturbed_mass_L1_change": 0.00790249088101344,
+  "comparisons": {
+    "grid_time_stationary": {
+      "initial_max_normalized_enclosed_mass_difference": 4.747076234978831e-05,
+      "final_max_normalized_enclosed_mass_difference": 4.644169035206147e-05,
+      "time_Gyr_difference": 0.0,
+      "relative_initial_charge_difference": 1.2533751814203242e-11,
+      "late_mean_density_mass_L1_difference": 9.846527443556883e-05
+    },
+    "domain_stationary": {
+      "initial_max_normalized_enclosed_mass_difference": 2.848710156655443e-11,
+      "final_max_normalized_enclosed_mass_difference": 1.1126196027277935e-06,
+      "time_Gyr_difference": 0.0,
+      "relative_initial_charge_difference": 3.4241720570094e-11,
+      "late_mean_density_mass_L1_difference": 4.653642543616471e-06
+    },
+    "grid_time_perturbed": {
+      "initial_max_normalized_enclosed_mass_difference": 5.362223864702198e-05,
+      "final_max_normalized_enclosed_mass_difference": 4.553234034807008e-05,
+      "time_Gyr_difference": 0.0,
+      "relative_initial_charge_difference": 1.2533751814203242e-11,
+      "late_mean_density_mass_L1_difference": 0.00010156968760948932
+    },
+    "domain_perturbed": {
+      "initial_max_normalized_enclosed_mass_difference": 2.846722857441364e-11,
+      "final_max_normalized_enclosed_mass_difference": 2.0358322755709146e-05,
+      "time_Gyr_difference": 0.0,
+      "relative_initial_charge_difference": 3.424105443627923e-11,
+      "late_mean_density_mass_L1_difference": 1.0760406406598746e-05
+    }
+  },
+  "runs": [
+    {
+      "galaxy": "DDO154",
+      "mode": "stationary",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.009999925327534123,
+      "actual_horizon_Gyr": 10.0,
+      "orbital_periods_reached": 12.315265517516224,
+      "max_relative_norm_drift": 6.661338147750939e-12,
+      "max_relative_energy_drift": 6.528639557785669e-08,
+      "max_tail_fraction": 1.0650542214202041e-11,
+      "max_enclosed_mass_change_over_N": 5.125320767172737e-06,
+      "max_profile_mass_L1_change": 1.0488582474195555e-05
+    },
+    {
+      "galaxy": "DDO154",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.009999925327534123,
+      "actual_horizon_Gyr": 10.0,
+      "orbital_periods_reached": 12.315265517516224,
+      "max_relative_norm_drift": 6.6590066793992264e-12,
+      "max_relative_energy_drift": 8.07548978347971e-08,
+      "max_tail_fraction": 2.3239684385771628e-07,
+      "max_enclosed_mass_change_over_N": 0.0037133709188063827,
+      "max_profile_mass_L1_change": 0.007426863956741905
+    },
+    {
+      "galaxy": "UGC11557",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.00999985877627205,
+      "actual_horizon_Gyr": 10.0,
+      "orbital_periods_reached": 22.79330694339909,
+      "max_relative_norm_drift": 1.3160139644696756e-11,
+      "max_relative_energy_drift": 1.0298836207675327e-07,
+      "max_tail_fraction": 2.6643827410879893e-07,
+      "max_enclosed_mass_change_over_N": 0.0038465286410881007,
+      "max_profile_mass_L1_change": 0.007693589742210534
+    },
+    {
+      "galaxy": "UGC11557",
+      "mode": "stationary",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.00999985877627205,
+      "actual_horizon_Gyr": 10.0,
+      "orbital_periods_reached": 22.79330694339909,
+      "max_relative_norm_drift": 1.3195000647669985e-11,
+      "max_relative_energy_drift": 8.748024338008594e-08,
+      "max_tail_fraction": 1.3728614995795285e-11,
+      "max_enclosed_mass_change_over_N": 5.430751149523233e-06,
+      "max_profile_mass_L1_change": 1.1066619446110907e-05
+    },
+    {
+      "galaxy": "F568-3",
+      "mode": "stationary",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.009999945464802021,
+      "actual_horizon_Gyr": 10.000000000000002,
+      "orbital_periods_reached": 19.32251600174226,
+      "max_relative_norm_drift": 9.32698362987594e-12,
+      "max_relative_energy_drift": 5.588705534251942e-10,
+      "max_tail_fraction": 7.43683775358394e-13,
+      "max_enclosed_mass_change_over_N": 5.297560472464674e-06,
+      "max_profile_mass_L1_change": 1.0595934183275923e-05
+    },
+    {
+      "galaxy": "F568-3",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.009999945464802021,
+      "actual_horizon_Gyr": 10.000000000000002,
+      "orbital_periods_reached": 19.32251600174226,
+      "max_relative_norm_drift": 9.323319893894677e-12,
+      "max_relative_energy_drift": 1.8843652110034303e-08,
+      "max_tail_fraction": 2.6785352429355084e-07,
+      "max_enclosed_mass_change_over_N": 0.003822597632070708,
+      "max_profile_mass_L1_change": 0.0076457843995263695
+    },
+    {
+      "galaxy": "NGC4559",
+      "mode": "stationary",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999988456683251,
+      "actual_horizon_Gyr": 12.510473496767442,
+      "orbital_periods_reached": 10.0,
+      "max_relative_norm_drift": 1.0565792685213182e-10,
+      "max_relative_energy_drift": 1.786669657500142e-10,
+      "max_tail_fraction": 2.3195436602877348e-17,
+      "max_enclosed_mass_change_over_N": 1.5766824835475075e-08,
+      "max_profile_mass_L1_change": 3.1500702349522113e-08
+    },
+    {
+      "galaxy": "NGC4559",
+      "mode": "perturbed",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999988456683251,
+      "actual_horizon_Gyr": 12.510473496767442,
+      "orbital_periods_reached": 10.0,
+      "max_relative_norm_drift": 1.0659584326333515e-10,
+      "max_relative_energy_drift": 2.4195503921167293e-10,
+      "max_tail_fraction": 3.8467151580658496e-07,
+      "max_enclosed_mass_change_over_N": 0.003818305351634083,
+      "max_profile_mass_L1_change": 0.00763728124184392
+    },
+    {
+      "galaxy": "UGC06614",
+      "mode": "stationary",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999997320709207,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 14.30918658565976,
+      "max_relative_norm_drift": 1.266319271664429e-10,
+      "max_relative_energy_drift": 2.285750188460317e-10,
+      "max_tail_fraction": 2.630645112618174e-16,
+      "max_enclosed_mass_change_over_N": 2.5820516522675376e-08,
+      "max_profile_mass_L1_change": 5.1558756934410564e-08
+    },
+    {
+      "galaxy": "UGC06614",
+      "mode": "perturbed",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999997320709207,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 14.30918658565976,
+      "max_relative_norm_drift": 1.2671974580769074e-10,
+      "max_relative_energy_drift": 4.1880604609301913e-10,
+      "max_tail_fraction": 5.792094946033752e-07,
+      "max_enclosed_mass_change_over_N": 0.003951019740757411,
+      "max_profile_mass_L1_change": 0.00790249088101344
+    },
+    {
+      "galaxy": "NGC2955",
+      "mode": "stationary",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999996865483264,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 27.581236360830587,
+      "max_relative_norm_drift": 2.360943662793602e-10,
+      "max_relative_energy_drift": 3.7497486991969837e-10,
+      "max_tail_fraction": 2.945197690313139e-16,
+      "max_enclosed_mass_change_over_N": 2.4127128544040715e-08,
+      "max_profile_mass_L1_change": 4.806758457708658e-08
+    },
+    {
+      "galaxy": "NGC2955",
+      "mode": "perturbed",
+      "tag": "timestep_refined",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.0004999996865483264,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 27.581236360830587,
+      "max_relative_norm_drift": 2.367047668982991e-10,
+      "max_relative_energy_drift": 5.240343893271345e-10,
+      "max_tail_fraction": 7.471139353737625e-07,
+      "max_enclosed_mass_change_over_N": 0.0038022309395885634,
+      "max_profile_mass_L1_change": 0.007604461771798421
+    },
+    {
+      "galaxy": "UGC01281",
+      "mode": "stationary",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.00999992571287833,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 71.03292649437847,
+      "max_relative_norm_drift": 3.9787062533491735e-11,
+      "max_relative_energy_drift": 1.6132027157837518e-10,
+      "max_tail_fraction": 1.0946093498507506e-12,
+      "max_enclosed_mass_change_over_N": 5.2785253386266135e-06,
+      "max_profile_mass_L1_change": 1.0557458468700835e-05
+    },
+    {
+      "galaxy": "UGC01281",
+      "mode": "perturbed",
+      "tag": "baseline",
+      "grid_points": 1023,
+      "box": 32.0,
+      "dt": 0.00999992571287833,
+      "actual_horizon_Gyr": 9.999999999999998,
+      "orbital_periods_reached": 71.03292649437847,
+      "max_relative_norm_drift": 3.976430296148692e-11,
+      "max_relative_energy_drift": 1.7179109608766566e-08,
+      "max_tail_fraction": 3.8552532705145294e-07,
+      "max_enclosed_mass_change_over_N": 0.0038784620777627898,
+      "max_profile_mass_L1_change": 0.007757110887804188
+    }
+  ]
+}

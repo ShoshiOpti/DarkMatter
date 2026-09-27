@@ -1,0 +1,140 @@
+{
+  "status": "pass",
+  "study_status": "retrospective_development",
+  "independence_verified": false,
+  "scope": "Declared development/transfer predictions; nuisance perturbation pilot is not posterior inference, a calibrated confidence interval or new independent evidence.",
+  "replicates": 3,
+  "galaxies": 3,
+  "models": [
+    "core",
+    "nfw",
+    "profiled_baryons",
+    "envelope"
+  ],
+  "summary": [
+    {
+      "replicate": "0",
+      "model": "core",
+      "failed_galaxies": 0,
+      "full_mean_loss": 24.82416840108583,
+      "finite_subset_mean_loss": 24.82416840108583
+    },
+    {
+      "replicate": "0",
+      "model": "nfw",
+      "failed_galaxies": 0,
+      "full_mean_loss": 8.23887452501676,
+      "finite_subset_mean_loss": 8.23887452501676
+    },
+    {
+      "replicate": "0",
+      "model": "profiled_baryons",
+      "failed_galaxies": 1,
+      "full_mean_loss": null,
+      "finite_subset_mean_loss": 590.492541360689
+    },
+    {
+      "replicate": "0",
+      "model": "envelope",
+      "failed_galaxies": 0,
+      "full_mean_loss": 5.749013269424718,
+      "finite_subset_mean_loss": 5.749013269424718
+    },
+    {
+      "replicate": "1",
+      "model": "core",
+      "failed_galaxies": 0,
+      "full_mean_loss": 22.9784555984357,
+      "finite_subset_mean_loss": 22.9784555984357
+    },
+    {
+      "replicate": "1",
+      "model": "nfw",
+      "failed_galaxies": 0,
+      "full_mean_loss": 10.163735268261645,
+      "finite_subset_mean_loss": 10.163735268261645
+    },
+    {
+      "replicate": "1",
+      "model": "profiled_baryons",
+      "failed_galaxies": 1,
+      "full_mean_loss": null,
+      "finite_subset_mean_loss": 594.4423831498401
+    },
+    {
+      "replicate": "1",
+      "model": "envelope",
+      "failed_galaxies": 0,
+      "full_mean_loss": 6.099046704080533,
+      "finite_subset_mean_loss": 6.099046704080533
+    },
+    {
+      "replicate": "2",
+      "model": "core",
+      "failed_galaxies": 0,
+      "full_mean_loss": 19.605213483110546,
+      "finite_subset_mean_loss": 19.605213483110546
+    },
+    {
+      "replicate": "2",
+      "model": "nfw",
+      "failed_galaxies": 0,
+      "full_mean_loss": 7.7708296112908135,
+      "finite_subset_mean_loss": 7.7708296112908135
+    },
+    {
+      "replicate": "2",
+      "model": "profiled_baryons",
+      "failed_galaxies": 1,
+      "full_mean_loss": null,
+      "finite_subset_mean_loss": 577.5472928851035
+    },
+    {
+      "replicate": "2",
+      "model": "envelope",
+      "failed_galaxies": 0,
+      "full_mean_loss": 6.29060289828475,
+      "finite_subset_mean_loss": 6.29060289828475
+    }
+  ],
+  "source_artifact_sha256": "072807f947fd43db4905ffdf2f173cc2bb68e433fc5435c261bb0022b99b2b92",
+  "comparisons": [
+    {
+      "primary": "envelope",
+      "comparator": "core",
+      "difference_direction": "comparator minus primary; positive favors primary",
+      "status": "descriptive_operational_gate",
+      "jointly_feasible_galaxies": 3,
+      "full_sample_effect": 19.075155131661116,
+      "joint_feasible_subset_effect": 19.075155131661116,
+      "conditional_baseline_inference": null,
+      "wild_p_value": null,
+      "holm_p_value": null
+    },
+    {
+      "primary": "envelope",
+      "comparator": "nfw",
+      "difference_direction": "comparator minus primary; positive favors primary",
+      "status": "descriptive_operational_gate",
+      "jointly_feasible_galaxies": 3,
+      "full_sample_effect": 2.489861255592041,
+      "joint_feasible_subset_effect": 2.489861255592041,
+      "conditional_baseline_inference": null,
+      "wild_p_value": null,
+      "holm_p_value": null
+    },
+    {
+      "primary": "envelope",
+      "comparator": "profiled_baryons",
+      "difference_direction": "comparator minus primary; positive favors primary",
+      "status": "incomplete_family_member_no_full_sample_inference",
+      "jointly_feasible_galaxies": 2,
+      "full_sample_effect": null,
+      "joint_feasible_subset_effect": 585.1120750355584,
+      "conditional_baseline_inference": null,
+      "wild_p_value": null,
+      "holm_p_value": null
+    }
+  ],
+  "contract_scope": "External provenance is self-attested consistency, not proof of scientific correctness or outcome blindness. Conditional baseline inference assumes independent galaxy clusters. Minimum galaxy count is an operational gate, not calibration certification. No calibrated full-procedure interval is produced."
+}

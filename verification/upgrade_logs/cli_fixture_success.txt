@@ -1,0 +1,7 @@
+Calibration: 5 synthetic scenarios, null and known effect, 1 replicates each, 99 draws.
+Calibration normal: completed 1 null and 1 known-effect replicates.
+Calibration skewed: completed 1 null and 1 known-effect replicates.
+Calibration heteroskedastic: completed 1 null and 1 known-effect replicates.
+Calibration influential: completed 1 null and 1 known-effect replicates.
+Calibration shared_systematic: completed 1 null and 1 known-effect replicates.
+Completed. Results: C:\Users\shosh\AppData\Local\Temp\du-upgrade-cli-8375889e417e\out\runs\20260927T1237494490392Z-1334940bb6f74bacb24c7ffcd8653aed

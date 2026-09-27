@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-09-27T12:37:52.641472+00:00",
+  "scope": "Preserved migration integrity, declared current manuscript revision and complete local dependency inventory; no compilation, fitting, evolution, figure rendering or statistical rerun.",
+  "requires_imported_archive": false,
+  "checks": {
+    "canonical_manuscripts": {
+      "status": "pass",
+      "historical_files_verified": 4,
+      "historical_tex_matches_reference": true,
+      "current_revision": "operational-thermal-bridge-2026-09-27",
+      "current_files_verified": 4,
+      "supporting_files_verified": 8
+    },
+    "manuscript_figures": {
+      "status": "pass",
+      "distinct_figures": 25,
+      "per_manuscript": {
+        "Cubic_Scalar_GR_Intersection.tex": 11,
+        "Cubic_Scalar_GR_Supplement.tex": 14
+      },
+      "paths": [
+        "figures/bridge_equilibrium_diagnostics.pdf",
+        "figures/bridge_rotation_comparison.pdf",
+        "figures/bridge_statistical_comparison.pdf",
+        "figures/calibration_identifiability.pdf",
+        "figures/charged_persistence.pdf",
+        "figures/charged_population_and_stability.pdf",
+        "figures/consolidated_rotation_comparison.pdf",
+        "figures/consolidated_statistical_comparison.pdf",
+        "figures/internal_polarization_response.pdf",
+        "figures/inverse_parent_compatibility.pdf",
+        "figures/inverse_phase_and_closure.pdf",
+        "figures/inverse_population_constraints.pdf",
+        "figures/inverse_stationarity_diagnostics.pdf",
+        "figures/inverse_support_six_galaxies.pdf",
+        "figures/late_window_refinement.pdf",
+        "figures/outer_extension_galaxies.pdf",
+        "figures/outer_extension_population.pdf",
+        "figures/outer_extension_profiles.pdf",
+        "figures/physical_accretion.pdf",
+        "figures/physical_endpoint.pdf",
+        "figures/physical_mechanism_tests.pdf",
+        "figures/physical_population.pdf",
+        "figures/pointwise_cluster_comparison.pdf",
+        "figures/pointwise_covariance_sensitivity.pdf",
+        "figures/pointwise_radial_differences.pdf"
+      ]
+    },
+    "native_input_manifest": {
+      "status": "pass",
+      "files_verified": 211,
+      "unlisted_files": [],
+      "complete_coverage": true
+    },
+    "publication_scene_manifest": {
+      "status": "pass",
+      "scene_files_verified": 25,
+      "matches_manuscript_figures": true,
+      "archived_pdf_hashes_verified": true,
+      "source_producers_present": 11,
+      "extractor_hash_verified": true
+    },
+    "primary_imports": {
+      "status": "pass",
+      "files_verified": 39,
+      "archive_access_required": false
+    },
+    "scientific_reference": {
+      "status": "pass",
+      "retained_original_files": 1697,
+      "retained_original_bytes": 296861795,
+      "replay_dependencies": 1577,
+      "external_replay_dependencies": [],
+      "raw_calibration_inputs": 18,
+      "python_sources_parsed": 166,
+      "publication_figure_baselines": 25,
+      "scope": "Original source hashes, replay dependency closure, raw-input hashes and Python syntax; no fit, field evolution, figure redraw or bootstrap rerun."
+    }
+  }
+}

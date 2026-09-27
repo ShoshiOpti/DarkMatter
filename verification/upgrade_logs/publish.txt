@@ -1,0 +1,2 @@
+  DarkUniverse.Console -> C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\bin\Release\net10.0\DarkUniverse.Console.dll
+  DarkUniverse.Console -> C:\Users\shosh\AppData\Local\Temp\du-upgrade-publish-494009f14514\

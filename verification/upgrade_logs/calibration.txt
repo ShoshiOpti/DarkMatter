@@ -1,0 +1,7 @@
+Calibration: 5 synthetic scenarios, null and known effect, 500 replicates each, 999 draws.
+Calibration normal: completed 500 null and 500 known-effect replicates.
+Calibration skewed: completed 500 null and 500 known-effect replicates.
+Calibration heteroskedastic: completed 500 null and 500 known-effect replicates.
+Calibration influential: completed 500 null and 500 known-effect replicates.
+Calibration shared_systematic: completed 500 null and 500 known-effect replicates.
+Completed. Results: C:\Users\shosh\OneDrive\Desktop\PhysPapers\DarkUniverseNEW\DarkMatter\output\runs\20260927T1237063109710Z-7d95b5b55f8340ae9ad9474b0ee0540e

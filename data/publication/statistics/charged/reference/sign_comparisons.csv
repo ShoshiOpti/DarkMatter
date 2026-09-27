@@ -1,0 +1,7 @@
+primary,comparator,wins,losses,ties,joint_failures,informative_signs,p_sign_raw,p_sign_holm6,Z_sign_holm6,inference
+charged,inherited_baryons,121,10,0,0,131,2.3062220622792172e-25,1.3837332373675303e-24,10.2348753026976,nominal_retrospective_independent_fair_sign_diagnostic
+charged,profiled_baryons,63,68,0,0,131,0.7268761029664557,1.0,0.0,nominal_retrospective_independent_fair_sign_diagnostic
+charged,free_control,0,0,131,0,0,1.0,1.0,0.0,nominal_retrospective_independent_fair_sign_diagnostic
+charged,original_core,27,104,0,0,131,7.43182695970135e-12,2.229548087910405e-11,6.690141565344833,nominal_retrospective_independent_fair_sign_diagnostic
+charged,envelope,21,110,0,0,131,9.43200455562353e-16,3.772801822249412e-15,7.862254606531083,nominal_retrospective_independent_fair_sign_diagnostic
+charged,nfw,12,119,0,0,131,2.587003859247397e-23,1.2935019296236985e-22,9.785969053233524,nominal_retrospective_independent_fair_sign_diagnostic

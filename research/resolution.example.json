@@ -1,0 +1,9 @@
+{
+  "bootstrapDraws": 999,
+  "seed": 2026092701,
+  "confidenceLevel": 0.95,
+  "testAlpha": 0.05,
+  "mechanismSpeedToleranceKms": null,
+  "mechanismLossMargin": null,
+  "solverSpeedErrorBoundKms": null
+}

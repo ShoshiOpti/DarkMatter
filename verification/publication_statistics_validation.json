@@ -1,0 +1,176 @@
+{
+  "status": "pass",
+  "analysis": "consolidated_manuscript_2026_09_26",
+  "statistical_unit": "one galaxy; original 131 galaxies and 659 outer measurements",
+  "scope": "Retrospective inference conditional on frozen predictions. No fit, population formation, physical stability, nuisance propagation, survey covariance or model-history correction is implied.",
+  "failure_policy": "Finite prediction wins over failure in signs. Undefined full-sample continuous contrasts have no p value; only jointly feasible subset intervals are reported. Conservative p=1 placeholders are internal to the fixed six-slot Holm adjustment.",
+  "monte_carlo": "99999 whole-galaxy pairs draws and 99999 Rademacher wild draws; plus-one p values and explicit zero-exceedance floor flags",
+  "input_integrity": {
+    "status": "pass",
+    "verified_files": 20
+  },
+  "random_stream_validation": {
+    "status": "pass",
+    "streams": 6,
+    "regenerated_values": 78399216,
+    "numpy_version": "2.3.5",
+    "method": "Native PCG64 raw uint64 values and complete bootstrap draw stream SHA-256 checks"
+  },
+  "policy_validation": {
+    "status": "pass",
+    "checks": 11,
+    "coverage": "training failure propagation; negative/nonfinite outer speeds; finite-vs-failed and joint failures; ties; metadata/split integrity; six-slot Holm; undefined studentization"
+  },
+  "envelope": {
+    "status": "pass",
+    "comparisons": 30,
+    "maximum_reconstructed_score_error": 1.8189894035458565e-12,
+    "reference_comparison": {
+      "status": "pass",
+      "reference_file": "sign_family_h10.csv",
+      "rows": 30,
+      "checked_values": 270,
+      "maximum_absolute_error": 9.814371537686384e-14,
+      "maximum_relative_error_nonzero": 3.534346164305315e-13,
+      "largest_absolute_error_field": "sensitivity_symmetric_1e-8|adaptive_primary|scalar_core/holm10_Z",
+      "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+    },
+    "original_h4_h8_reference_comparison": {
+      "status": "pass",
+      "reference_file": "sign_family_original.csv",
+      "rows": 24,
+      "checked_values": 504,
+      "maximum_absolute_error": 1.1368683772161603e-13,
+      "maximum_relative_error_nonzero": 1.0289098987717285e-07,
+      "largest_absolute_error_field": "primary_symmetric_1e-4|extended|baryon_only/mean_delta",
+      "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+    },
+    "zero_tolerance_source": "Preserved galaxy scores, independently checked against raw prediction rows"
+  },
+  "pressure": {
+    "status": "pass",
+    "primary": "nonlinear_eos",
+    "comparators": [
+      "inherited_baryons",
+      "profiled_baryons",
+      "derived_quartic",
+      "original_core",
+      "envelope",
+      "nfw"
+    ],
+    "galaxies": 131,
+    "outer_rows": 659,
+    "supplied_observation_rows": 3034,
+    "metadata_unchanged": true,
+    "split_unchanged": true,
+    "bootstrap_draws": 99999,
+    "pairs_seed": 2026092601,
+    "wild_seed": 2026092602,
+    "finite_subset_seed_base": 2026092603,
+    "reference_comparisons": {
+      "sign": {
+        "status": "pass",
+        "reference_file": "sign_comparisons.csv",
+        "rows": 6,
+        "checked_values": 48,
+        "maximum_absolute_error": 1.7763568394002505e-15,
+        "maximum_relative_error_nonzero": 2.0469700134468328e-16,
+        "largest_absolute_error_field": "envelope/Z_sign_holm6",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "continuous": {
+        "status": "pass",
+        "reference_file": "continuous_comparisons.csv",
+        "rows": 6,
+        "checked_values": 234,
+        "maximum_absolute_error": 2.2737367544323206e-13,
+        "maximum_relative_error_nonzero": 8.796627826054281e-11,
+        "largest_absolute_error_field": "profiled_baryons/bootstrap_t_ci_high",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "models": {
+        "status": "pass",
+        "reference_file": "model_summary.csv",
+        "rows": 7,
+        "checked_values": 105,
+        "maximum_absolute_error": 2.2737367544323206e-13,
+        "maximum_relative_error_nonzero": 7.081946196081338e-16,
+        "largest_absolute_error_field": "inherited_baryons/full_sample_mean_squared_loss",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "covariance": {
+        "status": "pass",
+        "reference_file": "covariance_sensitivity.csv",
+        "rows": 24,
+        "checked_values": 168,
+        "maximum_absolute_error": 1.1368683772161603e-13,
+        "maximum_relative_error_nonzero": 3.284905094898869e-13,
+        "largest_absolute_error_field": "original_core|0/mean_difference",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      }
+    }
+  },
+  "charged": {
+    "status": "pass",
+    "primary": "charged",
+    "comparators": [
+      "inherited_baryons",
+      "profiled_baryons",
+      "free_control",
+      "original_core",
+      "envelope",
+      "nfw"
+    ],
+    "galaxies": 131,
+    "outer_rows": 659,
+    "supplied_observation_rows": 3034,
+    "metadata_unchanged": true,
+    "split_unchanged": true,
+    "bootstrap_draws": 99999,
+    "pairs_seed": 2026092611,
+    "wild_seed": 2026092612,
+    "finite_subset_seed_base": 2026092613,
+    "reference_comparisons": {
+      "sign": {
+        "status": "pass",
+        "reference_file": "sign_comparisons.csv",
+        "rows": 6,
+        "checked_values": 48,
+        "maximum_absolute_error": 3.552713678800501e-15,
+        "maximum_relative_error_nonzero": 3.6304158121434047e-16,
+        "largest_absolute_error_field": "nfw/Z_sign_holm6",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "continuous": {
+        "status": "pass",
+        "reference_file": "continuous_comparisons.csv",
+        "rows": 6,
+        "checked_values": 246,
+        "maximum_absolute_error": 2.9564062309361816e-10,
+        "maximum_relative_error_nonzero": 8.865178521639481e-09,
+        "largest_absolute_error_field": "free_control/t_statistic",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "models": {
+        "status": "pass",
+        "reference_file": "model_summary.csv",
+        "rows": 7,
+        "checked_values": 105,
+        "maximum_absolute_error": 1.1368683772161603e-13,
+        "maximum_relative_error_nonzero": 4.710075124441366e-16,
+        "largest_absolute_error_field": "inherited_baryons/full_sample_mean_squared_loss",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      },
+      "covariance": {
+        "status": "pass",
+        "reference_file": "covariance_sensitivity.csv",
+        "rows": 24,
+        "checked_values": 168,
+        "maximum_absolute_error": 5.684341886080802e-14,
+        "maximum_relative_error_nonzero": 1.8710996635154696e-07,
+        "largest_absolute_error_field": "inherited_baryons|0/mean_difference",
+        "tolerance": "Counts and flags exact; p values relative 2e-10 (absolute floor 1e-45); other values absolute 2e-10 plus relative 2e-10."
+      }
+    }
+  }
+}

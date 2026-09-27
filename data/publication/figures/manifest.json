@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "scope": "Frozen publication vector scenes with plotted coordinates. Source scripts regenerate scenes after changed science inputs. The .NET replay does not refit or rerun inference.",
+  "figure_count": 25,
+  "figures": [
+    {
+      "name": "bridge_equilibrium_diagnostics",
+      "file": "bridge_equilibrium_diagnostics.scene.json.gz",
+      "sha256": "4eb0a5ba76622bd6813a975e0ed9534f7bfa8303c27e742a245264bc0650508c",
+      "axes": 2,
+      "series": 4,
+      "coordinate_rows": 439,
+      "source_script": "numerics/bridge_halo_2026_09_26/plot_bridge_results.py",
+      "archived_pdf_sha256": "ac652bb35b46de282e8cd9c439df6015ef613695bc923dbfea0af4480d026998"
+    },
+    {
+      "name": "bridge_rotation_comparison",
+      "file": "bridge_rotation_comparison.scene.json.gz",
+      "sha256": "ef9ec7f0b29d8b6dccc3f83f64633df86f5fe71230bd080b040b27a4fbf6d1ed",
+      "axes": 7,
+      "series": 177,
+      "coordinate_rows": 15720,
+      "source_script": "numerics/bridge_halo_2026_09_26/plot_bridge_results.py",
+      "archived_pdf_sha256": "5e2a1a931613df72adac72cf5c9dfea2d2567198a2ca09d3db345b51ad7e7a28"
+    },
+    {
+      "name": "bridge_statistical_comparison",
+      "file": "bridge_statistical_comparison.scene.json.gz",
+      "sha256": "8e7144b7b88db727a70ad9c98d272afdc839efd5d9ba5b2b49dc0ccaafc93619",
+      "axes": 3,
+      "series": 24,
+      "coordinate_rows": 103,
+      "source_script": "numerics/bridge_halo_2026_09_26/plot_bridge_results.py",
+      "archived_pdf_sha256": "e9a5eb5ab487459f5a98f72fe1ee9a2a6018cbf194e8f3fbde201ef7821970df"
+    },
+    {
+      "name": "calibration_identifiability",
+      "file": "calibration_identifiability.scene.json.gz",
+      "sha256": "c54b99129243ecd2e6b49e37ccd948ccf0c2c7edb71e3daa4870da344d23f80d",
+      "axes": 2,
+      "series": 34,
+      "coordinate_rows": 291,
+      "source_script": "figure_sources/plot_review_diagnostics.py",
+      "archived_pdf_sha256": "0e2f25d28c9ee9e57edfd5d6fc7422d987c708170870525818c1a48846429ef4"
+    },
+    {
+      "name": "charged_persistence",
+      "file": "charged_persistence.scene.json.gz",
+      "sha256": "a39a9a9459a5c5e0876ba55f7ad91b31039765c7e07342bdf12ec89dd5ccd4f7",
+      "axes": 2,
+      "series": 14,
+      "coordinate_rows": 5600,
+      "source_script": "numerics/persistent_halo_population_2026_09_26/plot_population.py",
+      "archived_pdf_sha256": "79e04f9327a00be4c5be0d51a7dc0bdfaee959c91575b485257c799565a18ceb"
+    },
+    {
+      "name": "charged_population_and_stability",
+      "file": "charged_population_and_stability.scene.json.gz",
+      "sha256": "573636eea3701191f0a736030254fbbc5d76385eced132901eed5dfba874b40c",
+      "axes": 5,
+      "series": 12,
+      "coordinate_rows": 9496,
+      "source_script": "numerics/persistent_halo_population_2026_09_26/plot_population.py",
+      "archived_pdf_sha256": "04a97145a27bb2a8d3eb506dda0f8bf3324a3bff17499d63c7fa98ca5a205484"
+    },
+    {
+      "name": "consolidated_rotation_comparison",
+      "file": "consolidated_rotation_comparison.scene.json.gz",
+      "sha256": "4133b9a6029ba159868b32d9c0f32e08f92805d82cdcf6f6fa6a57a56c690b8e",
+      "axes": 6,
+      "series": 201,
+      "coordinate_rows": 1362,
+      "source_script": "consolidation_2026_09_26/plot_consolidation.py",
+      "archived_pdf_sha256": "57ea3f7ef5cddd9d390748abd068c8a63026a23b1b028ef2ed706edbea88c261"
+    },
+    {
+      "name": "consolidated_statistical_comparison",
+      "file": "consolidated_statistical_comparison.scene.json.gz",
+      "sha256": "33c56c7f8734c292e9d5fda74e53f17d8786e8f11289a7db048a30d4e601d36e",
+      "axes": 3,
+      "series": 27,
+      "coordinate_rows": 75,
+      "source_script": "consolidation_2026_09_26/plot_consolidation.py",
+      "archived_pdf_sha256": "19f3c0fbdd1f65ed158b1fb64f6ca2f6787f2de14cddd1e387559bbffa299721"
+    },
+    {
+      "name": "internal_polarization_response",
+      "file": "internal_polarization_response.scene.json.gz",
+      "sha256": "d95bc199e8eb5e51c8ad7565fa37417862a3e92801ec9b3a9171a6858817a71c",
+      "axes": 2,
+      "series": 8,
+      "coordinate_rows": 1409,
+      "source_script": "figure_sources/plot_review_diagnostics.py",
+      "archived_pdf_sha256": "f381c2fbde98c07bef05b7cfe7b10ef6d2a2450721b992497730654d1c7bf735"
+    },
+    {
+      "name": "inverse_parent_compatibility",
+      "file": "inverse_parent_compatibility.scene.json.gz",
+      "sha256": "2677ceed3434c79b85bb237aa7ef2900e27914d9247aefe4a2b7c9aa90a98792",
+      "axes": 2,
+      "series": 7,
+      "coordinate_rows": 601,
+      "source_script": "completeness_review_2026_09_26/plot_inverse_compatibility.py",
+      "archived_pdf_sha256": "c785813e810b8ac822649dbd965cf4426f8450479851620995237130d13f907e"
+    },
+    {
+      "name": "inverse_phase_and_closure",
+      "file": "inverse_phase_and_closure.scene.json.gz",
+      "sha256": "23a658dcba2b378d94d6f863c0cd34d51aca677568b9ed8174e5ed3cc2315f44",
+      "axes": 4,
+      "series": 9,
+      "coordinate_rows": 1140,
+      "source_script": "numerics/inverse_closure_2026_09_26/plot_closure.py",
+      "archived_pdf_sha256": "6b107a2b7e384071b416b94f9a35c1fbcb70c6fcabeea93452f5b028bbbda298"
+    },
+    {
+      "name": "inverse_population_constraints",
+      "file": "inverse_population_constraints.scene.json.gz",
+      "sha256": "2a34a952b0ffb43fb02f8e15f23b7337c048fd84e02e3b23cfc069c49d24840b",
+      "axes": 4,
+      "series": 8,
+      "coordinate_rows": 952,
+      "source_script": "numerics/inverse_field_configuration_2026_09_26/plot_configuration.py",
+      "archived_pdf_sha256": "e6a4ef671de80b09b9b711d8cf9dcf892fddfaf22a21ac0f8d04c82bd504e358"
+    },
+    {
+      "name": "inverse_stationarity_diagnostics",
+      "file": "inverse_stationarity_diagnostics.scene.json.gz",
+      "sha256": "95d6c27d7986122d959ec1d737f359cfc42626d0078885f95942034767474968",
+      "axes": 4,
+      "series": 7,
+      "coordinate_rows": 988,
+      "source_script": "numerics/inverse_closure_2026_09_26/plot_closure.py",
+      "archived_pdf_sha256": "195e9d7cacbbee5444769ecd76165ce8418cc8c4a5777f0ad6e7b45b7b2bc28d"
+    },
+    {
+      "name": "inverse_support_six_galaxies",
+      "file": "inverse_support_six_galaxies.scene.json.gz",
+      "sha256": "2d0347e35c7fed79c360bc580d9eff91ee16027af052fd8561df4d783f9ea65c",
+      "axes": 6,
+      "series": 30,
+      "coordinate_rows": 370,
+      "source_script": "numerics/inverse_field_configuration_2026_09_26/plot_configuration.py",
+      "archived_pdf_sha256": "d0775e07f3698ed75b5a16b7387f9f41b4ec13eb8618250d53f4f915d63a572f"
+    },
+    {
+      "name": "late_window_refinement",
+      "file": "late_window_refinement.scene.json.gz",
+      "sha256": "d943e62724fa7793f764c5e565163d914f413e72a080bfa67b8cd23a540d2134",
+      "axes": 3,
+      "series": 12,
+      "coordinate_rows": 1827,
+      "source_script": "completeness_review_2026_09_26/reproduction/plot_compact_physical.py",
+      "archived_pdf_sha256": "1aa0e8c264510cb0d55aa0505ec68ff92fc10b8c0e5130ddf638b5b5ad75e4e1"
+    },
+    {
+      "name": "outer_extension_galaxies",
+      "file": "outer_extension_galaxies.scene.json.gz",
+      "sha256": "0d276e48de5354b34dd53443b1e34fd2470c34cbaabeb39379a6b3a298270d4f",
+      "axes": 6,
+      "series": 159,
+      "coordinate_rows": 807,
+      "source_script": "figure_sources/plot_extension.py",
+      "archived_pdf_sha256": "3c8a18611af7671685eadd6069e010b24e998241bf122b7ecad06c16f67f32c9"
+    },
+    {
+      "name": "outer_extension_population",
+      "file": "outer_extension_population.scene.json.gz",
+      "sha256": "fb29cc38ba499680a411825bcce353aa1069c9e7c513787f561b8f451372a9fe",
+      "axes": 4,
+      "series": 13,
+      "coordinate_rows": 1316,
+      "source_script": "figure_sources/plot_extension.py",
+      "archived_pdf_sha256": "fe4a3099008a5f6797757ac495fc795a4ea165f01018a20c2f281565af6134f8"
+    },
+    {
+      "name": "outer_extension_profiles",
+      "file": "outer_extension_profiles.scene.json.gz",
+      "sha256": "1784ff98de3a5994c88992ee680d503ecdd138f4cafa1f2084a0fe9adce065bb",
+      "axes": 4,
+      "series": 12,
+      "coordinate_rows": 19284,
+      "source_script": "figure_sources/plot_extension.py",
+      "archived_pdf_sha256": "8fd548359bf64108fb6a17bcb53b64e9b17a512a077790268b225b02888fa9d2"
+    },
+    {
+      "name": "physical_accretion",
+      "file": "physical_accretion.scene.json.gz",
+      "sha256": "134c4da625230c957269530835c98dd822d5c5397308765ddb4df7028ee0b5e9",
+      "axes": 4,
+      "series": 9,
+      "coordinate_rows": 2750,
+      "source_script": "completeness_review_2026_09_26/reproduction/plot_compact_physical.py",
+      "archived_pdf_sha256": "b8fe2fe9a9a3af1ebe6f86b7eabc0df45597dc77f6f232f5c949e69a3125037e"
+    },
+    {
+      "name": "physical_endpoint",
+      "file": "physical_endpoint.scene.json.gz",
+      "sha256": "a2d2dffe2b4f5084ea3322029b4d66735b6dbcf95d2c6c37e37278d5c135ce5e",
+      "axes": 3,
+      "series": 9,
+      "coordinate_rows": 3207,
+      "source_script": "completeness_review_2026_09_26/reproduction/plot_compact_physical.py",
+      "archived_pdf_sha256": "8b93b22397e119b494bda93854abff7a2034f8e6511cae5b294d51e248d3fdac"
+    },
+    {
+      "name": "physical_mechanism_tests",
+      "file": "physical_mechanism_tests.scene.json.gz",
+      "sha256": "d2c69d80b70cc21d18069796087b9d2e2b5aa703c195bc218889dbb67325fac9",
+      "axes": 3,
+      "series": 14,
+      "coordinate_rows": 455,
+      "source_script": "figure_sources/physical_mechanism_tests.py",
+      "archived_pdf_sha256": "3ca8cde6a9d968a23d0fff4bd85d188a78bbacb8cccf109704f97f5312ad0715"
+    },
+    {
+      "name": "physical_population",
+      "file": "physical_population.scene.json.gz",
+      "sha256": "cb6ed4c0b6a9532565dfd4a05218a20f7c47dd64123d832758c05df810c2d0b3",
+      "axes": 4,
+      "series": 16,
+      "coordinate_rows": 276,
+      "source_script": "completeness_review_2026_09_26/reproduction/plot_compact_physical.py",
+      "archived_pdf_sha256": "9a37d152e6ee636a59fc19e622bec7c573f249d200f2947499065491c5ad6d61"
+    },
+    {
+      "name": "pointwise_cluster_comparison",
+      "file": "pointwise_cluster_comparison.scene.json.gz",
+      "sha256": "000741949a2b549e4082e56bdb3a04e03a9a70a4f3bcec21e9542ad36eb8789a",
+      "axes": 3,
+      "series": 25,
+      "coordinate_rows": 2008,
+      "source_script": "figure_sources/plot_pointwise.py",
+      "archived_pdf_sha256": "1b57a2b3d3ca5351696f616270330982e0e9b4bb63bd29bf1aff589455ec6196"
+    },
+    {
+      "name": "pointwise_covariance_sensitivity",
+      "file": "pointwise_covariance_sensitivity.scene.json.gz",
+      "sha256": "0b9f10025b5b4355fdb0a90cddafda162e3f959209303d5d26c84470bb8909ee",
+      "axes": 4,
+      "series": 36,
+      "coordinate_rows": 104,
+      "source_script": "figure_sources/plot_pointwise.py",
+      "archived_pdf_sha256": "27937926e470bb1a20cb7b31db83128a7c0c6dbdb8e44ebc2e544aa7a94d4ce0"
+    },
+    {
+      "name": "pointwise_radial_differences",
+      "file": "pointwise_radial_differences.scene.json.gz",
+      "sha256": "e4b143b78f3ea64387e1cfbb9cb42702d98d803549dac4c5560dcc58a599f757",
+      "axes": 2,
+      "series": 4,
+      "coordinate_rows": 1322,
+      "source_script": "figure_sources/plot_pointwise.py",
+      "archived_pdf_sha256": "6214581d2e8cc965acbc1c83d8bf69a60075d98c98427139038cabc8164e3229"
+    }
+  ],
+  "extractor_sha256": "f15e029f5faa706ef1d7d6f8bcf22f1f7e654baad407864cbe7034a0a4d803f5",
+  "manuscript_sha256": {
+    "Cubic_Scalar_GR_Intersection.tex": "416aea37dc84bcc3dd1e8adb7e6ce43d600b1ecf91c7e3e9774650e2f579236c",
+    "Cubic_Scalar_GR_Supplement.tex": "0649e52af2a43337461e5d5866ebbac3b9937e86ef4336c2f312bfb948e4ebb4"
+  }
+}

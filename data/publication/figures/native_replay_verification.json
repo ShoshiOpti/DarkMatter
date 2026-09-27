@@ -1,0 +1,164 @@
+{
+  "status": "pass",
+  "method": "Independent Python comparison of native XML primitive trees against frozen JSON, ignoring only added accessible description and role; all scientific CSV coordinates compared by exact IEEE double equality.",
+  "figures": [
+    {
+      "name": "bridge_equilibrium_diagnostics",
+      "scene_equal": true,
+      "coordinate_rows_exact": 439,
+      "svg_sha256": "34b017e729157b5fdf17181e8af1c10644902629060afc899c1e1ad753c181ed"
+    },
+    {
+      "name": "bridge_rotation_comparison",
+      "scene_equal": true,
+      "coordinate_rows_exact": 15720,
+      "svg_sha256": "5940479a4aea14c701d04ba0acf6a8c1cd902bbe838c39cd503554619ca9d763"
+    },
+    {
+      "name": "bridge_statistical_comparison",
+      "scene_equal": true,
+      "coordinate_rows_exact": 103,
+      "svg_sha256": "b749507d2e56d476c4be70529b8b7593e955e43972271a9ebb4c39a5fa187ebe"
+    },
+    {
+      "name": "calibration_identifiability",
+      "scene_equal": true,
+      "coordinate_rows_exact": 291,
+      "svg_sha256": "b1a4212c9a1d00dd42e452eac1eccfbd4b1b62f7a32b2a2fc67d6baf3f53c461"
+    },
+    {
+      "name": "charged_persistence",
+      "scene_equal": true,
+      "coordinate_rows_exact": 5600,
+      "svg_sha256": "a1aa06c63ee91821af79060eef1aba74ada74e880188169a919f103bc620ac26"
+    },
+    {
+      "name": "charged_population_and_stability",
+      "scene_equal": true,
+      "coordinate_rows_exact": 9496,
+      "svg_sha256": "c04461f0fa2e8f6e5b5cce56ad1374ed2e7ce4b8ba9b0db3d1d3e867dd15ce0a"
+    },
+    {
+      "name": "consolidated_rotation_comparison",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1362,
+      "svg_sha256": "6503690d1fd1845a30f9f9b67d24294a759e35b270f4a8e61593ea00071745f6"
+    },
+    {
+      "name": "consolidated_statistical_comparison",
+      "scene_equal": true,
+      "coordinate_rows_exact": 75,
+      "svg_sha256": "9b527a98e3817543b435f9a9a90e1a4669a87bae7e56f8067901b0a5a848f4ea"
+    },
+    {
+      "name": "internal_polarization_response",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1409,
+      "svg_sha256": "a4b1c2bc0655669645cf5aaa35eb559a7a4439a42bde8cabd800fa87c70de001"
+    },
+    {
+      "name": "inverse_parent_compatibility",
+      "scene_equal": true,
+      "coordinate_rows_exact": 601,
+      "svg_sha256": "3e3253c742506787a8bed9f4d18766dbccf4464088620bce4b3837428aeb101c"
+    },
+    {
+      "name": "inverse_phase_and_closure",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1140,
+      "svg_sha256": "060df757160b7a8e4f4564dc242b5bba5bd2fa9de8da77e47b6fb4b12d65ca81"
+    },
+    {
+      "name": "inverse_population_constraints",
+      "scene_equal": true,
+      "coordinate_rows_exact": 952,
+      "svg_sha256": "88bb46b26efec36257d9031c2127a061eaf893a9a250edd64210edef08608f6f"
+    },
+    {
+      "name": "inverse_stationarity_diagnostics",
+      "scene_equal": true,
+      "coordinate_rows_exact": 988,
+      "svg_sha256": "a22bc6d37ed416e9eed4d21403b67d643748d3fa7f1ef32161e143e8c354b2a6"
+    },
+    {
+      "name": "inverse_support_six_galaxies",
+      "scene_equal": true,
+      "coordinate_rows_exact": 370,
+      "svg_sha256": "8f7891bbdfca7970df01bb25dec9b3627fabbb58c2f4edbb0b18e52f62b3d2c1"
+    },
+    {
+      "name": "late_window_refinement",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1827,
+      "svg_sha256": "1749eafb68bc3ac6270ffc9ea9952168cd36c7a91c7aa30299c23b4c365a02f0"
+    },
+    {
+      "name": "outer_extension_galaxies",
+      "scene_equal": true,
+      "coordinate_rows_exact": 807,
+      "svg_sha256": "f0032755ee3ee13b7dba2cb209aab437f7b31058d1356c67182a7b4789d8c1d2"
+    },
+    {
+      "name": "outer_extension_population",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1316,
+      "svg_sha256": "f9d358c13b06aae3c6bc979ff18e7f9a2c9143dd3d44ee23c06352104b8c80e1"
+    },
+    {
+      "name": "outer_extension_profiles",
+      "scene_equal": true,
+      "coordinate_rows_exact": 19284,
+      "svg_sha256": "2c274a32ae06f495211a5cf053e16c98715a7430675810c92fd24143e9d7edb8"
+    },
+    {
+      "name": "physical_accretion",
+      "scene_equal": true,
+      "coordinate_rows_exact": 2750,
+      "svg_sha256": "5ec0fd92877db103d360d32fdee6e0194338cd4ab4d07330cb141d74c0433313"
+    },
+    {
+      "name": "physical_endpoint",
+      "scene_equal": true,
+      "coordinate_rows_exact": 3207,
+      "svg_sha256": "bdb8c655993f3e0c3a03eb8e8e54753f0689846a1d9ea03c902d443d10eb8016"
+    },
+    {
+      "name": "physical_mechanism_tests",
+      "scene_equal": true,
+      "coordinate_rows_exact": 455,
+      "svg_sha256": "3bc7cb0a5465536b3a31273430ced78dc9c0804d44dba50be4897c642931895a"
+    },
+    {
+      "name": "physical_population",
+      "scene_equal": true,
+      "coordinate_rows_exact": 276,
+      "svg_sha256": "54508ae491764624658e7b817c20785043454571a093ed34159c1036d533fd9a"
+    },
+    {
+      "name": "pointwise_cluster_comparison",
+      "scene_equal": true,
+      "coordinate_rows_exact": 2008,
+      "svg_sha256": "0f403f4a305800c6c3b22bf8217dfdc4358fe22afd39d959aea6f680f7509cf4"
+    },
+    {
+      "name": "pointwise_covariance_sensitivity",
+      "scene_equal": true,
+      "coordinate_rows_exact": 104,
+      "svg_sha256": "53b37b890a6fa6ee622872e45b1f75be6f1583ebffa1b27b90a2ef4f2750c02f"
+    },
+    {
+      "name": "pointwise_radial_differences",
+      "scene_equal": true,
+      "coordinate_rows_exact": 1322,
+      "svg_sha256": "2e5da326fc364d4f5204ab986f70bf6493c490852158b12cb4ae86aa458ce48b"
+    }
+  ],
+  "figure_count": 25,
+  "coordinate_rows": 71902,
+  "visual_spot_checks": [
+    "consolidated_statistical_comparison",
+    "charged_population_and_stability",
+    "inverse_parent_compatibility"
+  ],
+  "visual_result": "Representative SVGs rasterized with Sharp and visually inspected: labels, mathematical notation, colorbar, error bars, log axes and legends legible."
+}
