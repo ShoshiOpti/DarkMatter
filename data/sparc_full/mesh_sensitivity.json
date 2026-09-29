@@ -1,0 +1,14 @@
+{
+  "all175": {
+    "coarse_mean_response_minus_scalar": -0.2050315769627449,
+    "fine_mean_response_minus_scalar": -0.2046837969191588,
+    "change_in_mean_difference": -0.000347780043586114,
+    "max_galaxy_difference_change": 0.009124239942138956
+  },
+  "quality131": {
+    "coarse_mean_response_minus_scalar": -0.25583881694269506,
+    "fine_mean_response_minus_scalar": -0.2553864025046041,
+    "change_in_mean_difference": -0.0004524144380909931,
+    "max_galaxy_difference_change": 0.009124239942138956
+  }
+}

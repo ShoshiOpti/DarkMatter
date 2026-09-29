@@ -1,0 +1,32 @@
+{
+  "scope": "Retrospective full-SPARC conditional halo-template comparison; not a common-microphysics or baryon-forced field solution",
+  "sample": "All 175 galaxies / 3391 rows; historical quality subset Q<3, inclination>=30deg, N>=8 reported separately.",
+  "models": [
+    "baryons",
+    "scalar",
+    "new_analytic",
+    "old_exact",
+    "mean_response"
+  ],
+  "new_analytic": "Supplied second-order coalescent envelope with archived parent-compressed mode-0 dilation/fraction/scale; all shape constants fixed before fits.",
+  "mean_response": "Recomputed constrained mode-1 positive mean envelope, supplied epsilon=.1, r*=.8, g0=.3; isolated-core shape, not baryon-forced equilibrium.",
+  "fit": "Each halo has total mass and length fitted; fixed catalogue D,i, MLdisk=.5, MLbulge=.7. No inherited kinematic calibration.",
+  "whole_profile": "Integrate halo mass to infinity; no cutoff at observed Rmax or holdout split; retain signed SPARC disk/gas/bulge force templates.",
+  "radial_protocols": [
+    "All rows fitted (descriptive, no significance assigned from fitted loss)",
+    "Inner N-max(2,ceil(.2N)) fitted; all outer observations evaluated once"
+  ],
+  "bounds": "Length [Rmin/100,100 Rmax]; halo central potential/c^2<=.001; nonnegative halo amplitude and nonnegative total squared speed at every supplied radius.",
+  "baseline_failure": "UGC01281 catalogue baryonic force is negative at two central rows. Use zero-speed continuation only for a flagged predictive-loss diagnostic, retain galaxy and rows, and report a separate physically admissible-subset sensitivity. This is not a physical GR circular solution.",
+  "inference": "Equal-galaxy outer mean squared standardized residual difference; 99999 null-centered calibration-group pairs bootstrap, Ursa Major distance-method 4 grouped. Two-sided p and unsigned equivalent Z=norm.isf(p/2); sign supplies direction. Exact independent-group sign diagnostic also reported.",
+  "primary_family": [
+    "new_analytic vs baryons",
+    "mean_response vs baryons",
+    "new_analytic vs scalar",
+    "mean_response vs scalar"
+  ],
+  "multiplicity": "Holm correction within the four-comparison family, separately for all175 and historical131. Historical hypothesis search is not covered.",
+  "limits": "Public errors omit inclination systematics and radial covariance is unavailable. Fixed-nuisance and common stellar-ML profiling sensitivities are conditional.",
+  "seed": 2026092951,
+  "bootstrap_draws": 99999
+}

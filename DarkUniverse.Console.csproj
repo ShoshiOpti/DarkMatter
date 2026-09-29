@@ -8,6 +8,7 @@
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Update="README.md" CopyToPublishDirectory="PreserveNewest" />
     <None Update="data/**/*" CopyToPublishDirectory="PreserveNewest" />
     <None Update="tools/**/*" CopyToPublishDirectory="PreserveNewest" />
     <None Update="research/**/*" CopyToPublishDirectory="PreserveNewest" />

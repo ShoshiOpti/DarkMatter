@@ -33,13 +33,15 @@ internal static class Cli
 
         (string Name, string Description)[] commands =
         [
+            ("sparc-full", "Refit all 175 SPARC galaxies natively; reproduce full-profile figures, outer inference and green-fit significance bounds."),
             ("publication", "Recompute three current statistical families and inverse diagnostics; replay all 25 publication figures."),
             ("diagnostics", "Recompute frozen-target inverse algebra and summarize retained persistence audits."),
-            ("all", "Run the current publication and historical reconstruction."),
+            ("reconstruction", "Check parent/relative field equations, hidden stress and saved-curve density bookkeeping."),
+            ("all", "Run publication and historical reconstruction, plus the latest full-SPARC native refits and statistics."),
             ("statistics", "Reconstruct the current and historical statistical analyses."),
             ("pointwise", "Reconstruct the original empirical pointwise analysis and its three figures."),
             ("plots", "Recompute current inference and reproduce current and historical figures."),
-            ("verify", "Run the complete reconstruction with all verification checks.")
+            ("verify", "Run complete historical/publication checks and the latest full-SPARC refit, plot and statistical verification.")
         ];
         foreach (var (name, description) in commands)
         {
@@ -48,6 +50,19 @@ internal static class Cli
                 ResolveOptions(name, result.GetValue(dataOption), result.GetValue(outputOption))));
             root.Subcommands.Add(command);
         }
+
+        var experimentOption = new Option<FileInfo?>("--experiment")
+        {
+            Description = "Versioned conditional formation experiment bundle with hashed source JSON files.",
+            Required = true
+        };
+        var formationCommand = new Command("formation", "Recompute descriptive statistics and plots for prescribed formation experiments; no galaxy population inference.") { experimentOption };
+        formationCommand.SetAction(result => Execute(action, () =>
+            ResolveOptions("formation", result.GetValue(dataOption), result.GetValue(outputOption)) with
+            {
+                ExperimentPath = result.GetValue(experimentOption)!.FullName
+            }));
+        root.Subcommands.Add(formationCommand);
 
         foreach (string name in new[] { "calibrate", "resolution", "research-create", "research-lock", "research-validate", "research-evaluate", "research-pilot" })
         {
@@ -181,6 +196,7 @@ internal sealed record CommandOptions
     public string? ReferencePath { get; init; }
     public string? PythonExecutable { get; init; }
     public string? PackagesPath { get; init; }
+    public string? ExperimentPath { get; init; }
 
     /// <summary>Captures the validated paths and inputs for one requested analysis.</summary>
     public CommandOptions(string command, DirectoryInfo dataRoot, DirectoryInfo outputRoot, string? cataloguePath = null, string? massModelsPath = null)

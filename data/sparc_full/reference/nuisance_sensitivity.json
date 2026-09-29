@@ -1,0 +1,49 @@
+{
+  "scope": "Additional inner-only profile fits; catalogue Gaussian D and inclination priors, shared stellar 0.1 dex prior. Conditional sensitivity, not a marginal likelihood.",
+  "failed_optimizer_count": 0,
+  "max_guard_penalty": 0.0,
+  "all175": {
+    "baryon_mean_loss": 81.94053820469392,
+    "new_mean_loss": 25.55805583794614,
+    "mean_difference": -56.3824823667478,
+    "bootstrap95": [
+      -102.05600093725384,
+      -27.348547339628094
+    ],
+    "two_sided_p": 0.01083,
+    "equivalent_Z": 2.5481367775145607,
+    "bootstrap_exceedances": 1082,
+    "replications": 99999,
+    "minimum_reportable_p": 1e-05,
+    "groups": 148,
+    "group_wins": 104,
+    "group_losses": 44,
+    "group_ties": 0,
+    "group_sign_p": 8.873046763703883e-07,
+    "group_sign_Z": 4.915114760631133,
+    "galaxy_wins": 125,
+    "galaxy_losses": 50
+  },
+  "quality131": {
+    "baryon_mean_loss": 101.99673495507436,
+    "new_mean_loss": 31.895829619321013,
+    "mean_difference": -70.10090533575335,
+    "bootstrap95": [
+      -130.801276043241,
+      -32.10702664182121
+    ],
+    "two_sided_p": 0.01453,
+    "equivalent_Z": 2.443886421880683,
+    "bootstrap_exceedances": 1452,
+    "replications": 99999,
+    "minimum_reportable_p": 1e-05,
+    "groups": 111,
+    "group_wins": 80,
+    "group_losses": 31,
+    "group_ties": 0,
+    "group_sign_p": 3.681632925244418e-06,
+    "group_sign_Z": 4.6285903165013025,
+    "galaxy_wins": 97,
+    "galaxy_losses": 34
+  }
+}

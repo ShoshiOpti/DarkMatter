@@ -1,0 +1,154 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "exact_frw": {
+    "beta_star": 1.2124318166750199,
+    "Mphi_over_Mpl": 0.5,
+    "rho_b0_hat": 0.002,
+    "rho_r0_hat": 0.0002,
+    "initial": [
+      1.2124318166750199,
+      0.15,
+      0.0,
+      0.0,
+      0.0,
+      0.06643353252047636
+    ],
+    "tau_final": 300.0,
+    "a_final": 9.86236847514956,
+    "beta_final": 1.212424236019458,
+    "ell_final": -0.0004280378351015883,
+    "H_over_m_final": 0.0021502070301510703,
+    "max_beta_departure": 0.00967711026982676,
+    "max_relative_friedmann_constraint": 1.6407519702083712e-10,
+    "max_state_refinement_difference": 2.4150725863592015e-10,
+    "late_window_energy_weighted_w": -0.006295304551016621,
+    "frozen_beta_max_missing_equation": 0.01087677377200573,
+    "frozen_beta_relative_a_final_difference": 1.422454056521083e-05
+  },
+  "averaged_frw": {
+    "m": 1.0,
+    "Mpl": 10.0,
+    "n_comoving": 0.009999999999999998,
+    "h4_comoving": 3.120501742932566e-05,
+    "rho_b0": 0.002,
+    "chi_initial_real": [
+      0.06324555320336758,
+      0.07221776565491876
+    ],
+    "chi_initial_imag": [
+      0.0,
+      0.028010610914637978
+    ],
+    "A3": 3.9999999999999996e-05,
+    "A6": 1.0401672476441886e-07,
+    "t_final": 2000.0,
+    "a_final": 7.36189715188313,
+    "internal_clock_final": 100.0865443110861,
+    "internal_clock_infinity": 105.36362402644187,
+    "f2_initial": 0.6000000000000001,
+    "f2_final": 0.39073375139770716,
+    "max_relative_analytic_scale_error": 6.934453011808728e-13,
+    "max_field_clock_comparison": 8.586799344129197e-13,
+    "max_relative_number_drift": 1.8838264281839656e-12,
+    "max_relative_h4_drift": 3.962608019492109e-12,
+    "population_quadrature_squared_rate_error": 1.7018416569643952e-16
+  },
+  "halo_base": {
+    "J": 240,
+    "R": 24.0,
+    "time_final": 4.0,
+    "preparation_ratio": 0.8,
+    "scalar_contact": 0.3,
+    "continuum_eigenvalue": -0.8183349164629782,
+    "continuum_N": 33.34725351580468,
+    "continuum_T": 6.90856744491138,
+    "continuum_Ug": 1.6408798962963018,
+    "continuum_W": -18.739774578805875,
+    "continuum_relative_virial": 5.0271313683409265e-12,
+    "discrete_eigenvalue": -0.8192697838224793,
+    "discrete_stationarity_residual": 3.3188729542388273e-14,
+    "perturbation_mass_constraint_per_N": 2.581322710458088e-14,
+    "gp": 1.8249999999999982,
+    "gm": -0.6187499999999994,
+    "epsilon_tests": [
+      {
+        "epsilon": 0.05,
+        "max_relative_force_error_final": 2.701370587132601e-05,
+        "unexcited_force_error_final": 0.0036799514103766917,
+        "L1_density_error_per_mass": 4.306571508776981e-05,
+        "max_relative_number_drift": 4.440892098500626e-16,
+        "max_relative_energy_drift": 3.352873534367973e-14,
+        "exact_central_density_ratio": 0.9963095620316602,
+        "approximate_central_density_ratio": 0.9962825081105894
+      },
+      {
+        "epsilon": 0.1,
+        "max_relative_force_error_final": 0.00023468505050272537,
+        "unexcited_force_error_final": 0.014692099031822003,
+        "L1_density_error_per_mass": 0.000386795033760912,
+        "max_relative_number_drift": 4.440892098500626e-16,
+        "max_relative_energy_drift": 1.84297022087776e-14,
+        "exact_central_density_ratio": 0.9854262493145909,
+        "approximate_central_density_ratio": 0.9851937951852282
+      },
+      {
+        "epsilon": 0.2,
+        "max_relative_force_error_final": 0.0021251548314722424,
+        "unexcited_force_error_final": 0.059156285999949265,
+        "L1_density_error_per_mass": 0.003680204908811435,
+        "max_relative_number_drift": 4.440892098500626e-16,
+        "max_relative_energy_drift": 1.2212453270876722e-14,
+        "exact_central_density_ratio": 0.9437881190656393,
+        "approximate_central_density_ratio": 0.9419247820301334
+      }
+    ]
+  },
+  "halo_refined": {
+    "J": 480,
+    "R": 24.0,
+    "time_final": 4.0,
+    "preparation_ratio": 0.8,
+    "scalar_contact": 0.3,
+    "continuum_eigenvalue": -0.8183349164629782,
+    "continuum_N": 33.34725351580468,
+    "continuum_T": 6.90856744491138,
+    "continuum_Ug": 1.6408798962963018,
+    "continuum_W": -18.739774578805875,
+    "continuum_relative_virial": 5.0271313683409265e-12,
+    "discrete_eigenvalue": -0.8185691058658885,
+    "discrete_stationarity_residual": 8.038014698286133e-14,
+    "perturbation_mass_constraint_per_N": 4.5248090383456865e-15,
+    "gp": 1.8249999999999982,
+    "gm": -0.6187499999999994,
+    "epsilon_tests": [
+      {
+        "epsilon": 0.1,
+        "max_relative_force_error_final": 0.000234496954405361,
+        "unexcited_force_error_final": 0.01471697308728892,
+        "L1_density_error_per_mass": 0.0003866323174686858,
+        "max_relative_number_drift": 1.887379141862766e-15,
+        "max_relative_energy_drift": 6.628031457012185e-14,
+        "exact_central_density_ratio": 0.985430352700461,
+        "approximate_central_density_ratio": 0.9851984422243116
+      }
+    ]
+  },
+  "envelope": {
+    "a": 1.452128,
+    "b": 1.524735,
+    "s": 1.4884315,
+    "eta": 0.024390440540931802,
+    "eta_squared": 0.0005948935897807297,
+    "radius_range": [
+      0.02,
+      200.0
+    ],
+    "max_relative_force_error_coalescent": 0.001189046764820123,
+    "max_relative_force_error_second_order": 1.0604295117566664e-06,
+    "max_relative_density_error_second_order": 1.0598695717733975e-06
+  }
+}

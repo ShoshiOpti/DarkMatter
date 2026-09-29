@@ -1,0 +1,1027 @@
+{
+  "scope": "Conditional retrospective halo-template comparison. The added fields still gravitate through GR. This is not a test against all GR models.",
+  "summaries": {
+    "all175": [
+      {
+        "phase": "inner",
+        "model": "baryons",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 461.19920446375727,
+        "median_loss": 91.8129426818383,
+        "mae": 55.413119985264366,
+        "total_chi2": 542877.9023293325
+      },
+      {
+        "phase": "inner",
+        "model": "scalar",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 45.838953166491294,
+        "median_loss": 4.767150042796957,
+        "mae": 15.638877167700723,
+        "total_chi2": 72478.39498388505
+      },
+      {
+        "phase": "inner",
+        "model": "new_analytic",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 44.963255809529265,
+        "median_loss": 4.6517240257281385,
+        "mae": 15.475285086008745,
+        "total_chi2": 71246.78089558624
+      },
+      {
+        "phase": "inner",
+        "model": "old_exact",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 44.96325127749469,
+        "median_loss": 4.65172387497518,
+        "mae": 15.475285248097027,
+        "total_chi2": 71246.77294170867
+      },
+      {
+        "phase": "inner",
+        "model": "mean_response",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 45.634269369572145,
+        "median_loss": 4.744029891424984,
+        "mae": 15.59607978835683,
+        "total_chi2": 72186.81780384046
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_baryons",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 223.36785065363344,
+        "median_loss": 30.62677866663096,
+        "mae": 35.23989550573638,
+        "total_chi2": 256235.12896165004
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_new",
+        "galaxies": 175,
+        "rows": 761,
+        "mean_loss": 26.31150088844228,
+        "median_loss": 3.200013802799559,
+        "mae": 12.353023691496555,
+        "total_chi2": 38664.67115166776
+      },
+      {
+        "phase": "all",
+        "model": "baryons",
+        "galaxies": 175,
+        "rows": 3391,
+        "mean_loss": 379.5906616785924,
+        "median_loss": 85.23278224846521,
+        "mae": 39.97588921024151,
+        "total_chi2": 1960466.5628884477
+      },
+      {
+        "phase": "all",
+        "model": "scalar",
+        "galaxies": 175,
+        "rows": 3391,
+        "mean_loss": 7.119230314025106,
+        "median_loss": 1.5110375208897482,
+        "mae": 7.011010433821394,
+        "total_chi2": 47505.04521290793
+      },
+      {
+        "phase": "all",
+        "model": "new_analytic",
+        "galaxies": 175,
+        "rows": 3391,
+        "mean_loss": 6.975939377535013,
+        "median_loss": 1.4636219154040377,
+        "mae": 6.937701030731595,
+        "total_chi2": 46442.019108219225
+      },
+      {
+        "phase": "all",
+        "model": "old_exact",
+        "galaxies": 175,
+        "rows": 3391,
+        "mean_loss": 6.975939312938955,
+        "median_loss": 1.463621912137366,
+        "mae": 6.937700994792199,
+        "total_chi2": 46442.018667348515
+      },
+      {
+        "phase": "all",
+        "model": "mean_response",
+        "galaxies": 175,
+        "rows": 3391,
+        "mean_loss": 7.087695777512259,
+        "median_loss": 1.5009467517780612,
+        "mae": 6.995392234312948,
+        "total_chi2": 47264.76327979675
+      }
+    ],
+    "quality131": [
+      {
+        "phase": "inner",
+        "model": "baryons",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 557.5934313520028,
+        "median_loss": 141.6429426273066,
+        "mae": 63.409504592971146,
+        "total_chi2": 527059.7315368971
+      },
+      {
+        "phase": "inner",
+        "model": "scalar",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 59.11932800395827,
+        "median_loss": 8.797695654721496,
+        "mae": 18.008343032499123,
+        "total_chi2": 71891.76653271816
+      },
+      {
+        "phase": "inner",
+        "model": "new_analytic",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 58.0592333407255,
+        "median_loss": 8.475569913729663,
+        "mae": 17.833776363372497,
+        "total_chi2": 70689.63059892552
+      },
+      {
+        "phase": "inner",
+        "model": "old_exact",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 58.05922726767253,
+        "median_loss": 8.475569700872468,
+        "mae": 17.833776548027135,
+        "total_chi2": 70689.62264036179
+      },
+      {
+        "phase": "inner",
+        "model": "mean_response",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 58.86394160145367,
+        "median_loss": 8.726116676015684,
+        "mae": 17.959472581541014,
+        "total_chi2": 71605.0757517273
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_baryons",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 263.3447309742189,
+        "median_loss": 57.41388368809297,
+        "mae": 39.364318178236864,
+        "total_chi2": 246785.84621720246
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_new",
+        "galaxies": 131,
+        "rows": 659,
+        "mean_loss": 33.123465915984525,
+        "median_loss": 3.8272084679305785,
+        "mae": 13.799489221778142,
+        "total_chi2": 38104.23542303094
+      },
+      {
+        "phase": "all",
+        "model": "baryons",
+        "galaxies": 131,
+        "rows": 3034,
+        "mean_loss": 471.40701724839255,
+        "median_loss": 134.4488390191848,
+        "mae": 44.69196202406968,
+        "total_chi2": 1932483.500233728
+      },
+      {
+        "phase": "all",
+        "model": "scalar",
+        "galaxies": 131,
+        "rows": 3034,
+        "mean_loss": 8.562044157904038,
+        "median_loss": 2.2044659191832174,
+        "mae": 7.926124132696408,
+        "total_chi2": 46422.44140430166
+      },
+      {
+        "phase": "all",
+        "model": "new_analytic",
+        "galaxies": 131,
+        "rows": 3034,
+        "mean_loss": 8.374288300908992,
+        "median_loss": 2.1376314943882053,
+        "mae": 7.838459481909938,
+        "total_chi2": 45363.37204566477
+      },
+      {
+        "phase": "all",
+        "model": "old_exact",
+        "galaxies": 131,
+        "rows": 3034,
+        "mean_loss": 8.374288217498478,
+        "median_loss": 2.1376315062440177,
+        "mae": 7.838459436915907,
+        "total_chi2": 45363.37160731949
+      },
+      {
+        "phase": "all",
+        "model": "mean_response",
+        "galaxies": 131,
+        "rows": 3034,
+        "mean_loss": 8.520568249791236,
+        "median_loss": 2.188793070572672,
+        "mae": 7.907619987519254,
+        "total_chi2": 46182.948042930155
+      }
+    ],
+    "admissible174": [
+      {
+        "phase": "inner",
+        "model": "baryons",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 463.4709695634685,
+        "median_loss": 92.25327325852388,
+        "mae": 55.54499367023902,
+        "total_chi2": 542548.3419437625
+      },
+      {
+        "phase": "inner",
+        "model": "scalar",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 45.84048449478307,
+        "median_loss": 4.705179985686073,
+        "mae": 15.573754222347345,
+        "total_chi2": 72250.53247366643
+      },
+      {
+        "phase": "inner",
+        "model": "new_analytic",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 44.96297510851971,
+        "median_loss": 4.53655310403178,
+        "mae": 15.410184439411772,
+        "total_chi2": 71021.72040666029
+      },
+      {
+        "phase": "inner",
+        "model": "old_exact",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 44.96297055581609,
+        "median_loss": 4.536552987854933,
+        "mae": 15.410184604045533,
+        "total_chi2": 71021.71245746082
+      },
+      {
+        "phase": "inner",
+        "model": "mean_response",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 45.63501961841796,
+        "median_loss": 4.659480308067288,
+        "mae": 15.530828825924988,
+        "total_chi2": 71959.29917348846
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_baryons",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 224.45990628162204,
+        "median_loss": 30.51795825031659,
+        "mae": 35.30980840215304,
+        "total_chi2": 256068.378104732
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_new",
+        "galaxies": 174,
+        "rows": 756,
+        "mean_loss": 26.271627942388886,
+        "median_loss": 3.1635027111605503,
+        "mae": 12.291604920188846,
+        "total_chi2": 38498.4241841591
+      },
+      {
+        "phase": "all",
+        "model": "baryons",
+        "galaxies": 174,
+        "rows": 3366,
+        "mean_loss": 381.6319670459075,
+        "median_loss": 85.44184855647782,
+        "mae": 40.092402522822134,
+        "total_chi2": 1959856.4746943037
+      },
+      {
+        "phase": "all",
+        "model": "scalar",
+        "galaxies": 174,
+        "rows": 3366,
+        "mean_loss": 7.078846162139739,
+        "median_loss": 1.4433084240082177,
+        "mae": 6.9688563970408035,
+        "total_chi2": 47151.393394355946
+      },
+      {
+        "phase": "all",
+        "model": "new_analytic",
+        "galaxies": 174,
+        "rows": 3366,
+        "mean_loss": 6.936167381260456,
+        "median_loss": 1.3976929529580118,
+        "mae": 6.895780247315294,
+        "total_chi2": 46094.61243998653
+      },
+      {
+        "phase": "all",
+        "model": "old_exact",
+        "galaxies": 174,
+        "rows": 3366,
+        "mean_loss": 6.936167318650017,
+        "median_loss": 1.397692932157706,
+        "mae": 6.89578021212071,
+        "total_chi2": 46094.61200936816
+      },
+      {
+        "phase": "all",
+        "model": "mean_response",
+        "galaxies": 174,
+        "rows": 3366,
+        "mean_loss": 7.047320795033504,
+        "median_loss": 1.4356235676208395,
+        "mae": 6.953251627444243,
+        "total_chi2": 46911.939711576364
+      }
+    ],
+    "admissible_quality130": [
+      {
+        "phase": "inner",
+        "model": "baryons",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 561.375595615372,
+        "median_loss": 143.63090226178426,
+        "mae": 63.64752309907344,
+        "total_chi2": 526730.1711513271
+      },
+      {
+        "phase": "inner",
+        "model": "scalar",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 59.22353435749854,
+        "median_loss": 8.544089179951932,
+        "mae": 17.939405135370748,
+        "total_chi2": 71663.90402249954
+      },
+      {
+        "phase": "inner",
+        "model": "new_analytic",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 58.1595959219219,
+        "median_loss": 8.253749617094538,
+        "mae": 17.764783892368573,
+        "total_chi2": 70464.57010999956
+      },
+      {
+        "phase": "inner",
+        "model": "old_exact",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 58.15958980935024,
+        "median_loss": 8.2537491804221,
+        "mae": 17.764784080603828,
+        "total_chi2": 70464.56215611394
+      },
+      {
+        "phase": "inner",
+        "model": "mean_response",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 58.96671249015407,
+        "median_loss": 8.486491213672341,
+        "mae": 17.890316622541356,
+        "total_chi2": 71377.5571213753
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_baryons",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 265.11391989414665,
+        "median_loss": 57.92555177731354,
+        "mae": 39.489620229383,
+        "total_chi2": 246619.0953602844
+      },
+      {
+        "phase": "inner",
+        "model": "profiled_new",
+        "galaxies": 130,
+        "rows": 654,
+        "mean_loss": 33.122497242248,
+        "median_loss": 3.7816073202737304,
+        "mae": 13.728409216568448,
+        "total_chi2": 37937.98845552228
+      },
+      {
+        "phase": "all",
+        "model": "baryons",
+        "galaxies": 130,
+        "rows": 3009,
+        "mean_loss": 474.84550562902814,
+        "median_loss": 137.00109214762938,
+        "mae": 44.884188094860896,
+        "total_chi2": 1931873.4120395838
+      },
+      {
+        "phase": "all",
+        "model": "scalar",
+        "galaxies": 130,
+        "rows": 3009,
+        "mean_loss": 8.519090091871922,
+        "median_loss": 2.177906628378815,
+        "mae": 7.876741911919888,
+        "total_chi2": 46068.789585749684
+      },
+      {
+        "phase": "all",
+        "model": "new_analytic",
+        "galaxies": 130,
+        "rows": 3009,
+        "mean_loss": 8.331811543767463,
+        "median_loss": 2.1364157430438313,
+        "mae": 7.789279036807955,
+        "total_chi2": 45015.965377432076
+      },
+      {
+        "phase": "all",
+        "model": "old_exact",
+        "galaxies": 130,
+        "rows": 3009,
+        "mean_loss": 8.331811462869897,
+        "median_loss": 2.136415729753721,
+        "mae": 7.789278992741173,
+        "total_chi2": 45015.96494933914
+      },
+      {
+        "phase": "all",
+        "model": "mean_response",
+        "galaxies": 130,
+        "rows": 3009,
+        "mean_loss": 8.47754998456797,
+        "median_loss": 2.167325301306545,
+        "mae": 7.858233542581192,
+        "total_chi2": 45830.12447470976
+      }
+    ]
+  },
+  "inference": {
+    "all175": [
+      {
+        "model": "new_analytic",
+        "baseline": "baryons",
+        "mean_difference": -416.23594865422797,
+        "bootstrap95": [
+          -599.3629902632238,
+          -277.9332347810759
+        ],
+        "two_sided_p": 1e-05,
+        "equivalent_Z": 4.417173413469023,
+        "bootstrap_exceedances": 0,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 148,
+        "group_wins": 141,
+        "group_losses": 5,
+        "group_ties": 2,
+        "group_sign_p": 1.1984718251370814e-35,
+        "group_sign_Z": 12.462310574417431,
+        "galaxy_wins": 167,
+        "galaxy_losses": 5,
+        "Holm_p": 4e-05,
+        "Holm_Z": 4.10747965458625,
+        "Holm_group_sign_p": 3.595415475411244e-35,
+        "Holm_group_sign_Z": 12.3744066325667
+      },
+      {
+        "model": "mean_response",
+        "baseline": "baryons",
+        "mean_difference": -415.56493509418505,
+        "bootstrap95": [
+          -598.3022829040643,
+          -277.53891212364005
+        ],
+        "two_sided_p": 1e-05,
+        "equivalent_Z": 4.417173413469023,
+        "bootstrap_exceedances": 0,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 148,
+        "group_wins": 142,
+        "group_losses": 4,
+        "group_ties": 2,
+        "group_sign_p": 4.188799933293481e-37,
+        "group_sign_Z": 12.726950905092787,
+        "galaxy_wins": 168,
+        "galaxy_losses": 4,
+        "Holm_p": 4e-05,
+        "Holm_Z": 4.10747965458625,
+        "Holm_group_sign_p": 1.6755199733173926e-36,
+        "Holm_group_sign_Z": 12.618226593345772
+      },
+      {
+        "model": "new_analytic",
+        "baseline": "scalar",
+        "mean_difference": -0.8756973569620355,
+        "bootstrap95": [
+          -1.3685702411558684,
+          -0.5141774611001222
+        ],
+        "two_sided_p": 0.00049,
+        "equivalent_Z": 3.486164275802433,
+        "bootstrap_exceedances": 48,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 148,
+        "group_wins": 126,
+        "group_losses": 20,
+        "group_ties": 2,
+        "group_sign_p": 5.407411042600246e-20,
+        "group_sign_Z": 9.155564969429182,
+        "galaxy_wins": 148,
+        "galaxy_losses": 24,
+        "Holm_p": 0.0009,
+        "Holm_Z": 3.3200541166994473,
+        "Holm_group_sign_p": 5.407411042600246e-20,
+        "Holm_group_sign_Z": 9.155564969429182
+      },
+      {
+        "model": "mean_response",
+        "baseline": "scalar",
+        "mean_difference": -0.2046837969191588,
+        "bootstrap95": [
+          -0.31906408417424104,
+          -0.12284553247411836
+        ],
+        "two_sided_p": 0.00045,
+        "equivalent_Z": 3.5088787519844677,
+        "bootstrap_exceedances": 44,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 148,
+        "group_wins": 126,
+        "group_losses": 19,
+        "group_ties": 3,
+        "group_sign_p": 1.4679742967742358e-20,
+        "group_sign_Z": 9.295295809815917,
+        "galaxy_wins": 147,
+        "galaxy_losses": 24,
+        "Holm_p": 0.0009,
+        "Holm_Z": 3.3200541166994473,
+        "Holm_group_sign_p": 2.9359485935484717e-20,
+        "Holm_group_sign_Z": 9.221272557108351
+      }
+    ],
+    "quality131": [
+      {
+        "model": "new_analytic",
+        "baseline": "baryons",
+        "mean_difference": -499.5341980112772,
+        "bootstrap95": [
+          -721.5299955277862,
+          -333.0201884701581
+        ],
+        "two_sided_p": 2e-05,
+        "equivalent_Z": 4.264890793922825,
+        "bootstrap_exceedances": 1,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 111,
+        "group_wins": 108,
+        "group_losses": 2,
+        "group_ties": 1,
+        "group_sign_p": 9.40778259234277e-30,
+        "group_sign_Z": 11.329183308554962,
+        "galaxy_wins": 128,
+        "galaxy_losses": 2,
+        "Holm_p": 8e-05,
+        "Holm_Z": 3.9444000841594518,
+        "Holm_group_sign_p": 2.822334777702831e-29,
+        "Holm_group_sign_Z": 11.232543969093172
+      },
+      {
+        "model": "mean_response",
+        "baseline": "baryons",
+        "mean_difference": -498.7294897505491,
+        "bootstrap95": [
+          -720.2786829497846,
+          -332.57725936342257
+        ],
+        "two_sided_p": 2e-05,
+        "equivalent_Z": 4.264890793922825,
+        "bootstrap_exceedances": 1,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 111,
+        "group_wins": 109,
+        "group_losses": 1,
+        "group_ties": 1,
+        "group_sign_p": 1.7102257906158654e-31,
+        "group_sign_Z": 11.675021454875528,
+        "galaxy_wins": 129,
+        "galaxy_losses": 1,
+        "Holm_p": 8e-05,
+        "Holm_Z": 3.9444000841594518,
+        "Holm_group_sign_p": 6.840903162463462e-31,
+        "Holm_group_sign_Z": 11.55654124412691
+      },
+      {
+        "model": "new_analytic",
+        "baseline": "scalar",
+        "mean_difference": -1.0600946632327737,
+        "bootstrap95": [
+          -1.680887984853831,
+          -0.6068186447428875
+        ],
+        "two_sided_p": 0.00085,
+        "equivalent_Z": 3.3359776401340473,
+        "bootstrap_exceedances": 84,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 111,
+        "group_wins": 98,
+        "group_losses": 12,
+        "group_ties": 1,
+        "group_sign_p": 6.156273065927667e-18,
+        "group_sign_Z": 8.629607752488173,
+        "galaxy_wins": 116,
+        "galaxy_losses": 14,
+        "Holm_p": 0.00136,
+        "Holm_Z": 3.203008429893477,
+        "Holm_group_sign_p": 1.2312546131855334e-17,
+        "Holm_group_sign_Z": 8.54996535740752
+      },
+      {
+        "model": "mean_response",
+        "baseline": "scalar",
+        "mean_difference": -0.2553864025046041,
+        "bootstrap95": [
+          -0.4011804598395399,
+          -0.15054787932491895
+        ],
+        "two_sided_p": 0.00068,
+        "equivalent_Z": 3.39751845977858,
+        "bootstrap_exceedances": 67,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 111,
+        "group_wins": 98,
+        "group_losses": 12,
+        "group_ties": 1,
+        "group_sign_p": 6.156273065927667e-18,
+        "group_sign_Z": 8.629607752488173,
+        "galaxy_wins": 116,
+        "galaxy_losses": 14,
+        "Holm_p": 0.00136,
+        "Holm_Z": 3.203008429893477,
+        "Holm_group_sign_p": 1.2312546131855334e-17,
+        "Holm_group_sign_Z": 8.54996535740752
+      }
+    ],
+    "admissible174": [
+      {
+        "model": "new_analytic",
+        "baseline": "baryons",
+        "mean_difference": -418.5079944549487,
+        "bootstrap95": [
+          -602.6380111589034,
+          -278.8893359195409
+        ],
+        "two_sided_p": 2e-05,
+        "equivalent_Z": 4.264890793922825,
+        "bootstrap_exceedances": 1,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 147,
+        "group_wins": 140,
+        "group_losses": 5,
+        "group_ties": 2,
+        "group_sign_p": 2.315446615810949e-35,
+        "group_sign_Z": 12.409690995967205,
+        "galaxy_wins": 166,
+        "galaxy_losses": 5,
+        "Holm_p": 8e-05,
+        "Holm_Z": 3.9444000841594518,
+        "Holm_group_sign_p": 6.946339847432847e-35,
+        "Holm_group_sign_Z": 12.321416423086763
+      },
+      {
+        "model": "mean_response",
+        "baseline": "baryons",
+        "mean_difference": -417.83594994505046,
+        "bootstrap95": [
+          -601.6141251038968,
+          -278.4641536676699
+        ],
+        "two_sided_p": 2e-05,
+        "equivalent_Z": 4.264890793922825,
+        "bootstrap_exceedances": 1,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 147,
+        "group_wins": 141,
+        "group_losses": 4,
+        "group_ties": 2,
+        "group_sign_p": 8.14970344632138e-37,
+        "group_sign_Z": 12.674866776459591,
+        "galaxy_wins": 167,
+        "galaxy_losses": 4,
+        "Holm_p": 8e-05,
+        "Holm_Z": 3.9444000841594518,
+        "Holm_group_sign_p": 3.259881378528552e-36,
+        "Holm_group_sign_Z": 12.565697318085256
+      },
+      {
+        "model": "new_analytic",
+        "baseline": "scalar",
+        "mean_difference": -0.8775093862633699,
+        "bootstrap95": [
+          -1.3717652951394297,
+          -0.513343909200079
+        ],
+        "two_sided_p": 0.00043,
+        "equivalent_Z": 3.5209522755243374,
+        "bootstrap_exceedances": 42,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 147,
+        "group_wins": 125,
+        "group_losses": 20,
+        "group_ties": 2,
+        "group_sign_p": 9.346847788426254e-20,
+        "group_sign_Z": 9.096291980918856,
+        "galaxy_wins": 147,
+        "galaxy_losses": 24,
+        "Holm_p": 0.00082,
+        "Holm_Z": 3.3459539932893834,
+        "Holm_group_sign_p": 9.346847788426254e-20,
+        "Holm_group_sign_Z": 9.096291980918856
+      },
+      {
+        "model": "mean_response",
+        "baseline": "scalar",
+        "mean_difference": -0.2054648763651118,
+        "bootstrap95": [
+          -0.31945189998091167,
+          -0.12282683568261946
+        ],
+        "two_sided_p": 0.00041,
+        "equivalent_Z": 3.533561944607769,
+        "bootstrap_exceedances": 40,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 147,
+        "group_wins": 125,
+        "group_losses": 19,
+        "group_ties": 3,
+        "group_sign_p": 2.554715468036583e-20,
+        "group_sign_Z": 9.23617289083483,
+        "galaxy_wins": 146,
+        "galaxy_losses": 24,
+        "Holm_p": 0.00082,
+        "Holm_Z": 3.3459539932893834,
+        "Holm_group_sign_p": 5.109430936073166e-20,
+        "Holm_group_sign_Z": 9.161682643643694
+      }
+    ],
+    "admissible_quality130": [
+      {
+        "model": "new_analytic",
+        "baseline": "baryons",
+        "mean_difference": -503.21599969345004,
+        "bootstrap95": [
+          -728.4812908148441,
+          -335.8104674333552
+        ],
+        "two_sided_p": 5e-05,
+        "equivalent_Z": 4.0556269811224,
+        "bootstrap_exceedances": 4,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 110,
+        "group_wins": 107,
+        "group_losses": 2,
+        "group_ties": 1,
+        "group_sign_p": 1.8476601514473386e-29,
+        "group_sign_Z": 11.269906493116302,
+        "galaxy_wins": 127,
+        "galaxy_losses": 2,
+        "Holm_p": 0.0002,
+        "Holm_Z": 3.7190164854556804,
+        "Holm_group_sign_p": 5.542980454342016e-29,
+        "Holm_group_sign_Z": 11.172762299339547
+      },
+      {
+        "model": "mean_response",
+        "baseline": "baryons",
+        "mean_difference": -502.40888312521787,
+        "bootstrap95": [
+          -727.2885852174949,
+          -335.32860847203665
+        ],
+        "two_sided_p": 5e-05,
+        "equivalent_Z": 4.0556269811224,
+        "bootstrap_exceedances": 4,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 110,
+        "group_wins": 108,
+        "group_losses": 1,
+        "group_ties": 1,
+        "group_sign_p": 3.389636702121535e-31,
+        "group_sign_Z": 11.616703662168003,
+        "galaxy_wins": 128,
+        "galaxy_losses": 1,
+        "Holm_p": 0.0002,
+        "Holm_Z": 3.7190164854556804,
+        "Holm_group_sign_p": 1.355854680848614e-30,
+        "Holm_group_sign_Z": 11.497631218898647
+      },
+      {
+        "model": "new_analytic",
+        "baseline": "scalar",
+        "mean_difference": -1.063938435576642,
+        "bootstrap95": [
+          -1.6934966139561725,
+          -0.6080820154894777
+        ],
+        "two_sided_p": 0.00099,
+        "equivalent_Z": 3.2933532687372926,
+        "bootstrap_exceedances": 98,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 110,
+        "group_wins": 97,
+        "group_losses": 12,
+        "group_ties": 1,
+        "group_sign_p": 1.0984371144539348e-17,
+        "group_sign_Z": 8.563130261963616,
+        "galaxy_wins": 115,
+        "galaxy_losses": 14,
+        "Holm_p": 0.00142,
+        "Holm_Z": 3.1905546135886462,
+        "Holm_group_sign_p": 2.1968742289078695e-17,
+        "Holm_group_sign_Z": 8.48287988277928
+      },
+      {
+        "model": "mean_response",
+        "baseline": "scalar",
+        "mean_difference": -0.25682186734445994,
+        "bootstrap95": [
+          -0.40457386128463624,
+          -0.15106324989061182
+        ],
+        "two_sided_p": 0.00071,
+        "equivalent_Z": 3.3856882215056343,
+        "bootstrap_exceedances": 70,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 110,
+        "group_wins": 97,
+        "group_losses": 12,
+        "group_ties": 1,
+        "group_sign_p": 1.0984371144539348e-17,
+        "group_sign_Z": 8.563130261963616,
+        "galaxy_wins": 115,
+        "galaxy_losses": 14,
+        "Holm_p": 0.00142,
+        "Holm_Z": 3.1905546135886462,
+        "Holm_group_sign_p": 2.1968742289078695e-17,
+        "Holm_group_sign_Z": 8.48287988277928
+      }
+    ]
+  },
+  "sensitivity": {
+    "all175": {
+      "common_stellar_ML_profiling": {
+        "mean_difference": -197.0563497651912,
+        "bootstrap95": [
+          -303.50686669575686,
+          -121.49483724391632
+        ],
+        "two_sided_p": 0.00038,
+        "equivalent_Z": 3.5535977143914805,
+        "bootstrap_exceedances": 37,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 148,
+        "group_wins": 138,
+        "group_losses": 10,
+        "group_ties": 0,
+        "group_sign_p": 6.14651311853403e-30,
+        "group_sign_Z": 11.366408250519322,
+        "galaxy_wins": 161,
+        "galaxy_losses": 14
+      }
+    },
+    "quality131": {
+      "common_stellar_ML_profiling": {
+        "mean_difference": -230.2212650582344,
+        "bootstrap95": [
+          -361.15877769413896,
+          -139.87549774612808
+        ],
+        "two_sided_p": 0.00085,
+        "equivalent_Z": 3.3359776401340473,
+        "bootstrap_exceedances": 84,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 111,
+        "group_wins": 105,
+        "group_losses": 6,
+        "group_ties": 0,
+        "group_sign_p": 1.8478334088755076e-24,
+        "group_sign_Z": 10.206840863304349,
+        "galaxy_wins": 122,
+        "galaxy_losses": 9
+      }
+    },
+    "admissible174": {
+      "common_stellar_ML_profiling": {
+        "mean_difference": -198.1882783392332,
+        "bootstrap95": [
+          -305.09432654962126,
+          -122.25026551383917
+        ],
+        "two_sided_p": 0.00029,
+        "equivalent_Z": 3.6240727282637195,
+        "bootstrap_exceedances": 28,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 147,
+        "group_wins": 137,
+        "group_losses": 10,
+        "group_ties": 0,
+        "group_sign_p": 1.1468743946655128e-29,
+        "group_sign_Z": 11.311818593569054,
+        "galaxy_wins": 160,
+        "galaxy_losses": 14
+      }
+    },
+    "admissible_quality130": {
+      "common_stellar_ML_profiling": {
+        "mean_difference": -231.99142265189863,
+        "bootstrap95": [
+          -363.99751566766884,
+          -140.57831525826913
+        ],
+        "two_sided_p": 0.00071,
+        "equivalent_Z": 3.3856882215056343,
+        "bootstrap_exceedances": 70,
+        "replications": 99999,
+        "minimum_reportable_p": 1e-05,
+        "groups": 110,
+        "group_wins": 104,
+        "group_losses": 6,
+        "group_ties": 0,
+        "group_sign_p": 3.497855888988012e-24,
+        "group_sign_Z": 10.144718448488563,
+        "galaxy_wins": 121,
+        "galaxy_losses": 9
+      }
+    }
+  },
+  "bounds": {
+    "scalar": {
+      "length_hits": 7,
+      "weak_field_hits": 9
+    },
+    "new_analytic": {
+      "length_hits": 6,
+      "weak_field_hits": 10
+    },
+    "old_exact": {
+      "length_hits": 6,
+      "weak_field_hits": 11
+    },
+    "mean_response": {
+      "length_hits": 7,
+      "weak_field_hits": 9
+    }
+  }
+}

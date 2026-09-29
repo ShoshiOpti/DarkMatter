@@ -1,0 +1,103 @@
+{
+  "status": "pass",
+  "verified_at_utc": "2026-09-29T21:03:07.246269+00:00",
+  "regression_tests": 43,
+  "portable_output_files_identical": 73,
+  "latest_research_files_verified": 31,
+  "published_support_files_verified": 256,
+  "current_assembly_sha256": "2454cdcdbe9cd169a352d554eab410c5d5e021f5fcb00b7d8bde8b90822a3a62",
+  "complete_verify_run": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\output\\sparc_dotnet\\complete_verification\\runs\\20260929T2100447715894Z-288130f5e5c841d2b24056ff4217a2c8",
+  "atlas_unique_galaxies": 175,
+  "atlas_model_coordinates_verified": 16955,
+  "valid_SVG_figures": 32,
+  "native_results": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\output\\sparc_dotnet\\runs\\20260929T2101126873076Z-84e3a961b2304cc2ad3d678863637dbf\\sparc_full",
+  "portable_results": "C:\\Users\\shosh\\OneDrive\\Desktop\\PhysPapers\\DarkUniverseNEW\\output\\sparc_dotnet\\portable_run\\runs\\20260929T2101085955776Z-534f9351af3244eabbea67281e3ce9ff\\sparc_full",
+  "visual_review": "Current SVGs match the previous visually checked figure set byte-for-byte.",
+  "numerical_validation": {
+    "status": "pass",
+    "scope": "Native all-175 conditional halo-template refit; frozen theory density inputs; no shared-microphysics or baryon-forced field solution.",
+    "galaxies": 175,
+    "rows": 3391,
+    "native_fit_count": 1400,
+    "profiles": {
+      "max_CDF_error": 1.1102230246251565e-16,
+      "max_depth_error": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    "prediction_regression": {
+      "rows_compared": 33910,
+      "maximum_velocity_error_kms": 3.025192563654855e-05,
+      "worst": "UGC02916/inner/new_analytic/42",
+      "tolerance_kms": 0.001
+    },
+    "random_stream": "Complete native 99999 x 148 and 99999 x 111 count streams match NumPy SHA-256 contracts.",
+    "statistics_regression": "Primary bootstrap/sign counts and bounds checked against independent Python references.",
+    "field_profiles": "Versioned numerical theory inputs; original solver and mesh diagnostics supplied for provenance, not invoked by .NET.",
+    "nuisance_profiles": "Archived nuisance-fitted predictions rescored and resampled natively; no fresh nuisance optimization.",
+    "figures": 32,
+    "atlas_panels": 175,
+    "outer_mass": "Integrated to infinity; never truncated at observed Rmax.",
+    "full_fit_bounds": {
+      "primary_physical_rows": {
+        "rows": 3389,
+        "chi2_baryons": 1960465.1954071964,
+        "chi2_green": 46434.77702839338,
+        "delta_chi2": 1914030.418378803,
+        "gaussian_marginal_conservative_p": 2.602947640092364e-121,
+        "gaussian_marginal_log10_p": -120.58453456790599,
+        "gaussian_marginal_equivalent_two_sided_Z": 23.42114030480394,
+        "variance_only_conservative_p": 0.001770609269036856,
+        "variance_only_equivalent_two_sided_Z": 3.12623346215886,
+        "green_Q_per_row": 13.701616119325282,
+        "interpretation": "Conservative p upper bounds / Z lower bounds; fixed grey null and correct quoted marginal errors. Not a detection of the action.",
+        "galaxies": 175
+      },
+      "all3391_zero_speed_convention": {
+        "rows": 3391,
+        "chi2_baryons": 1960466.5628884465,
+        "chi2_green": 46442.01910821937,
+        "delta_chi2": 1914024.5437802272,
+        "gaussian_marginal_conservative_p": 3.080056744388543e-121,
+        "gaussian_marginal_log10_p": -120.51144128234766,
+        "gaussian_marginal_equivalent_two_sided_Z": 23.41396627333448,
+        "variance_only_conservative_p": 0.0017716596221398102,
+        "variance_only_equivalent_two_sided_Z": 3.1260590688795964,
+        "green_Q_per_row": 13.695670630557172,
+        "interpretation": "Conservative p upper bounds / Z lower bounds; fixed grey null and correct quoted marginal errors. Not a detection of the action.",
+        "galaxies": 175
+      },
+      "quality_physical_rows": {
+        "rows": 3032,
+        "chi2_baryons": 1932482.132752476,
+        "chi2_green": 45356.1299658389,
+        "delta_chi2": 1887126.002786637,
+        "gaussian_marginal_conservative_p": 6.80513209663614e-134,
+        "gaussian_marginal_log10_p": -133.16716344014714,
+        "gaussian_marginal_equivalent_two_sided_Z": 24.62508988320291,
+        "variance_only_conservative_p": 0.0016066759694491927,
+        "variance_only_equivalent_two_sided_Z": 3.1546920458019696,
+        "green_Q_per_row": 14.959145767097263,
+        "interpretation": "Conservative p upper bounds / Z lower bounds; fixed grey null and correct quoted marginal errors. Not a detection of the action.",
+        "galaxies": 131
+      },
+      "null": "Fixed grey mean, correct marginal sigma; no uncertainty in distance, inclination, stellar mass or baryonic templates.",
+      "calibration": "T<=Q0; Gaussian union bound min(1,2N SF(sqrt(T/N))); variance-only Markov bound min(1,N/T). Arbitrary correlations permitted.",
+      "excluded_from_physical_statistic_only": "Two central UGC01281 negative-force rows. Original green fits unchanged; all 175 galaxies and exterior mass retained.",
+      "Z_convention": "Two-sided equivalent; conservative p upper bounds and Z lower bounds, not exact LRT tails or action-detection significance."
+    }
+  },
+  "source_sha256": {
+    "DarkMatter/FullSparcProfiles.cs": "a0bf659229577f5a6678dc991ffbc43b40c92e152fca67c29c8a9693811a5fac",
+    "DarkMatter/FullSparcStatistics.cs": "9243c708f0d5dca854c54417eb582c6a0dc61be241761bb42d637767569a221c",
+    "DarkMatter/FullSparcStudy.cs": "262a1cee413222e66aea7d43f6a1dffa329acc5938a1323b36a8a2f932801418",
+    "DarkMatter/Cli.cs": "9bf208cdb30832cd85e3a8085f5628ee0f98eb750240a950bb7e651b20b1e27e",
+    "DarkMatter/Program.cs": "aa82c0229a6802bc0ee99d54eb3e37acc9b262ef8a453f9528dfa48daa37aac1",
+    "DarkMatter.Tests/FullSparcTests.cs": "6a4033e844d2f17ffa8aa57c509f79eb11bf74a358027e6bab05636058ca6aae",
+    "DarkMatter/data/input_manifest.json": "9ab25a04ed592b7b80a815e3ea707695fb0aa873f091a3bf6804334d6bfb627c",
+    "DarkMatter/README.md": "ceb95df72a8b9cb7a83e9a43c64a616e6584df7e36fdf317c28021761779dd95",
+    "DarkMatter/DarkUniverse.Console.csproj": "df7addc2ecb49b198ce6b6f6be8c11d47c0cc6dbacf148e09c5eb015c00a0212",
+    "DarkUniverse.slnx": "2376f6d70d566a5a1041496177279d94e32a5f515c483f398b6e5a8c6a40515b",
+    "global.json": "20c93ca7812d0a9825eef71217156f95ab2f4fe5aadfeb22ebc1c24b630018d3",
+    "DarkMatter/tools/check_sparc_full_delivery.py": "abcf9a9263ec2307ba35e5728e8810de0d0a795fac4de8829487aab5a51af74d"
+  }
+}

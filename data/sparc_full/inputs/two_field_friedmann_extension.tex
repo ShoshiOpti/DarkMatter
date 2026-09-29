@@ -1,0 +1,655 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,booktabs,array,longtable}
+\usepackage{graphicx,float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{Two-field dynamics and observable envelopes}\fancyhead[R]{Technical addendum}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\allowdisplaybreaks
+\newcommand{\dd}{\mathrm d}
+\newcommand{\mpl}{M_{\rm Pl}}
+\newcommand{\mf}{M_\phi}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\lap}{\nabla^2}
+\newcommand{\avg}[1]{\overline{#1}}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\Acal}{\mathcal A}
+\title{Coupled two-field--Friedmann solutions\\and rotation-curve envelope approximations}
+\author{Technical analysis of the manuscripts supplied by Shoshauna Gauvin}
+\date{29 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We retain the oscillator information metric and symmetric comparison potential of the consolidated manuscript, rather than introduce an independent entropy force. The complete nonlinear homogeneous field equations are integrated together with the Friedmann and Raychaudhuri equations. In the homogeneous leading nonrelativistic theory, a comoving field transformation additionally gives an analytic solution for the expansion and a one-dimensional quadrature for internal population transfer: conserved comoving number and quartic Hamiltonian produce energy densities proportional to $a^{-3}$ and $a^{-6}$, even while the two populations exchange. For halos, the earlier second-variation equations are completed into a positive, exactly number-normalized response envelope and checked against new full two-field--Poisson evolutions. At a declared final time and radius interval, its maximum squared-speed error is $0.0235\%$ for excitation angle $0.10$, versus $1.47\%$ for the unexcited scalar. A constrained time-averaged internal-mode construction supplies a further conditional envelope without discarding core backreaction. Finally, an analytic coalescing-scale expansion of the earlier dPIE envelope has positive density, exact total mass, and a uniform relative-error bound; at the archived shape its second-order force error is below $1.77\times10^{-6}$. These are equation-solving and approximation results, not new galaxy-fit significances. The archived rotation-curve comparisons, their calibration differences, and the missing occupation and common-microphysics conditions are retained explicitly.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{What is retained, what is new, and what is not inferred}
+The controlling source is \emph{Two-Field Dynamics, Entropy Geometry, Localization, and Gravity}, revised version 4, especially Sections 14, 28.2, 30 and 31 \cite{consolidated}. The accompanying TeX was checked against these displayed equations. The original two real configuration fields remain mixedness $\beta$ and squeezing $\ell$. The separate three-parameter relativistic rapidity preparation and its prescribed boost-diffusion channel are not substituted into this action.
+
+The four reference PDFs supply the nonrelativistic contact matching, scalar-reduction restrictions, internal-mode equations and historical observational comparisons \cite{cubicmain,cubicsupp,channelmain,channelsupp}. In particular, the time-dependent second-variation equations used below are already in Section S5.3 of \cite{channelsupp}; they are not claimed as a new derivation originating here. The new work is the joint Friedmann solution, its invariant-based analytic reduction, the explicit numerical implementation and tests, the positive number-preserving completion, the constrained mean-envelope calculation, and the controlled analytic dPIE expansion.
+
+The consolidated manuscript does not supply a calibrated cosmological initial state, universal microscopic mass, galaxy assembly history, or a law populating internal modes. All numerical states below are explicitly supplied benchmarks. Solving an initial-value problem does not remove its initial conditions. The main observational table is transcribed from the supplied manuscript, not represented as a newly reproduced fit. Original per-galaxy nuisance calibrations, fitted lengths, prediction arrays, and simulation archives are not included among the six attachments. The public SPARC source was checked \cite{sparc}; its downloadable archive was not retrieved successfully in the calculation environment, and no new rotation-curve fit is reported.
+
+Two distinctions are especially important. A positive stress omitted by comparison with the minimizing scalar is not the same quantity as the signed error of a Gaussian reconstruction. Also, a mass-preserving redistribution does not create additional Newtonian mass. The new consolidated calculations make both distinctions explicit \cite[Sections 5--8, 14.7 and 31.4]{consolidated}.
+
+\section{The complete relativistic two-field--Friedmann problem}
+\subsection{Action and functions}
+Use $c=\hbar=1$, signature $(-+++)$, and $\mpl^{-2}=8\pi G$. Combine any bare cosmological constant and constant potential offset into one independent density $\rho_\Lambda$. Then
+\begin{equation}
+ S=\int\sqrt{-g}\,\dd^4x\left[\frac{\mpl^2}{2}R
+ -\frac{\mf^2}{2}G_{AB}\partial_\mu\phi^A\partial^\mu\phi^B
+ -\mf^2m^2 V(\phi)-\rho_\Lambda\right]+S_b+S_r .
+ \label{ext:action}
+\end{equation}
+Here $m^2=\mu_{\rm cal}^4/\mf^2$ in the original energy-calibration notation. Set the reference squeezing to zero, without loss of generality within this family, and define
+\begin{align}
+ u(\beta)&=\frac12\coth(\beta/2),&
+ \chi(\beta)&=\frac{1}{4\sinh^2(\beta/2)},&
+ w(\beta)&=4\beta u(\beta),\\
+ G_{AB}\dd\phi^A\dd\phi^B&=\chi\,\dd\beta^2+w\,\dd\ell^2,\\
+ V(\beta,\ell)&=\frac12\left[(\beta_*u+\beta u_*)\cosh(2\ell)
+                   -\beta u-\beta_*u_*\right].\label{ext:potential}
+\end{align}
+The gradients and metric derivatives required by the solver are
+\begin{align}
+ \frac{\chi'}{\chi}&=-2u,& w'&=4(u-\beta\chi),\\
+ V_\beta&=\frac12\left[(u_*-\beta_*\chi)\cosh(2\ell)-u+\beta\chi\right],\\
+ V_\ell&=(\beta_*u+\beta u_*)\sinh(2\ell).
+\end{align}
+For numerical evaluation close to the minimum, the equivalent expression
+\begin{equation}
+ V=\frac12(\beta_*-\beta)(u-u_*)+
+       (\beta_*u+\beta u_*)\sinh^2\ell
+\end{equation}
+avoids subtracting several nearly equal order-one quantities. No density-matrix normalization fixes $\rho_\Lambda$, $m$, $\mf$, or $G$.
+
+\subsection{The coupled equations}
+For an FLRW metric with scale factor $a(t)$ and curvature $k$, define
+\begin{equation}
+ K=\frac{\mf^2}{2}(\chi\dot\beta^2+w\dot\ell^2),\qquad
+ U=\mf^2m^2 V,\qquad \rho_\phi=K+U,\quad p_\phi=K-U.
+\end{equation}
+The full initial-value system is
+\begin{align}
+ \boxed{\ddot\beta+3H\dot\beta+\frac{\chi'}{2\chi}\dot\beta^2
+       -\frac{w'}{2\chi}\dot\ell^2+\frac{m^2}{\chi}V_\beta=0,}
+ \label{ext:beta}\\
+ \boxed{\ddot\ell+\left(3H+\frac{w'}{w}\dot\beta\right)\dot\ell
+                   +\frac{m^2}{w}V_\ell=0,}\label{ext:ell}\\
+ 3\mpl^2(H^2+k/a^2)&=K+U+\rho_b+\rho_r+\rho_\Lambda,\label{ext:friedmann}\\
+ \dot H&=\frac{k}{a^2}-\frac{2K+\rho_b+4\rho_r/3}{2\mpl^2},\label{ext:ray}\\
+ \dot a&=aH,\qquad \dot\rho_b=-3H\rho_b,\qquad \dot\rho_r=-4H\rho_r.
+\end{align}
+The field equations give $\dot\rho_\phi=-6HK$ identically. Equations \eqref{ext:friedmann} and \eqref{ext:ray} are therefore compatible when the initial constraint is satisfied. In the numerical check, $H$ is evolved using \eqref{ext:ray}; it is not reset at every step to the square root of the constraint. The residual of \eqref{ext:friedmann} is consequently a separate diagnostic.
+
+This is the conservative sigma-model problem selected by the sources, with Hubble dilution. It is not the prescribed BKM gradient flow. Appending the random-boost heating law requires a compensating sector with opposite energy transfer and a specified three-dimensional stress; the one-dimensional diffusion calculation does not supply that completion \cite[Section 30.3]{consolidated}.
+
+\subsection{Exactly what a scalar decomposition loses}
+Introduce the physical target metric $\mathcal G_{AB}=\mf^2G_{AB}$ and, on a segment with nonzero speed,
+\begin{equation}
+ \dot\sigma^2=\mathcal G_{AB}\dot\phi^A\dot\phi^B,\qquad
+ e_\sigma^A=\dot\phi^A/\dot\sigma,
+ \qquad \mathcal G(e_s,e_s)=1,\quad \mathcal G(e_s,e_\sigma)=0.
+\end{equation}
+Writing $D_te_\sigma=\Omega e_s$ in two dimensions, projection of the full field equation gives
+\begin{align}
+ \ddot\sigma+3H\dot\sigma+U_{;\sigma}&=0,\label{ext:tangent}\\
+ \boxed{\dot\sigma\,\Omega+U_{;s}=0.}\label{ext:normal}
+\end{align}
+The Friedmann equations depend on $\dot\sigma^2$ and $U$, but they do not replace \eqref{ext:normal}. A potential reconstructed along one actual trajectory can reproduce its background stress without defining a universally valid single-field restriction. This is the background/entropy-direction distinction used in covariant multi-field dynamics \cite{langlois}, specialized here to the stipulated action.
+
+For this oscillator model, $\ell=0$, $\dot\ell=0$ is an exact real-scalar sector. In contrast, fixing $\beta=\beta_*$ leaves the temporal normal residual
+\begin{equation}
+ \mathcal R_\beta=
+ \frac{w_*'}{2\chi_*}\left[-\dot\ell^2+
+             \frac{m^2}{4}\bigl(\cosh2\ell-1\bigr)\right].
+ \label{ext:frozenres}
+\end{equation}
+A specially adjusted zero of this expression is weaker than invariance for arbitrary scalar data. These sector statements agree with Section S4.6 of \cite{cubicsupp}. The complex fixed-polarization nonrelativistic sector introduced later is a different reduction, because it retains both an amplitude and a phase.
+
+\subsection{A new numerical solution of the unaveraged system}
+Choose $r_*=0.8$, where
+\begin{equation}
+ r_*=\frac12\left[\frac{\tanh(\beta_*/2)}{\beta_*/2}
+                         +\operatorname{sech}^2(\beta_*/2)\right],
+ \qquad \beta_*=1.2124318166750199.
+\end{equation}
+With $\tau=mt$, densities in units $\mf^2m^2$, and $\gamma=\mf/\mpl$, the supplied initial data are
+\begin{equation}
+ \begin{gathered}
+ \gamma=0.5,\quad a_0=1,\quad \beta_0=\beta_*,\quad \ell_0=0.15,
+ \quad \beta'_0=\ell'_0=0,\\
+ \widehat\rho_{b0}=0.002,\quad \widehat\rho_{r0}=0.0002,
+ \quad \rho_\Lambda=k=0.
+ \end{gathered}
+\end{equation}
+The expanding Friedmann root fixes $H_0/m=0.06643353252047636$. The integrated solution at $\tau=300$ is
+\begin{center}
+\begin{tabular}{lr}\toprule
+Quantity & New numerical result\\\midrule
+$a$ & $9.8623684751$\\
+$H/m$ & $0.0021502070302$\\
+$\beta$ & $1.2124242360$\\
+$\ell$ & $-0.0004280378351$\\
+$\max|\beta-\beta_*|$ on $[0,300]$ & $0.00967711027$\\
+Maximum relative Friedmann residual & $1.65\times10^{-10}$\\
+Maximum state change on tolerance refinement & $2.42\times10^{-10}$\\\bottomrule
+\end{tabular}
+\end{center}
+DOP853 runs used relative tolerances $2\times10^{-9}$ and $2\times10^{-11}$, absolute tolerances one hundredth as large, and maximum step $0.25$. The energy-weighted finite-window ratio $\int_{200}^{300}p_\phi\dd\tau/\int_{200}^{300}\rho_\phi\dd\tau$ is $-0.00630$: the late oscillations are approximately matter-like in this example, not a demonstrated cosmological dark-energy solution.
+
+A separately integrated frozen-$\beta$ scalar has almost the same final scale factor: its relative difference is $1.42\times10^{-5}$. Nevertheless its maximum missing $\beta$ equation, in units $m^2$, is $0.01088$. Thus a close expansion history is not a test of the omitted field equation.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.87\linewidth]{figures/exact_fields.pdf}
+\caption{New unaveraged field--Friedmann solution for the declared benchmark. Both fields evolve; $H$ is determined by the same stress. The figure is not a cosmological parameter fit.}
+\end{figure}
+
+\section{An analytic joint solution in the homogeneous nonrelativistic regime}
+\subsection{Matched contacts, not a replacement potential}
+For equal mass $m$, the already matched contact energy is
+\begin{equation}
+ h_4(\psi)=\frac{\Lambda_1n_1^2+\Lambda_2n_2^2+4\Lambda_\times n_1n_2
+       +\Lambda_p(\psi_1^{*2}\psi_2^2+\psi_1^2\psi_2^{*2})}{16m^2},
+ \quad n_a=|\psi_a|^2,
+ \label{ext:h4}
+\end{equation}
+with
+\begin{equation}
+ (\Lambda_1,\Lambda_2,\Lambda_\times,\Lambda_p)
+ =\frac{m^2C_0}{\mf^2}
+    (1,r_*^2,r_*(2r_*-1),r_*(3-2r_*)),\qquad C_0=\cosh^2(\beta_*/2).
+ \label{ext:contacts}
+\end{equation}
+The temporal derivative vertex is included in this matching \cite[Sections S6--S7]{cubicsupp}. Standard nonrelativistic reductions of Klein--Gordon--Einstein systems require control of fast modes, metric corrections and small frequency shifts \cite{salehian}. Here all ``exact'' statements in this section mean exact within the retained homogeneous quartic truncation, not within the full relativistic action.
+
+After removal of the rest phase, the homogeneous physical envelopes obey
+\begin{equation}
+ i(\partial_t+3H/2)\psi_a=\partial_{\psi_a^*}h_4(\psi).
+\end{equation}
+Set
+\begin{equation}
+ z_a=a^{3/2}\psi_a,\qquad
+ s(t)=\int_{t_0}^t\frac{\dd t'}{a(t')^3}.
+ \label{ext:clock}
+\end{equation}
+Quartic homogeneity gives the autonomous internal system
+\begin{equation}
+ \boxed{i\frac{\dd z_a}{\dd s}=\partial_{z_a^*}h_4(z),\qquad
+       n_c=z^\dagger z=\text{constant},\qquad
+       h_c=h_4(z)=\text{constant}.}\label{ext:internal}
+\end{equation}
+Consequently the leading averaged field stress is
+\begin{equation}
+ \boxed{\rho_\phi(a)=\frac{m n_c}{a^3}+\frac{h_c}{a^6},\qquad
+        p_\phi(a)=\frac{h_c}{a^6}.}\label{ext:rhoavg}
+\end{equation}
+One way to verify the pressure is to vary the physical volume at fixed comoving canonical amplitudes. Rest energy per comoving cell is fixed, while its quartic energy is $a^{-3}h_c$; therefore the pressure is $a^{-6}h_c$. Equivalently, $\dot\rho_\phi=-3H(\rho_\phi+p_\phi)$ follows directly.
+
+The important closure is in the two invariants, not in a Gaussian covariance ansatz. Individual field populations and cumulants can evolve while \eqref{ext:rhoavg} remains fixed by $n_c,h_c$. With a supplied homogeneous ensemble on a common background, the same calculation uses $\langle n_c\rangle$ and $\langle h_c\rangle$, not $h_4(\langle z\rangle)$ or a Wick reconstruction at later times. Spatial gradients, gravitational clustering, explicit time-dependent coefficients, and exchange channels invalidate the simple two-invariant background closure.
+
+\subsection{Closed expansion law and its limits}
+For a flat background set
+\begin{equation}
+ A_3=\frac{mn_c+\rho_{b0}}{3\mpl^2},\quad
+ A_6=\frac{h_c}{3\mpl^2},\quad
+ A_4=\frac{\rho_{r0}}{3\mpl^2},\quad
+ A_\Lambda=\frac{\rho_\Lambda}{3\mpl^2}.
+\end{equation}
+The simultaneous Friedmann solution satisfies
+\begin{equation}
+ H^2=A_3a^{-3}+A_4a^{-4}+A_6a^{-6}+A_\Lambda,
+ \qquad
+ t-t_0=\int_{a_0}^{a}\frac{\dd\alpha}
+ {\alpha\sqrt{A_3\alpha^{-3}+A_4\alpha^{-4}+A_6\alpha^{-6}+A_\Lambda}}.
+ \label{ext:quad_a}
+\end{equation}
+With no radiation or vacuum, $y=a^3$ has the elementary solution
+\begin{equation}
+ \boxed{y(t)=y_0+3\sqrt{A_3y_0+A_6}\,(t-t_0)
+                  +\frac94 A_3(t-t_0)^2.}\label{ext:analytic_a}
+\end{equation}
+Indeed $\dot y=3\sqrt{A_3y+A_6}$ on the expanding branch. With $A_\Lambda>0$ and no radiation, writing $\Delta t=t-t_0$,
+\begin{align}
+ y(t)={}&\left(y_0+\frac{A_3}{2A_\Lambda}\right)
+             \cosh(3\sqrt{A_\Lambda}\,\Delta t)
+ -\frac{A_3}{2A_\Lambda}\nonumber\\
+ &+\frac{\sqrt{A_\Lambda y_0^2+A_3y_0+A_6}}{\sqrt{A_\Lambda}}
+             \sinh(3\sqrt{A_\Lambda}\,\Delta t).
+ \label{ext:analytic_lambda}
+\end{align}
+For $A_3,A_6>0$ and $A_4=A_\Lambda=0$, set
+\begin{equation}
+ u_0=\sqrt{A_3y_0+A_6},\quad u(t)=u_0+\frac32 A_3(t-t_0),\quad d=\sqrt{A_6}.
+\end{equation}
+The internal clock is also explicit:
+\begin{equation}
+ s(t)=\frac{1}{3d}\log\frac{(u-d)(u_0+d)}{(u+d)(u_0-d)}.
+ \label{ext:s_explicit}
+\end{equation}
+It approaches a finite value as $t\to\infty$ for the supplied nonzero initial scale factor. This slows and eventually freezes the retained interaction-driven internal motion in this cosmology; it is not thermodynamic relaxation or an occupation-selection mechanism. For $A_6=0$, use the nonsingular limiting formula
+\begin{equation}
+ s(t)=\frac{2}{3\sqrt{A_3}}\left(y_0^{-1/2}-y(t)^{-1/2}\right).
+\end{equation}
+On the repulsive branch $2/3<r_*<1$, $h_c\ge0$. The term $a^{-6}$ is a small positive-pressure interaction correction in the controlled nonrelativistic regime. Extrapolating it to interaction-dominated densities, or back to $H\gtrsim m$, is not justified by this solution. In particular it does not derive an early stiff epoch of the full action.
+
+\subsection{Solving the two populations, not merely their sum}
+Write
+\begin{equation}
+ z_1=\sqrt{n_c(1-f)}e^{i\theta_1},\quad
+ z_2=\sqrt{n_cf}e^{i\theta_2},\quad \delta=\theta_2-\theta_1,
+\end{equation}
+and define
+\begin{equation}
+ Q(f)=\Lambda_1(1-f)^2+\Lambda_2f^2+4\Lambda_\times f(1-f),
+ \qquad e=\frac{16m^2h_c}{n_c^2}.
+\end{equation}
+In the internal clock,
+\begin{align}
+ \frac{\dd f}{\dd s}&=-\frac{\Lambda_pn_c}{4m^2}f(1-f)\sin2\delta,\\
+ \frac{\dd\delta}{\dd s}&=-\frac{n_c}{16m^2}
+       [Q'(f)+2\Lambda_p(1-2f)\cos2\delta],\\
+ \cos2\delta&=\frac{e-Q(f)}{2\Lambda_p f(1-f)}.
+\end{align}
+Eliminating the phase gives the explicit quadrature
+\begin{equation}
+ \boxed{\left(\frac{\dd f}{\dd s}\right)^2
+ =\frac{n_c^2}{64m^4}
+ \left[4\Lambda_p^2f^2(1-f)^2-(e-Q(f))^2\right].}\label{ext:populationquad}
+\end{equation}
+Integrating $\dd f$ over the square root of this quartic, changing sign at turning points, determines $f(s)$. This is an elliptic quadrature in the generic case. The common phase follows from
+\begin{equation}
+ \frac{\dd\theta_1}{\dd s}=-\frac{n_c}{8m^2}
+ [\Lambda_1(1-f)+2\Lambda_\times f+\Lambda_pf\cos2\delta].
+\end{equation}
+Equations \eqref{ext:analytic_a}, \eqref{ext:s_explicit}, and \eqref{ext:populationquad}, together with the phases, solve the leading joint two-field--Friedmann problem for supplied admissible data. At component zeros the original polynomial complex-field equation is regular and preferable to a phase chart.
+
+For an independent new integration, use $m=1$, $\Lambda_1=4$, $r_*=0.8$, $\mpl=10$, $\rho_{b0}=0.002$, $a_0=1$, and
+\begin{equation}
+ z_1(0)=\sqrt{0.004},\qquad z_2(0)=\sqrt{0.006}\,e^{0.37i}.
+\end{equation}
+Then $n_c=0.01$, $h_c=3.12050174293\times10^{-5}$, $A_3=4.0\times10^{-5}$ and $A_6=1.04016724764\times10^{-7}$. At $t=2000$,
+\begin{equation}
+ a=7.36189715188,\quad s=100.0865443111,\quad f=0.3907337514,
+\end{equation}
+whereas $f(0)=0.6$. Direct integration of the coupled expansion and complex fields agrees with the analytic scale factor to $6.94\times10^{-13}$ relative error and with the re-clocked complex solution to $8.59\times10^{-13}$ maximum absolute error. The population-quadrature squared-rate identity has residual below $1.71\times10^{-16}$ in this run. These are checks within the truncation, not bounds on omitted relativistic operators.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.85\linewidth]{figures/cosmological_conversion.pdf}
+\caption{New population-transfer solution. The two populations exchange substantially, although the homogeneous expansion is determined by the conserved comoving number and quartic energy.}
+\end{figure}
+
+\section{The spatial equations needed for a galaxy}
+\subsection{Cosmological weak-field parent}
+In comoving coordinates $\mathbf x$, the leading spatial equations are
+\begin{align}
+ i(\partial_t+3H/2)\psi_a
+ &=-\frac{\lap_x\psi_a}{2ma^2}+m\Phi_{\rm pec}\psi_a
+                      +\partial_{\psi_a^*}h_4,\label{ext:gpp_exp}\\
+ \lap_x\Phi_{\rm pec}
+ &=4\pi G a^2\left[m\sum_a|\psi_a|^2-\avg\rho_\phi^{\rm rest}
+                              +\rho_b-\avg\rho_b\right].\label{ext:poisson_exp}
+\end{align}
+The overbars in \eqref{ext:poisson_exp} denote the homogeneous background, not a Gaussian closure. These are a subhorizon, weak-field, small-frequency-shift approximation. They are not exact relativistic perturbation equations. Their origin and the need for systematic corrections are consistent with the scalar-field effective-field framework of \cite{salehian}.
+
+Equivalently, $z=a^{3/2}\psi$ obeys
+\begin{equation}
+ i\partial_t z_a=-\frac{\lap_x z_a}{2ma^2}+m\Phi_{\rm pec}z_a
+                              +a^{-3}\partial_{z_a^*}h_4(z).
+\end{equation}
+The two coefficients $a^{-2}$ and $a^{-3}$ show why the homogeneous clock transformation does not remove expansion from all spatial dynamics simultaneously.
+
+For a well-separated bound halo, use physical coordinates and the local nearly nonexpanding limit. With a static baryonic potential supplied consistently to the equilibrium or evolution,
+\begin{align}
+ i\partial_t\psi_1={}&-\frac{\lap\psi_1}{2m}+m(\Phi_h+\Phi_b)\psi_1
+ +\frac{(\Lambda_1n_1+2\Lambda_\times n_2)\psi_1+
+                  \Lambda_p\psi_1^*\psi_2^2}{8m^2},\\
+ i\partial_t\psi_2={}&-\frac{\lap\psi_2}{2m}+m(\Phi_h+\Phi_b)\psi_2
+ +\frac{(\Lambda_2n_2+2\Lambda_\times n_1)\psi_2+
+                  \Lambda_p\psi_2^*\psi_1^2}{8m^2},\\
+ \lap\Phi_h={}&4\pi Gm(n_1+n_2).\label{ext:localgpp}
+\end{align}
+Friedmann controls the background and the initial cosmological conditions; it does not supply the radial halo density. Substituting $\rho_\phi(R)$ into a separate Friedmann equation at every radius is not a solution of \eqref{ext:localgpp}. Cosmological corrections in a virialized region must be treated in a consistent background/perturbation split, not appended as an arbitrary acceleration law.
+
+\subsection{Why the stress cannot be added as a tracer force}
+Let $\rho=mn$, $n=n_1+n_2$, and $\mathbf s$ be the unit doublet polarization. The retained momentum flux is
+\begin{equation}
+ \Pi_{ij}=\rho v_iv_j+\Pi^q_{ij}
+       +\frac{n}{4m}\partial_i\mathbf s\cdot\partial_j\mathbf s+h_4\delta_{ij}.
+\end{equation}
+This stress supports and redistributes the \emph{field}. Gas and stellar test particles respond to the gravitational metric, not to an additional term $\nabla p_{\rm field}/\rho_{\rm tracer}$. At leading Newtonian order the mass source is $mn$. If internal energy is too large for this ordering, the remedy is to use the full relativistic stress and Einstein equations, not count the same support a second time as an independent halo force \cite[Sections 5 and 6.6]{channelmain}.
+
+For orientation, a genuinely static spherical relativistic source with energy density $\epsilon$ and radial pressure $p_r$ obeys
+\begin{equation}
+ M'(R)=4\pi R^2\epsilon/c^2,\qquad
+ v_{\rm local}^2(R)=
+ \frac{G[M(R)+4\pi R^3p_r(R)/c^2]}{R[1-2GM(R)/(c^2R)]}.
+\end{equation}
+This follows from the radial Einstein equation for a metric with lapse $e^{\nu(R)}$, using $v_{\rm local}^2/c^2=R\nu'$. It is not a disk formula, and an oscillating halo requires a justified quasistatic average. It displays where relativistic pressure belongs when that correction is necessary.
+
+\subsection{Shared physical scales}
+A dimensionless scalar-core normalization with central density $\rho_c$ gives
+\begin{equation}
+ L^4=\frac{\hbar^2}{4\pi Gm^2\rho_c},\qquad
+ v_s^2=4\pi G\rho_cL^2,\qquad
+ \eta_h=\frac{\alpha_h}{4\pi GL^2},\qquad
+ \alpha_h=\frac{2b_g}{m^2}.
+ \label{ext:scales}
+\end{equation}
+Thus $L v_s=\hbar/m$. Independently fitting $L$ and $v_s$ to one fixed stored profile generally changes the inferred particle mass and interaction calibration. A physical multi-galaxy fit with shared $m,\mf,\beta_*$ must recompute the core and response as $\rho_c$, $\eta_h$ and the baryonic source vary. This is a source-derived restriction, not a new limitation introduced here \cite[Section S9]{cubicsupp}.
+
+For a trial central state $\rho_{c,g}$ and shared microscopic parameters, \eqref{ext:scales} determines $L_g,v_{s,g},\eta_{h,g}$; the baryonic potential enters in units $v_{s,g}^2$ at $R=L_gx$. The central state, any internal occupation, and their assembly prescription remain galaxy-state inputs. Initial cosmological abundance constrains a mean inventory but does not determine their allocation to individual halos.
+
+\section{A controlled, positive response envelope}
+\subsection{Retain both the occupied mode and core backreaction}
+On the repulsive branch define
+\begin{align}
+ D&=C_0(1-r_*)(1+11r_*),&
+ A_p&=C_0r_*(3-2r_*),\\
+ f_*&=\frac{1+6r_*}{1+11r_*},&
+ P_*&=\frac{12C_0r_*^2(3r_*-2)}{1+11r_*},&
+ b_g&=\frac{P_*}{16\mf^2}.
+\end{align}
+Let $c=(\sqrt{1-f_*},i\sqrt{f_*})^T$, $d=(-\sqrt{f_*},i\sqrt{1-f_*})^T$, so $c^\dagger d=0$. A scalar core $u>0$ solves
+\begin{equation}
+ \left[-\frac{\lap}{2m}+m(\Phi_0+\Phi_b)+g_0u^2\right]u=\omega_cu,
+ \qquad \lap\Phi_0=4\pi Gmu^2,\qquad g_0=2b_g.
+ \label{ext:core}
+\end{equation}
+The quadratic internal contact expansion gives
+\begin{equation}
+ g_+=\frac{P_*+Df_*(1-f_*)+A_p}{8\mf^2},\qquad
+ g_-=\frac{Df_*(1-f_*)-A_p}{8\mf^2},
+\end{equation}
+and
+\begin{equation}
+ L_0=-\frac{\lap}{2m}+m(\Phi_0+\Phi_b)+g_0u^2-\omega_c,
+ \qquad L_0u=0.
+\end{equation}
+Expand the full doublet in the rotating frame as
+\begin{equation}
+ e^{i\omega_ct}\Psi
+ =c\,[u+\varepsilon^2a_2+\cdots]+d\,[\varepsilon b_1+O(\varepsilon^2)].
+\end{equation}
+The source equations \cite[Section S5.3]{channelsupp} are
+\begin{align}
+ i\dot b_1&=[L_0+(g_+-g_0)u^2]b_1+g_-u^2b_1^*,\\
+ i\dot a_2&=L_0a_2+2g_0u^2\Rea a_2+mu\Phi_2
+                         +u(g_+|b_1|^2+g_-b_1^2),\label{ext:a2}\\
+ \lap\Phi_2&=4\pi G\rho_2,\qquad
+ \boxed{\rho_2=m(2u\Rea a_2+|b_1|^2),\qquad \int\rho_2\,\dd^3x=0.}
+ \label{ext:rho2}
+\end{align}
+For a number-preserving coherent rotation, $\Psi(0)=(c\cos\varepsilon+d\sin\varepsilon)u$, use $b_1(0)=u$ and $a_2(0)=-u/2$. Omitting $2u\Rea a_2$ incorrectly replaces redistribution by a positive additional inventory. Omitting $\Phi_2$ discards the induced gravitational response. Both omissions lose terms of the same order as the desired envelope.
+
+\subsection{Positive completion and accuracy statement}
+A linearized density can become negative in a dilute tail even when it is useful in a weighted norm. A practical completion is
+\begin{align}
+ n_+(R,t;\varepsilon)&=\mathcal Z_\varepsilon(t)
+       \left[|u+\varepsilon^2a_2|^2+\varepsilon^2|b_1|^2\right],\\
+ \mathcal Z_\varepsilon(t)&=
+ \frac{N}{\displaystyle\int[|u+\varepsilon^2a_2|^2+\varepsilon^2|b_1|^2]\,\dd^3x},
+ \qquad N=\int u^2\,\dd^3x.\label{ext:positive}
+\end{align}
+This is nonnegative and has exactly number $N$. Equation \eqref{ext:rho2} implies $\mathcal Z_\varepsilon=1+O(\varepsilon^4)$, so the completion preserves the second-order density. It is not asserted to solve the nonlinear equations at the artificially retained fourth order. The full contact need not be invariant under $d\mapsto-d$, and third-order density corrections need not vanish. Accuracy should be stated through second order, with a generally allowed third-order remainder under sufficient smooth parameter dependence, or $o(\varepsilon^2)$ under only the source's stated $C^2$ differentiability.
+
+Its observable spherical mass and speed are
+\begin{equation}
+ M_+(<R,t)=4\pi m\int_0^R n_+(r,t)r^2\dd r,
+ \qquad v_h^2(R,t)=\frac{GM_+(<R,t)}{R}.
+ \label{ext:envforward}
+\end{equation}
+Use a declared time average only after computing the actual response. A constant dilation factor or arbitrary positive exterior component is not a substitute for \eqref{ext:a2}.
+
+\subsection{New full-parent comparison}
+We independently solve the supplied reference core, $m=1$, $4\pi G=1$, $g_0=0.3$, $u(0)=1$, with isolated potential boundary conditions. A continuum collocation solve gives
+\begin{equation}
+ \begin{gathered}
+ \omega_c=-0.8183349164630,\quad N=33.3472535158,\\
+ T=6.90856744491,\quad U_g=1.64087989630,\quad W=-18.7397745788.
+ \end{gathered}
+\end{equation}
+The relative virial residual is $5.03\times10^{-12}$. These independently recomputed values agree with the archived normalization in the supplied sources. A separate discrete stationary solve prevents background finite-difference drift from being mistaken for internal response.
+
+The full complex doublet and the second-variation system are then evolved on $0<R<24$, with 240 interior points, to $t/t_0=4$. Here $t_0=mL^2/\hbar$, and the excitation angles are supplied rather than inferred from data. The following errors compare squared halo speeds with the same full two-field solution over $0.2\le R/L\le8$ at the final time:
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+$\varepsilon$ & Unexcited scalar error & Positive response error & $L^1$ density error$/M$\\\midrule
+0.05 & $0.3680\%$ & $0.00270\%$ & $4.31\times10^{-5}$\\
+0.10 & $1.4692\%$ & $0.02347\%$ & $3.87\times10^{-4}$\\
+0.20 & $5.9156\%$ & $0.21252\%$ & $3.68\times10^{-3}$\\\bottomrule
+\end{tabular}
+\end{center}
+For $\varepsilon=0.10$, refinement to 480 interior points gives $0.02345\%$ response error and $1.4717\%$ unexcited-scalar error. The change in response-error fraction is $1.89\times10^{-7}$. Full-parent number drift is below $2\times10^{-15}$ and discrete energy drift below $7\times10^{-14}$ in these runs; these diagnostics are not continuum-error certificates. The response error increases by factors about $8.7$ and $9.1$ on successive doubling of excitation, consistent with a nonzero third-order correction over this sample, not an established asymptotic convergence theorem.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.87\linewidth]{figures/halo_response.pdf}
+\caption{A new full-parent comparison. The response envelope predicts the force change rather than independently adding positive halo mass. The approximation is time-dependent and the test interval is finite.}
+\end{figure}
+
+\section{A further improvement: a constrained time-averaged mode envelope}
+The preceding prescription needs an excitation history and evaluation time. When a mode occupation and an averaging regime are independently justified, one can instead solve its mean backreaction. This is a conditional second-order construction; no occupation law or nonlinear stationary-state theorem is supplied by it.
+
+For real amplitudes $A_j,B_j$, put
+\begin{equation}
+ b_{1j}=A_j\cos\Omega_jt-iB_j\sin\Omega_jt,
+ \qquad L_pB_j=\Omega_jA_j,\quad L_sA_j=\Omega_jB_j,
+\end{equation}
+where
+\begin{equation}
+ L_s=L_0+(g_+-g_0+g_-)u^2,\qquad
+ L_p=L_0+(g_+-g_0-g_-)u^2.
+\end{equation}
+The source proves positive internal operators and localized bound-mode structure under its stated hypotheses \cite[Theorem 4.3]{channelmain}. For one mode, normalized so $\int(A_j^2+B_j^2)/2=N$, define
+\begin{equation}
+ \Ncal_j=\frac12(A_j^2+B_j^2),\qquad
+ \Acal_j=\frac12(A_j^2-B_j^2).
+\end{equation}
+Allow a common frequency shift $\omega_c\mapsto\omega_c+\varepsilon^2\delta\omega$. Time-averaging \eqref{ext:a2} in that corrected frame gives the linear constrained problem
+\begin{align}
+ \boxed{(L_0+2g_0u^2)v+mu\avg\Phi_2-\delta\omega\,u
+             =-u(g_+\Ncal_j+g_-\Acal_j),}\label{ext:meanbvp}\\
+ \lap\avg\Phi_2&=4\pi Gm(2uv+\Ncal_j),\\
+ \int(2uv+\Ncal_j)\,\dd^3x&=0.\label{ext:meannumber}
+\end{align}
+Boundary conditions are regularity at the center, isolated gravitational decay, and an admissible decaying field correction. An inverse exists only when the constrained linear problem is nondegenerate; this must be checked for the chosen core. The frequency shift is an unknown fixed by the same number constraint, not an additional independently tuned gravitational coupling.
+
+The resulting positive mean-envelope approximation is
+\begin{equation}
+ \boxed{\avg n_+(R)=\mathcal Z
+       [(u+\varepsilon^2v)^2+\varepsilon^2\Ncal_j],\qquad
+       \int\avg n_+\,\dd^3x=N.}\label{ext:meanpositive}
+\end{equation}
+It again agrees through second order with the signed self-consistent density correction. For a declared incoherent mixture, sum $\Ncal=\sum_jw_j\Ncal_j$, $\Acal=\sum_jw_j\Acal_j$, with supplied $w_j\ge0$. Coherent cross terms must instead be retained when the preparation or averaging does not remove them.
+
+The new matrix calculation at the same reference core, with 480 interior points in $R<24$, gives:
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+Internal radial mode & $\Omega_j$ & $\delta\omega$ coefficient & Central density ratio at $\varepsilon=0.1$\\\midrule
+1 & 0.270018 & 0.535453 & 0.980624\\
+2 & 0.523932 & 0.838652 & 0.974951\\
+3 & 0.638747 & 0.986830 & 0.973966\\\bottomrule
+\end{tabular}
+\end{center}
+The continuum threshold in that discretization is $|\omega_c|=0.818569$. All three frequencies lie below it. The constrained linear residuals are below $5.3\times10^{-13}$ in coefficient units and the mean number corrections below $3.5\times10^{-15}$ of $N$. Grid and domain comparisons are in \texttt{spectral\_diagnostics.json}; finite-digit precision must not be confused with a continuum enclosure.
+
+Importantly, modes 2 and 3 have $2\Omega_j>|\omega_c|$. Their oscillatory second-harmonic density forcing can access the asymptotic density-wave continuum. A static mean solve therefore does not justify ignoring radiation, damping, or outer flux. Even mode 1 requires a higher-order and nonlinear persistence analysis. This construction improves the \emph{mean-source approximation}; it is not a solved eternal excited halo.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.87\linewidth]{figures/spectral_envelopes.pdf}
+\caption{New constrained mean envelopes with a supplied one-percent leading internal occupation. All profiles retain the same number. Occupations are not measured from galaxy data, and nonlinear persistence has not been established.}
+\end{figure}
+
+\section{A better-conditioned analytic envelope}
+\subsection{Start with the old dPIE, but use finite parameters}
+The earlier empirical family, in total-mass normalization, is
+\begin{equation}
+ \rho_e(R)=\frac{M_e(a_e+b_e)}{2\pi^2(R^2+a_e^2)(R^2+b_e^2)},
+ \qquad 0<a_e<b_e,
+\end{equation}
+with enclosed fraction
+\begin{equation}
+ F_e(R)=\frac{2[b_e\arctan(R/b_e)-a_e\arctan(R/a_e)]}{\pi(b_e-a_e)}.
+\end{equation}
+The archived selected parent-informed shape has $a_e/L=1.452128$, $b_e/L=1.524735$ \cite[Section VIII]{cubicmain}. Its nearly equal scales make the original amplitude $B_e=2GM_e/[\pi(b_e-a_e)]$ and the two radii poorly conditioned, even when the force is stable.
+
+Use instead
+\begin{equation}
+ s=\frac{a_e+b_e}{2},\quad e=\frac{b_e-a_e}{a_e+b_e},\quad
+ z=R/s,\quad q=e^2,\quad 0\le q<1.
+\end{equation}
+The exact density becomes
+\begin{equation}
+ \rho_e(R)=\frac{M_e}{\pi^2s^3}
+  \frac{1}{[z^2+(1-e)^2][z^2+(1+e)^2]}.\label{ext:exactstable}
+\end{equation}
+Mass, scale and the nonnegative shape coordinate $q$ remain finite at coalescence. A bounded integral representation removes cancellation from the CDF as well:
+\begin{equation}
+ F_e(R)=\frac{2}{\pi}\int_0^1
+ \left[\arctan\frac{R}{a_e+t(b_e-a_e)}-
+ \frac{R[a_e+t(b_e-a_e)]}{R^2+[a_e+t(b_e-a_e)]^2}\right]\dd t.
+\end{equation}
+This follows from the fundamental theorem of calculus applied to $g(a)=a\arctan(R/a)$.
+
+\subsection{The new second-order closed-form approximation}
+The coalescent limit and the first nonzero shape correction are
+\begin{align}
+ F_0(z)&=\frac{2}{\pi}\left[\arctan z-\frac{z}{1+z^2}\right],\\
+ \boxed{F_e^{(2)}(z)=F_0(z)+\frac{8q}{3\pi}\frac{z^3}{(1+z^2)^3}.}
+ \label{ext:newcdf}
+\end{align}
+Indeed, the symmetric divided difference of $g(a)$ is
+$g'(s)+(es)^2g'''(s)/6+O(e^4)$ and $g'''(s)=8R^3s/(R^2+s^2)^3$.
+The corresponding density is
+\begin{equation}
+ \boxed{\rho_e^{(2)}(R)=\frac{M_e}{\pi^2s^3}
+ \left[\frac{1}{(1+z^2)^2}+
+              \frac{2q(1-z^2)}{(1+z^2)^4}\right].}\label{ext:newrho}
+\end{equation}
+It is an actual positive finite-mass profile, not merely a force taper. Since
+\begin{equation}
+ \min_{z\ge0}\frac{1-z^2}{(1+z^2)^2}=-\frac18,
+\end{equation}
+its bracket is at least $(1-q/4)/(1+z^2)^2>0$ for $0\le q<1$. Also $F_e^{(2)}(0)=0$, $F_e^{(2)}(\infty)=1$: the correction redistributes mass but does not alter $M_e$.
+
+For a conservative uniform error bound, let $y=z^2$ and $D_0=(1+y)^2$. Direct multiplication gives
+\begin{equation}
+ \frac{\rho_e^{(2)}}{\rho_e}-1
+ =\frac{q^2}{D_0}-\frac{4q^2(y-1)^2}{D_0^2}
+                         -\frac{2q^3(y-1)}{D_0^2}.
+\end{equation}
+Using $D_0\ge1$ and $|y-1|\le y+1$ proves
+\begin{equation}
+ \boxed{\sup_{R\ge0}\left|\frac{\rho_e^{(2)}}{\rho_e}-1\right|
+       \le5q^2+2q^3.}\label{ext:uniformbound}
+\end{equation}
+Integrating against positive radial or line-of-sight weights gives the same relative bound for enclosed mass, surface density and cylindrical mass wherever their exact values are nonzero. It therefore also bounds the spherical halo squared-speed error.
+
+At the archived shape,
+\begin{equation}
+ s/L=1.4884315,\qquad e=0.02439044054,\qquad q=0.00059489359.
+\end{equation}
+The uniform bound is $1.770\times10^{-6}$. Direct evaluation on $0.02\le R/L\le200$ gives a maximum squared-speed error $1.061\times10^{-6}$ for \eqref{ext:newcdf}, compared with $1.189\times10^{-3}$ for the coalescent limit alone. This is improved analytic approximation of the old shape, not evidence of a better galaxy fit. Because the replacement is so accurate, it cannot itself explain a material reduction in observational residuals.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.87\linewidth]{figures/analytic_envelope_error.pdf}
+\caption{New analytic approximation check at the archived envelope scales. The second-order curve removes the leading coalescence error; its uniform error bound is derived independently of the sampled radius grid.}
+\end{figure}
+
+\subsection{A practical core-plus-envelope formula and independent closure}
+For a unit-normalized core fraction $F_c$ calculated from the relevant field solution,
+\begin{equation}
+ \boxed{v_h^2(R)=\frac{GM_h}{R}\left[
+ (1-f_e)F_c\!\left(\frac{R}{s_cL}\right)
+ +f_eF_e^{(2)}\!\left(\frac{R}{s}\right)\right],\quad0\le f_e\le1.}
+ \label{ext:practical}
+\end{equation}
+The same total $M_h$ supplies both terms. The dilation $s_c$, envelope mass fraction $f_e$, and shape parameters must be selected from the field-generated profile, independent mass constraints, or a declared inner-data training procedure. They do not follow from the homogeneous Friedmann solution. In a physical shared-parameter fit, replace the stored core by the recalculated baryon-forced core and, preferably, replace the entire analytic mixture by \eqref{ext:positive} or \eqref{ext:meanpositive}.
+
+For the \emph{exact} dPIE family, independent envelope summaries give
+\begin{equation}
+ P=a_eb_e=\frac{M_e}{2\pi\Sigma_{e0}},\quad
+ s^2=\frac{4R_{e,1/2,\perp}^2-3P}{9},\quad
+ q=\frac{4(R_{e,1/2,\perp}^2-3P)}{4R_{e,1/2,\perp}^2-3P}.
+ \label{ext:external}
+\end{equation}
+The admissible branch has $R_{e,1/2,\perp}^2\ge3P$, with equality at coalescence. This rewrites the source's exact amplitude--radius bridge in finite coordinates. The quantities must be component-separated independently of the rotation curve being predicted, with their joint covariance. A stellar half-light radius is not $R_{e,1/2,\perp}$, and an imported halo-model mass is not automatically $M_e$.
+
+Both exact dPIE and \eqref{ext:newrho} have $R^{-4}$ density tails and finite mass, but divergent global mass-weighted second radius moment. Do not insert them into a finite-variance dynamical virial identity without a separate truncation or boundary treatment. They also do not reproduce the generic exponential tail of a coherent bound wave state. Their use is an empirical finite-mass approximation, not a proof of coherent stationary field support at all radii.
+
+\section{Observational forward test and direct historical comparison}
+\subsection{The equation to compare with the rotation catalogue}
+Let $d_D=D/D_0$, $t_i=\sin i/\sin i_0$, $R=d_D R_{\rm cat}$, and preserve the signed baryonic force contributions $F_X=V_X|V_X|$. In the spherical-halo approximation, the catalogue-space prediction is
+\begin{equation}
+ \boxed{V_{{\rm pred,cat}}^2(R_{\rm cat})=
+ d_Dt_i^2[F_{\rm gas}+\Upsilon_dF_{\rm disk}+\Upsilon_bF_{\rm bulge}]
+       +t_i^2\frac{GM_h(<d_D R_{\rm cat})}{d_D R_{\rm cat}}.}
+ \label{ext:catalogue}
+\end{equation}
+This retains the convention used in the sources; the gas model already includes its adopted helium correction. For an axisymmetric parent solution, replace $GM_h(<R)/R$ by $R\partial_R\Phi_h(R,0)$, and include the measured three-dimensional baryonic source in the field solution. Adding disk velocities after constructing an isolated core is a template comparison, not a baryon-forced equilibrium.
+
+A physical test uses shared $(m,\mf,\beta_*)$, with a declared cosmological abundance and vacuum sector, and galaxy-specific states and independently constrained nuisances. The primary field prediction should be the self-consistent density forward map. Equations \eqref{ext:newcdf} and \eqref{ext:practical} are a fast compression of that map when their shape error is small compared with observational uncertainties. Stars and gas do not directly measure the dark field's internal-mode frequency, fourth cumulant, or occupation.
+
+\subsection{What the old fits actually establish}
+Table~\ref{ext:historical} records results already in \cite[Sections VIII and Methods, Tables 1--2]{cubicmain}. All are equal-galaxy mean squared standardized residuals on 659 outer rows of 131 galaxies. They are not reduced chi-square values. The parent-informed rows inherit their earlier length and nuisance calibrations; NFW has a separate historical fitting procedure.
+\begin{table}[htbp]\centering
+\begin{tabular}{p{.56\linewidth}rr}\toprule
+Archived procedure & Mean outer loss & MAE (km/s)\\\midrule
+Unexcited scalar, inherited calibration & 27.8020 & 12.879\\
+Selected scalar excitation & 23.9464 & 11.857\\
+Historical empirical finite envelope & 22.6284 & 10.533\\
+Parent-informed analytic envelope & 18.8200 & 10.254\\
+Direct parent-density template & 18.5029 & 10.188\\
+Dilation only, mass refitted & 18.7579 & ---\\
+NFW, different historical fit & 12.0952 & 8.109\\\bottomrule
+\end{tabular}
+\caption{Source-reported historical results, not new fits. The dilation-only row is a post-evaluation diagnostic.}\label{ext:historical}
+\end{table}
+The parent-informed envelope reduces mean loss by $16.83\%$ relative to the historical envelope, but the reported grouped, adjusted two-sided comparison is $p=0.22318$, with mean-loss-difference interval $[-10.5209,1.2064]$. The gain is unresolved by that conditional test. Dilation without the extra envelope scores $18.7579$, slightly better descriptively than $18.8200$; retaining an envelope without dilation gives $27.6256$. Thus the old numerical evidence primarily supports core broadening and mass recalibration, not detection of an independently populated exterior field component. The median fitted mass increased by $19.3\%$ in the source's comparison.
+
+Figure 3 on page 8 of the supplied main manuscript shows six illustrative rotation curves, while Figure 4 on page 10 displays the uncertainty and dilation ablation. Their interpretation is consistent with the table: improved average continuation is not uniformly better individual fits, and the old-envelope confidence interval crosses zero. The source explicitly identifies these comparisons as retrospective.
+
+\subsection{A test that separates the proposed physical improvement}
+Use the same catalogue calibration, baryonic source, initial inventory convention, radial split and validity guards for the full parent, scalar comparator and proposed approximation. A useful comparison sequence is the scalar state; the full two-field evolution at the same initial number and density; the second-order response including induced Poisson feedback; and its analytic compression. Hold the occupied-mode hypothesis fixed while comparing them. Only a subsequent separately labelled fit should allow the state or total mass to change.
+
+For a radial continuation test, fit galaxy-state parameters to inner rows, select shared occupation/shape rules on grouped inner validation, and then seal the prediction before evaluating the outer rows. Distance, inclination and stellar mass-to-light ratios need common priors or externally fixed values. Radial covariance and shared distance/calibration groups should enter the likelihood and resampling. The historical group structure and outer split are not reconstructed from the attachments, so no new significance is assigned here.
+
+A direct independent prediction instead needs the state normalization and size from information that excludes the target rotation curve, such as appropriately modeled lensing and outer tracers, together with baryonic geometry. Joint rotation, projected mass and vertical-force predictions are especially useful because they test the same gravitating state with different kernels. Source-selection and occupation uncertainties must remain distinct from an approximation-error budget.
+
+The time-dependent response and the mean-mode envelope now have calculable force profiles. Their usefulness is that they test the actual omitted equations and their backreaction. Neither the successful benchmark nor the analytic coalescence calculation establishes a statistically superior galaxy model before that observational comparison is carried out.
+
+\section{Reproducibility, checks, and limitations}
+The accompanying package contains \texttt{solve\_models.py}, \texttt{spectral\_envelope.py}, the observation-map helpers in \texttt{forward\_models.py}, independent identity checks, this TeX source, numerical CSV files and JSON diagnostic records. It uses Python 3.13.5, NumPy 2.3.5 and SciPy 1.17.0 in the execution environment. From the package directory:
+\begin{verbatim}
+python solve_models.py --out .
+python spectral_envelope.py
+python test_identities.py
+python plot_results.py
+pdflatex two_field_friedmann_extension.tex
+pdflatex two_field_friedmann_extension.tex
+\end{verbatim}
+The generated figures and their Python plotting producer are included. Independent checks verify the positive-envelope normalization and cumulative-mass integrals to $1.2\times10^{-16}$ absolute error in the tested cases, and the analytic vacuum-plus-matter solution against both Friedmann and Raychaudhuri equations to $9\times10^{-16}$ relative and $2.4\times10^{-16}$ absolute residual, respectively. These roundoff-level identities do not bound truncation error. The original six manuscripts are left unchanged. This is an addendum, not a claim that the consolidated manuscript's missing external figure and data archives were reconstructed. Some cross-references in \cite{channelsupp} print as ``Main Eq. (??)''; the directly numbered supplement equations and section locations were used instead.
+
+The exact relativistic run integrates a supplied homogeneous universe. The analytic run checks a separate homogeneous leading nonrelativistic universe. The halo run solves an isolated, spherically symmetric, nonexpanding leading theory, while the spectral calculation solves a constrained mean response on the same type of core. These are three compatible levels of approximation, not one simulation of cosmological galaxy formation. The gap between them consists of the spatial cosmological evolution, baryonic assembly, state occupation, boundary fluxes and a shared dimensional calibration.
+
+For physical application, check target displacement, $H/m$, physical wave numbers divided by $m$, internal as well as common nonlinear frequency shifts, weak gravity and perturbative response size. Near $r_*=2/3$, the scalar quartic coefficient vanishes while internal interactions do not; small scalar pressure alone is therefore an inadequate validity guard. Do not extrapolate the fourth-order truncation or a small-excitation approximation to high-density states without rematching or using the full action.
+
+No uncertainty bar here includes cosmological initial-state uncertainty, baryonic formation uncertainty, measurement covariance or historical model-selection freedom. Conservation and solver residuals are numerical diagnostics. The analytic dPIE bound, by contrast, is an algebraic bound on one explicitly specified profile approximation. Keeping these statements separate is necessary for an observationally meaningful comparison.
+
+\begingroup\small\raggedright
+\setlength{\parskip}{0pt}
+\begin{thebibliography}{9}
+\setlength{\itemsep}{1pt}
+\bibitem{consolidated} \emph{Two-Field Dynamics, Entropy Geometry, Localization, and Gravity}, consolidated project research manuscript, revised version 4, 29 September 2026. User-supplied PDF and TeX, \texttt{consolidated\_two\_field\_study\_v4}.
+\bibitem{cubicmain} S. Gauvin, \emph{Scalar reduction and internal stress in two-field models}. User-supplied \texttt{Cubic\_Scalar\_GR\_Intersection.pdf}, especially Sections VIII, Methods, and Tables 1--2.
+\bibitem{cubicsupp} S. Gauvin, \emph{Supplementary Information: Scalar reduction and internal stress in two-field models}. User-supplied \texttt{Cubic\_Scalar\_GR\_Supplement.pdf}, especially S4, S6--S11 and S22.
+\bibitem{channelmain} S. Gauvin, \emph{Energy-channel entropy and virial stress in a two-field dark sector}. User-supplied \texttt{TwoFieldDarkSector\_Main.pdf}, especially Sections 3--5 and Theorem 4.3.
+\bibitem{channelsupp} S. Gauvin, \emph{Supplemental Material: Energy-channel entropy and virial stress in a two-field dark sector}. User-supplied \texttt{TwoFieldDarkSector\_Supplement.pdf}, especially S2, S5.3, S6 and S10.
+\bibitem{langlois} D. Langlois and S. Renaux-Petel, ``Perturbations in generalized multi-field inflation,'' JCAP \textbf{04} (2008) 017, \href{https://arxiv.org/abs/0801.1085}{arXiv:0801.1085}.
+\bibitem{salehian} B. Salehian, H.-Y. Zhang, M. A. Amin, D. I. Kaiser and M. H. Namjoo, ``Beyond Schr\"odinger--Poisson: Nonrelativistic Effective Field Theory for Scalar Dark Matter,'' JHEP \textbf{09} (2021) 050, \href{https://arxiv.org/abs/2104.10128}{arXiv:2104.10128}.
+\bibitem{sparc} F. Lelli, S. S. McGaugh and J. M. Schombert, ``SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves,'' AJ \textbf{152} (2016) 157. Official data description: \href{https://astroweb.cwru.edu/SPARC/}{SPARC project website}; inspected 29 September 2026.
+\end{thebibliography}
+\endgroup
+\end{document}

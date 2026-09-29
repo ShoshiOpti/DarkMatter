@@ -86,3 +86,29 @@ The budget is propagated adversarially: the speed-difference bound adds twice th
 A speed assessment requires both its margin and the solver bound. A loss assessment likewise requires its margin and the solver bound, and expands a pairs-bootstrap-t interval by the propagated numerical error. The inclusion interval uses confidence 1 - 2*testAlpha (90% at alpha=0.05), following two-one-sided-test-style interval inclusion. It is an approximate, conditional diagnostic rather than an inversion of the wild test. It remains subject to bootstrap calibration and galaxy-independence assumptions.
 
 A configured margin is not a detected effect, a physical equivalence proof, or evidence for a formation mechanism. Preserve an unconfigured run and the scientific rationale for any subsequent margin; do not choose a margin just to obtain a preferred conclusion.
+
+## Reconstruction update: unchanged inference and new diagnostics
+
+The 27 September reconstruction update is not a new fitted model family. At fixed
+total leading density, baryons, source geometry, boundary data and observation
+mapping, the Poisson rotation curve is unchanged. Thus the same predictions,
+residuals, galaxy weights, failure flags and original resampling protocol must
+produce the same inferential results. The publication result contract checks this
+numerically before showing the 25 baseline scenes. `statistical_impact.json` records
+the current model summaries and that contract; it does not treat an identity as
+an independent test or assign it a new p-value.
+
+The density and force audits are descriptive and condition on the fitted target.
+Local density fractions, enclosed-force fractions, and fractions of galaxies have
+different denominators. Reported galaxy medians first take each galaxy's median
+across its declared outer rows, then the median across the stated all/active sample.
+The active subset uses the archived envelope threshold. Counting force decreases
+relative to the original core diagnoses its amplitude change; it is not a rejection
+of a newly fitted physical mechanism. A hypothetical double-counted envelope is
+only a bookkeeping diagnostic, not an additional inferential competitor.
+
+The periodic field fixture tests equations at a single instant and supplies no
+sampling distribution or galaxy calibration. Its internal-stress changes cannot
+be inserted into SPARC velocities without a physical normalization and evolved
+state. Future forward predictions must use the locked research protocol, preserve
+failure policy, and separate training from independent observational validation.

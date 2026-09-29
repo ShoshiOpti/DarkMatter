@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "revision": "reconstructed-dynamics-plot-bridge-2026-09-27",
+  "native_run": "DarkMatter/output/runs/20260927T1750398279001Z-453eea819d7f4049a254e08b9abeebfe",
+  "build_warnings": 0,
+  "build_errors": 0,
+  "regression_tests": 31,
+  "native_inputs": 213,
+  "preserved_native_inputs": 211,
+  "new_native_inputs": [
+    "publication/diagnostics/reconstruction/envelope_fits.csv",
+    "publication/diagnostics/reconstruction/frozen_core.csv"
+  ],
+  "full_native_verify": true,
+  "all_previous_statistical_and_figure_values_unchanged": true,
+  "comparison_report": "research/reconstruction_plot_bridge_2026_09_27/baseline_comparison.json",
+  "independent_checks": [
+    "check_momentum.py",
+    "check_force_bridge.py"
+  ],
+  "manuscript_pages": {
+    "main": 28,
+    "supplement": 158
+  },
+  "scope": "New derived momentum/density/curve-response identities and native diagnostic plots, not a new halo fit, time integration or mechanism significance.",
+  "pdf_qa": {
+    "all_document_overviews_reviewed": true,
+    "main_pages": 28,
+    "supplement_pages": 158,
+    "enlarged_changed_pages_reviewed": {
+      "main": [
+        11,
+        12
+      ],
+      "supplement": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ]
+    },
+    "final_transition_rechecked": 78,
+    "native_new_svg_figures_reviewed": 4,
+    "overfull_boxes": 0,
+    "undefined_references": 0,
+    "rerun_warnings": 0,
+    "visual_defects_remaining": false
+  }
+}
